@@ -44,10 +44,10 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-array:
- - Hello1
- - Hello2
- - Hello3
+test:
+ - title: Hello1
+ - title: Hello2
+ - title: Hello3
 main:
   heading: Great coffee with no compromises
   description: >

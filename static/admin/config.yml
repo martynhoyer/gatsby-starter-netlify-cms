@@ -19,6 +19,19 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
 
+  - name: "testpages"
+    label: "Test pages"
+    folder: "src/pages/testpages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "pages"
     label: "Pages"
     files:
@@ -35,7 +48,7 @@ collections:
         name: "products"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: "Test", name: "test", widget: list, fields: [{label: Title, name: title, widget: markdown}]}
+          - {label: "Test", name: "test", widget: list, fields: [{label: Title, name: title, widget: text}]}
           - {label: "Path", name: "path", widget: "hidden", default: "/products"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}

@@ -8,12 +8,15 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   const entryTestimonials = entry.getIn(["data", "testimonials"]);
   const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
 
+  const entryTest = entry.getIn(["data", "test"]);
+  const test = entryTest ? entryTest.toJS() : [];
+
   const entryPricingPlans = entry.getIn(["data", "pricing", "plans"]);
   const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : [];
 
   return (
     <ProductPageTemplate
-      test={entry.getIn(["data", "test"])}
+      test={test}
       image={entry.getIn(["data", "image"])}
       title={entry.getIn(["data", "title"])}
       heading={entry.getIn(["data", "heading"])}

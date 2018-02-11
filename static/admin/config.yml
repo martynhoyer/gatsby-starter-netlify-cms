@@ -35,6 +35,7 @@ collections:
         name: "products"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: "Test", name: "test", widget: object, fields: [{label: Title, name: title, widget: string}]}
           - {label: "Path", name: "path", widget: "hidden", default: "/products"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}

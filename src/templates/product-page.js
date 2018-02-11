@@ -110,7 +110,6 @@ export const ProductPageTemplate = ({
 export default ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
-  console.log(frontmatter.test);
   return (
     <ProductPageTemplate
       test={frontmatter.test}

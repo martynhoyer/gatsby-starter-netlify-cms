@@ -11,8 +11,6 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   const entryTest = entry.getIn(["data", "test"]);
   const test = entryTest ? entryTest.toJS() : [];
 
-  console.log(test);
-
   const entryPricingPlans = entry.getIn(["data", "pricing", "plans"]);
   const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : [];
 

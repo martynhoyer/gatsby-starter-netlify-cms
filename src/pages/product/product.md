@@ -47,12 +47,9 @@ intro:
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
 test:
- - title: >
-    Hello1
- - title: >
-    Hello2
- - title: >
-    Hello3
+ - title: Hello1
+ - title: Hello2
+ - title: Hello3
 main:
   heading: Great coffee with no compromises
   description: >

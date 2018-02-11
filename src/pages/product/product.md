@@ -1,5 +1,11 @@
 ---
 templateKey: product-page
+test:
+  - title: Hello1
+  - title: Hello2
+  - title: Hello3
+  - title: Hello 4
+  - title: Boom
 path: /products
 title: Our Coffee
 image: /img/jumbotron.jpg
@@ -46,10 +52,6 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-test:
- - title: Hello1
- - title: Hello2
- - title: Hello3
 main:
   heading: Great coffee with no compromises
   description: >
@@ -105,3 +107,4 @@ pricing:
       plan: Custom
       price: '??'
 ---
+

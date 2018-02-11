@@ -1,11 +1,13 @@
 ---
 templateKey: product-page
 test:
-  - title: Hello1
-  - title: Hello2
-  - title: Hello3
-  - title: Hello 4
-  - title: Boom
+  - title: |-
+      Hello1\
+      **dfdf**
+
+      ## hello
+
+      # test
 path: /products
 title: Our Coffee
 image: /img/jumbotron.jpg

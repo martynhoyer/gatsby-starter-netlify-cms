@@ -8,11 +8,11 @@ people:
     jobtitle: Managing director
     name: Ella Barrington
     paragraphs:
-      - id: '1'
+      - id: 1
         text: >-
           A reformed engineer, Ella is an award-winning business and operations
           director for motorsport.
-      - id: '2'
+      - id: 2
         text: >-
           She has worked with and for teams and tier one suppliers in everything
           from karting to international sportscars, junior formula to historic
@@ -21,39 +21,30 @@ people:
     jobtitle: Digital director
     name: Martyn Hoyer
     paragraphs:
-      - id: '1'
+      - id: 1
         text: >-
           Martyn is in charge of all things online. Through working for small
           agencies to multinational technology companies, Martyn has a passion
           for the web.
-      - id: '2'
+      - id: 2
         text: >-
           Combined with his knowledge of professional motorsport, he understands
           what works and what doesn’t across multiple platforms.
-  - jobtitle: Bestest mummy evar
-    name: Mummy B
-    paragraphs:
-      - id: '1'
-        text: Toby's mummy too
-      - id: '2'
-        text: Bobo loves her
 whyus:
   reasons:
-    - id: '5'
-      text: We're great!
-    - id: '1'
+    - id: 1
       text: >-
         We have comprehensive industry experience. We know motorsport in and
         out.
-    - id: '2'
+    - id: 2
       text: >-
         We build networks of experts and specialists that you can rely on. Our
         contacts are yours.
-    - id: '3'
+    - id: 3
       text: >-
         We understand the continuous progress required to keep ahead of the
         competition. We don't stop.
-    - id: '4'
+    - id: 4
       text: >-
         We constantly evolve, adapt and incorporate new technology and tactics.
         For clients and for ourselves.

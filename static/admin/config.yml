@@ -55,7 +55,7 @@ collections:
                 }, 
                 {
                   label: "Job title", 
-                  name: "name", 
+                  name: "jobtitle", 
                   widget: "string"
                 }, 
                 {

@@ -55,13 +55,13 @@ export const aboutPageQuery = graphql`
   query AboutPage {
     markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
-        path
         title
+        path
         subtitle
         people {
-          name
-          jobtitle
           image
+          jobtitle
+          name
           paragraphs {
             id
             text

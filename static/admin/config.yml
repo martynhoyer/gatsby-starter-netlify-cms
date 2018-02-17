@@ -35,12 +35,12 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/about/about.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/about/about-us.md"
+        label: "About us"
+        name: "about-us"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/about"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/about-us"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "People", name: "people", widget: "object", fields: [

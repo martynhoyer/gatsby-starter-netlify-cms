@@ -1,6 +1,6 @@
-import React from 'react';
-import graphql from 'graphql';
-import Content, { HTMLContent } from '../components/Content';
+import React from "react";
+import graphql from "graphql";
+import Content, { HTMLContent } from "../components/Content";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
@@ -11,7 +11,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">{title}</h2>
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {title}
+              </h2>
               <PageContent className="content" content={content} />
             </div>
           </div>
@@ -22,23 +24,58 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 };
 
 export default ({ data }) => {
-  const { markdownRemark: post } = data;
-
-  return (<AboutPageTemplate
-    contentComponent={HTMLContent}
-    title={post.frontmatter.title}
-    content={post.html}
-  />);
+  const { markdownRemark: page } = data;
+  return (
+    <div>
+      {page.frontmatter.people.map(person => (
+        <div key={person.name}>
+          <h2>{person.name}</h2>
+          <h3>{person.jobtitle}</h3>
+          {person.paragraphs.map(para => <p key={para.id}>{para.text}</p>)}
+        </div>
+      ))}
+      <div>
+        <h2>{page.frontmatter.whyus.title}</h2>
+        <ul>
+          {page.frontmatter.whyus.reasons.map(reason => (
+            <li key={reason.id}>{reason.text}</li>
+          ))}
+        </ul>
+      </div>
+      <AboutPageTemplate
+        contentComponent={HTMLContent}
+        title={page.frontmatter.title}
+        content={page.html}
+      />
+    </div>
+  );
 };
 
 export const aboutPageQuery = graphql`
-  query AboutPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+  query AboutPage {
+    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
         path
         title
+        subtitle
+        people {
+          name
+          jobtitle
+          image
+          paragraphs {
+            id
+            text
+          }
+        }
+        whyus {
+          title
+          reasons {
+            id
+            text
+          }
+        }
       }
+      html
     }
   }
 `;

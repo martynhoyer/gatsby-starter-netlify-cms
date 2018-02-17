@@ -82,6 +82,30 @@ collections:
                 }
               ]
             }
+          - {label: "Why us", name: "whyus", widget: "object", fields: [
+            {
+              label: "Title",
+              name: "title",
+              widget: "string"
+            },
+            {
+              label: "Reasons",
+              name: "reasons",
+              widget: "list",
+              fields: [
+                {
+                  label: "id", 
+                  name: "id", 
+                  widget: "string"
+                }, 
+                {
+                  label: "text", 
+                  name: "text", 
+                  widget: "string"
+                }
+              ]
+            }
+          ]}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/product/product.md"
         label: "Products Page"

@@ -46,7 +46,7 @@ collections:
           - {
               label: "People", 
               name: "people", 
-              widget: "object", 
+              widget: "list", 
               fields: [
                 {
                   label: "Name", 
@@ -66,7 +66,7 @@ collections:
                 {
                   label: "Paragraphs", 
                   name: "paragraphs", 
-                  widget: "object", 
+                  widget: "list", 
                   fields: [ 
                     {
                       label: "id", 

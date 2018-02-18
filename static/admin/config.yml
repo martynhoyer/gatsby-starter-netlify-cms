@@ -154,3 +154,58 @@ collections:
                 }
               ]
             }
+      - file: "src/pages/logistics.md"
+        label: "Logistics"
+        name: "logistics"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "logistics-home"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/logistics"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Snippets", 
+              name: "snippets", 
+              widget: "list", 
+              fields: [
+                {
+                  label: "Title", 
+                  name: "title", 
+                  widget: "string"
+                }, 
+                {
+                  label: "Sections", 
+                  name: "sections", 
+                  widget: "list", 
+                  fields: [ 
+                    {
+                      label: "id", 
+                      name: "id", 
+                      widget: "string"
+                    }, 
+                    {
+                      label: "Heading", 
+                      name: "heading", 
+                      widget: "string"
+                    },
+                    {
+                      label: "Paragraphs", 
+                      name: "paragraphs", 
+                      widget: "list", 
+                      fields: [ 
+                        {
+                          label: "id", 
+                          name: "id", 
+                          widget: "string"
+                        }, 
+                        {
+                          label: "text", 
+                          name: "text", 
+                          widget: "string"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }

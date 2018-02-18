@@ -3,7 +3,11 @@ import graphql from "graphql";
 import Link from "gatsby-link";
 import Content, { HTMLContent } from "../components/Content";
 
-export const ServicesPageTemplate = ({ title, content, contentComponent }) => {
+export const LogisticsHomePageTemplate = ({
+  title,
+  content,
+  contentComponent
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -28,23 +32,44 @@ export default ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <div>
-      <ServicesPageTemplate
+      <LogisticsHomePageTemplate
         contentComponent={HTMLContent}
         title={page.frontmatter.title}
         content={page.html}
       />
-      <Link to="/services">Back to our services</Link>
+      {page.frontmatter.snippets.map(snippet => (
+        <div key={snippet.title}>
+          <h2>{snippet.title}</h2>
+          {snippet.sections.map(section => (
+            <div key={section.id}>
+              <h3>{section.heading}</h3>
+              {section.paragraphs.map(para => <p key={para.id}>{para.text}</p>)}
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 };
 
-export const servicesPageQuery = graphql`
-  query ServicesPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+export const logisticsHomePageQuery = graphql`
+  query LogisticsHomePage {
+    markdownRemark(frontmatter: { templateKey: { eq: "logistics-home" } }) {
       frontmatter {
         title
         path
         subtitle
+        snippets {
+          title
+          sections {
+            id
+            heading
+            paragraphs {
+              id
+              text
+            }
+          }
+        }
       }
       html
     }

@@ -15,6 +15,31 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             html
             id
             frontmatter {
+              snippets {
+                title
+                linkUrl
+                linkText
+                bullets {
+                  id
+                  text
+                }
+              }
+              whyus {
+                title
+                reasons {
+                  id
+                  text
+                }
+              }
+              people {
+                image
+                jobtitle
+                name
+                paragraphs {
+                  id
+                  text
+                }
+              }
               templateKey
               path
               date

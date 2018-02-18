@@ -107,6 +107,54 @@ collections:
             }
           ]}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/services/services.md"
+        label: "Services"
+        name: "services"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services-home"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/services"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Snippets", 
+              name: "snippets", 
+              widget: "list", 
+              fields: [
+                {
+                  label: "Title", 
+                  name: "title", 
+                  widget: "string"
+                }, 
+                {
+                  label: "Link URL", 
+                  name: "linkUrl", 
+                  widget: "string"
+                }, 
+                {
+                  label: "Link text", 
+                  name: "linkText", 
+                  widget: "image"
+                }, 
+                {
+                  label: "Bullets", 
+                  name: "bullets", 
+                  widget: "list", 
+                  fields: [ 
+                    {
+                      label: "id", 
+                      name: "id", 
+                      widget: "string"
+                    }, 
+                    {
+                      label: "text", 
+                      name: "text", 
+                      widget: "string"
+                    }
+                  ]
+                }
+              ]
+            }
       - file: "src/pages/product/product.md"
         label: "Products Page"
         name: "products"

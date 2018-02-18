@@ -1,5 +1,6 @@
 import React from "react";
 import graphql from "graphql";
+import Link from "gatsby-link";
 import Content, { HTMLContent } from "../components/Content";
 
 export const ServicesHomePageTemplate = ({
@@ -43,7 +44,7 @@ export default ({ data }) => {
           {snippet.linkText &&
             snippet.linkUrl && (
               <p>
-                <a href={snippet.linkUrl}>{snippet.linkText}</a>
+                <Link to={snippet.linkUrl}>{snippet.linkText}</Link>
               </p>
             )}
         </div>

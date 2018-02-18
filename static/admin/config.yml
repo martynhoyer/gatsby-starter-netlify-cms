@@ -19,17 +19,16 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "testpages"
-    label: "Test pages"
-    folder: "src/pages/testpages"
+  - name: "Services"
+    label: "Services"
+    folder: "src/pages/services"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "default-page"}
-      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services-page"}
+      - {label: "Path", name: "path", widget: "string" default: "/services/{{slug}}"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages"
@@ -107,7 +106,7 @@ collections:
             }
           ]}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/services/services.md"
+      - file: "src/pages/services.md"
         label: "Services"
         name: "services"
         fields:

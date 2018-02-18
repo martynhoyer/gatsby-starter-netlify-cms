@@ -134,7 +134,7 @@ collections:
                 {
                   label: "Link text", 
                   name: "linkText", 
-                  widget: "image"
+                  widget: "string"
                 }, 
                 {
                   label: "Bullets", 

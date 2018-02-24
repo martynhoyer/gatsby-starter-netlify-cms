@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 function encode(data) {
   return Object.keys(data)
@@ -46,32 +47,22 @@ export default class Contact extends React.Component {
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
           >
-            <p hidden>
-              <label>
-                Don’t fill this out: <input name="bot-field" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your name:<br />
-                <input type="text" name="name" onChange={this.handleChange} />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your email:<br />
-                <input type="email" name="email" onChange={this.handleChange} />
-              </label>
-            </p>
-            <p>
-              <label>
-                Message:<br />
-                <textarea name="message" onChange={this.handleChange} />
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
+            <label hidden>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+            <label>
+              Your name:
+              <input type="text" name="name" onChange={this.handleChange} />
+            </label>
+            <label>
+              Your email:
+              <input type="email" name="email" onChange={this.handleChange} />
+            </label>
+            <label>
+              Message:
+              <textarea name="message" onChange={this.handleChange} />
+            </label>
+            <button type="submit">Send</button>
           </form>
         ) : (
           <div>Thanks!</div>

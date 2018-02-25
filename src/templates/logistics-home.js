@@ -1,14 +1,14 @@
-import React from "react";
-import graphql from "graphql";
-import Link from "gatsby-link";
-import Content, { HTMLContent } from "../components/Content";
+import React from 'react'
+import graphql from 'graphql'
+import Link from 'gatsby-link'
+import Content, { HTMLContent } from '../components/Content'
 
 export const LogisticsHomePageTemplate = ({
   title,
   content,
-  contentComponent
+  contentComponent,
 }) => {
-  const PageContent = contentComponent || Content;
+  const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
@@ -25,11 +25,11 @@ export const LogisticsHomePageTemplate = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default ({ data }) => {
-  const { markdownRemark: page } = data;
+  const { markdownRemark: page } = data
   return (
     <div>
       <LogisticsHomePageTemplate
@@ -49,8 +49,8 @@ export default ({ data }) => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
 export const logisticsHomePageQuery = graphql`
   query LogisticsHomePage {
@@ -74,4 +74,4 @@ export const logisticsHomePageQuery = graphql`
       html
     }
   }
-`;
+`

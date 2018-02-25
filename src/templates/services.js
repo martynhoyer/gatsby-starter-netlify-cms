@@ -1,10 +1,10 @@
-import React from "react";
-import graphql from "graphql";
-import Link from "gatsby-link";
-import Content, { HTMLContent } from "../components/Content";
+import React from 'react'
+import graphql from 'graphql'
+import Link from 'gatsby-link'
+import Content, { HTMLContent } from '../components/Content'
 
 export const ServicesPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+  const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
@@ -21,11 +21,11 @@ export const ServicesPageTemplate = ({ title, content, contentComponent }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default ({ data }) => {
-  const { markdownRemark: page } = data;
+  const { markdownRemark: page } = data
   return (
     <div>
       <ServicesPageTemplate
@@ -35,8 +35,8 @@ export default ({ data }) => {
       />
       <Link to="/services">Back to our services</Link>
     </div>
-  );
-};
+  )
+}
 
 export const servicesPageQuery = graphql`
   query ServicesPage($path: String!) {
@@ -49,4 +49,4 @@ export const servicesPageQuery = graphql`
       html
     }
   }
-`;
+`

@@ -1,9 +1,9 @@
-import React from "react";
-import graphql from "graphql";
-import Content, { HTMLContent } from "../components/Content";
+import React from 'react'
+import graphql from 'graphql'
+import Content, { HTMLContent } from '../components/Content'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+  const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
@@ -20,11 +20,11 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default ({ data }) => {
-  const { markdownRemark: page } = data;
+  const { markdownRemark: page } = data
   return (
     <div>
       {page.frontmatter.people.map(person => (
@@ -48,8 +48,8 @@ export default ({ data }) => {
         content={page.html}
       />
     </div>
-  );
-};
+  )
+}
 
 export const aboutPageQuery = graphql`
   query AboutPage {
@@ -78,4 +78,4 @@ export const aboutPageQuery = graphql`
       html
     }
   }
-`;
+`

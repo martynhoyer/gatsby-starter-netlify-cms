@@ -1,45 +1,21 @@
 const path = require("path");
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({
+  boundActionCreators,
+  graphql
+}) => {
+  const {
+    createPage
+  } = boundActionCreators;
 
   return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
         edges {
           node {
-            excerpt(pruneLength: 400)
-            html
-            id
             frontmatter {
-              snippets {
-                title
-                linkUrl
-                linkText
-                bullets {
-                  id
-                  text
-                }
-              }
-              whyus {
-                title
-                reasons {
-                  id
-                  text
-                }
-              }
-              people {
-                image
-                jobtitle
-                name
-                paragraphs {
-                  id
-                  text
-                }
-              }
               templateKey
               path
-              title
             }
           }
         }
@@ -51,17 +27,17 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const pagePath = node.frontmatter.path;
+    return result.data.allMarkdownRemark.edges.forEach(({
+      node
+    }) => {
+      const pagePath = node.frontmatter.path
       createPage({
         path: pagePath,
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
-        context: {
-          path: pagePath
-        }
+        context: {},
       });
     });
   });

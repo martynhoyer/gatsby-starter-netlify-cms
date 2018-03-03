@@ -50,7 +50,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Corse Concierge",
-        short_name: "Corse Concierge",
+        short_name: "Concierge",
         start_url: "/",
         background_color: "#6e408d",
         theme_color: "#6e408d",

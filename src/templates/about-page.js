@@ -1,30 +1,20 @@
-import React from 'react'
-import graphql from 'graphql'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import graphql from "graphql";
+import Content, { HTMLContent } from "../components/Content";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+  const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+    <div>
+      <h1>{title}</h1>
+      <PageContent className="content" content={content} />
+    </div>
+  );
+};
 
 export default ({ data }) => {
-  const { markdownRemark: page } = data
+  const { markdownRemark: page } = data;
   return (
     <div>
       {page.frontmatter.people.map(person => (
@@ -48,8 +38,8 @@ export default ({ data }) => {
         content={page.html}
       />
     </div>
-  )
-}
+  );
+};
 
 export const aboutPageQuery = graphql`
   query AboutPage {
@@ -78,4 +68,4 @@ export const aboutPageQuery = graphql`
       html
     }
   }
-`
+`;

@@ -1,13 +1,13 @@
 import React from "react";
 import graphql from "graphql";
 import Content, { HTMLContent } from "../components/Content";
+import SeoTitle from "../components/SeoTitle";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <div>
-      <h1>{title}</h1>
       <PageContent className="content" content={content} />
     </div>
   );
@@ -17,6 +17,10 @@ export default ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <div>
+      <SeoTitle
+        subtitle={page.frontmatter.subtitle}
+        title={page.frontmatter.title}
+      />
       {page.frontmatter.people.map(person => (
         <div key={person.name}>
           <h2>{person.name}</h2>
@@ -32,11 +36,7 @@ export default ({ data }) => {
           ))}
         </ul>
       </div>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={page.frontmatter.title}
-        content={page.html}
-      />
+      <AboutPageTemplate contentComponent={HTMLContent} content={page.html} />
     </div>
   );
 };

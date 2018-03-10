@@ -2,6 +2,7 @@ import React from "react";
 import graphql from "graphql";
 import Link from "gatsby-link";
 import Content, { HTMLContent } from "../components/Content";
+import SeoTitle from "../components/SeoTitle";
 
 export const LogisticsHomePageTemplate = ({
   title,
@@ -12,7 +13,6 @@ export const LogisticsHomePageTemplate = ({
 
   return (
     <div>
-      <h1>{title}</h1>
       <PageContent className="content" content={content} />
     </div>
   );
@@ -22,6 +22,10 @@ export default ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <div>
+      <SeoTitle
+        subtitle={page.frontmatter.subtitle}
+        title={page.frontmatter.title}
+      />
       <LogisticsHomePageTemplate
         contentComponent={HTMLContent}
         title={page.frontmatter.title}

@@ -17,7 +17,7 @@ export const ServicesPageTemplate = ({ title, content, contentComponent }) => {
 export default ({ data }) => {
   const { markdownRemark: page } = data;
   return (
-    <div>
+    <main>
       <SeoTitle subtitle="services" title={page.frontmatter.title} />
       <ServicesPageTemplate
         contentComponent={HTMLContent}
@@ -25,7 +25,7 @@ export default ({ data }) => {
         content={page.html}
       />
       <Link to="/services">Back to our services</Link>
-    </div>
+    </main>
   );
 };
 

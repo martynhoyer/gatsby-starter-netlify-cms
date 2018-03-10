@@ -16,7 +16,7 @@ export const AboutPageTemplate = ({ content, contentComponent }) => {
 export default ({ data }) => {
   const { markdownRemark: page } = data;
   return (
-    <div>
+    <main>
       <SeoTitle
         subtitle={page.frontmatter.subtitle}
         title={page.frontmatter.title}
@@ -37,7 +37,7 @@ export default ({ data }) => {
         </ul>
       </div>
       <AboutPageTemplate contentComponent={HTMLContent} content={page.html} />
-    </div>
+    </main>
   );
 };
 

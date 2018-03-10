@@ -21,7 +21,7 @@ export const ServicesHomePageTemplate = ({
 export default ({ data }) => {
   const { markdownRemark: page } = data;
   return (
-    <div>
+    <main>
       <SeoTitle
         subtitle={page.frontmatter.subtitle}
         title={page.frontmatter.title}
@@ -43,7 +43,7 @@ export default ({ data }) => {
             )}
         </div>
       ))}
-    </div>
+    </main>
   );
 };
 

@@ -16,6 +16,7 @@ const Concatenator = styled.span`
 `;
 
 const Title = styled.span`
+  display: block;
   margin-top: 1em;
   font-size: 2em;
 `;

@@ -18,10 +18,7 @@ export default ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <div>
-      <SeoTitle
-        subtitle={page.frontmatter.subtitle}
-        title={page.frontmatter.title}
-      />
+      <SeoTitle subtitle="services" title={page.frontmatter.title} />
       <ServicesPageTemplate
         contentComponent={HTMLContent}
         title={page.frontmatter.title}
@@ -38,7 +35,6 @@ export const servicesPageQuery = graphql`
       frontmatter {
         title
         path
-        subtitle
       }
       html
     }

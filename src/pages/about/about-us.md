@@ -4,7 +4,7 @@ path: /about-us
 title: Who we are
 subtitle: About us
 people:
-  - image: /img/human-paradise.jpg
+  - image: /img/ella.jpg
     jobtitle: Managing director
     name: Ella Barrington
     paragraphs:

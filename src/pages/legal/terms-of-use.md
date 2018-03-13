@@ -2,8 +2,9 @@
 templateKey: legal
 path: /terms-of-use
 title: Terms of use
-date: 2018-03-10T00:00:00.000Z
+date: '2018-03-10T00:00:00.000Z'
 ---
+
 **Please read these terms of use carefully before you start to use the site.**
 
 By using our site, you indicate that you accept these terms of use and that you agree to abide by them. If you do not agree to these terms of use, please refrain from using our site.
@@ -53,16 +54,16 @@ We aim to update our site regularly, and may change the content at any time. If 
 
 The material displayed on our site is provided without any guarantees, conditions or warranties as to its accuracy. To the extent permitted by law, we, and third parties connected to us hereby expressly exclude:
 
-*   All conditions, warranties and other terms which might otherwise be implied by statute, common law or the law of equity
-*   Any liability for any direct, indirect or consequential loss or damage incurred by any user in connection with our site or in connection with the use, inability to use, or results of the use of our site, any websites linked to it and any materials posted on it, including, without limitation any liability for:
-    *   loss of income or revenue;
-    *   loss of business;
-    *   loss of profits or contracts;
-    *   loss of anticipated savings;
-    *   loss of data;
-    *   loss of goodwill;
-    *   wasted management or office time; and
-    *   for any other loss or damage of any kind, however arising and whether caused by tort (including negligence), breach of contract or otherwise, even if foreseeable, provided that this condition shall not prevent claims for loss of or damage to your tangible property or any other claims for direct financial loss that are not excluded by any of the categories set out above.
+* All conditions, warranties and other terms which might otherwise be implied by statute, common law or the law of equity
+* Any liability for any direct, indirect or consequential loss or damage incurred by any user in connection with our site or in connection with the use, inability to use, or results of the use of our site, any websites linked to it and any materials posted on it, including, without limitation any liability for:
+  * loss of income or revenue;
+  * loss of business;
+  * loss of profits or contracts;
+  * loss of anticipated savings;
+  * loss of data;
+  * loss of goodwill;
+  * wasted management or office time; and
+  * for any other loss or damage of any kind, however arising and whether caused by tort (including negligence), breach of contract or otherwise, even if foreseeable, provided that this condition shall not prevent claims for loss of or damage to your tangible property or any other claims for direct financial loss that are not excluded by any of the categories set out above.
 
 This does not affect our liability for death or personal injury arising from our negligence, nor our liability for fraudulent misrepresentation or misrepresentation as to a fundamental matter, nor any other liability which cannot be excluded or limited under applicable law.
 

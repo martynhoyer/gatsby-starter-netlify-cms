@@ -1,25 +1,25 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Script from 'react-load-script'
-import graphql from 'graphql'
+import React from "react";
+import Link from "gatsby-link";
+import Script from "react-load-script";
+import graphql from "graphql";
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
     if (typeof window !== `undefined` && window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
+      window.netlifyIdentity.on("init", user => {
         if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/'
-          })
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
         }
-      })
+      });
     }
-    window.netlifyIdentity.init()
+    window.netlifyIdentity.init();
   }
 
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <section className="section">
@@ -28,7 +28,7 @@ export default class IndexPage extends React.Component {
           onLoad={() => this.handleScriptLoad()}
         />
         {posts
-          .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+          .filter(post => post.node.frontmatter.templateKey === "blog-post")
           .map(({ node: post }) => (
             <div key={post.id}>
               <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
@@ -38,7 +38,7 @@ export default class IndexPage extends React.Component {
             </div>
           ))}
       </section>
-    )
+    );
   }
 }
 
@@ -52,10 +52,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            path
           }
         }
       }
     }
   }
-`
+`;

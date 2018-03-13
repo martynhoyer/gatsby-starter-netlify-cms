@@ -37,11 +37,10 @@ export default ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostById($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        path
         title
       }
     }

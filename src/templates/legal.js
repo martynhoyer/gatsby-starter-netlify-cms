@@ -29,11 +29,10 @@ export default ({ data }) => {
 };
 
 export const legalPageQuery = graphql`
-  query LegalPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query LegalPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        path
       }
       html
     }

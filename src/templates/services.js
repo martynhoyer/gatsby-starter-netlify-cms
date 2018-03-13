@@ -30,11 +30,10 @@ export default ({ data }) => {
 };
 
 export const servicesPageQuery = graphql`
-  query ServicesPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ServicesPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        path
       }
       html
     }

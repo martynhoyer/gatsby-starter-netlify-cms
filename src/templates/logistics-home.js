@@ -64,7 +64,6 @@ export const logisticsHomePageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "logistics-home" } }) {
       frontmatter {
         title
-        path
         subtitle
         snippets {
           title

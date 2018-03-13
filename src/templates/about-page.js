@@ -68,7 +68,6 @@ export const aboutPageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
         title
-        path
         subtitle
         people {
           image

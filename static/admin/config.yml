@@ -13,7 +13,6 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Path", name: "path", widget: "string", default: {{slug}}}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
@@ -26,7 +25,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services"}
-      - {label: "Path", name: "path", widget: "string", default: "/services/{{slug}}"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -38,7 +36,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "legal"}
-      - {label: "Path", name: "path", widget: "string", default: {{slug}}}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -51,7 +48,6 @@ collections:
         name: "about-us"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/about-us"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {
@@ -123,7 +119,6 @@ collections:
         name: "services"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services-home"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/services"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
@@ -171,7 +166,6 @@ collections:
         name: "logistics"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "logistics-home"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/logistics"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}

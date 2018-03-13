@@ -1,8 +1,15 @@
 import React from "react";
 import graphql from "graphql";
-import Img from "gatsby-image";
 import Content, { HTMLContent } from "../components/Content";
 import SeoTitle from "../components/SeoTitle";
+import Person from "../components/Person";
+import styled from "styled-components";
+
+const PeopleGrid = styled.div`
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+`;
 
 export const AboutPageTemplate = ({ content, contentComponent }) => {
   const PageContent = contentComponent || Content;
@@ -17,8 +24,8 @@ export const AboutPageTemplate = ({ content, contentComponent }) => {
 function findNode(images, key) {
   let l = "";
   images.forEach((el, index) => {
-    let oName = `/img/${images[index].node.sizes.originalName}`;
-    if (oName === `${key}`) {
+    let originalName = `/img/${images[index].node.sizes.originalName}`;
+    if (originalName === `${key}`) {
       l = images[index].node;
     }
   });
@@ -35,17 +42,14 @@ export default ({ data }) => {
         subtitle={page.frontmatter.subtitle}
         title={page.frontmatter.title}
       />
-      {page.frontmatter.people.map(person => {
-        let img = findNode(images, person.image);
-        return (
-          <div key={person.name}>
-            <Img sizes={img.sizes} />
-            <h2>{person.name}</h2>
-            <h3>{person.jobtitle}</h3>
-            {person.paragraphs.map(para => <p key={para.id}>{para.text}</p>)}
-          </div>
-        );
-      })}
+      {page.frontmatter.people.length && (
+        <PeopleGrid>
+          {page.frontmatter.people.map(person => {
+            let img = findNode(images, person.image);
+            return <Person key={person.name} img={img} person={person} />;
+          })}
+        </PeopleGrid>
+      )}
       <div>
         <h2>{page.frontmatter.whyus.title}</h2>
         <ul>

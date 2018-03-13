@@ -3,6 +3,13 @@ import graphql from "graphql";
 import Link from "gatsby-link";
 import Content, { HTMLContent } from "../components/Content";
 import SeoTitle from "../components/SeoTitle";
+import styled from "styled-components";
+
+const ServicesGrid = styled.div`
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+`;
 
 export const ServicesHomePageTemplate = ({
   title,
@@ -31,18 +38,24 @@ export default ({ data }) => {
         title={page.frontmatter.title}
         content={page.html}
       />
-      {page.frontmatter.snippets.map(snippet => (
-        <div key={snippet.title}>
-          <h2>{snippet.title}</h2>
-          {snippet.bullets.map(bullet => <p key={bullet.id}>{bullet.text}</p>)}
-          {snippet.linkText &&
-            snippet.linkUrl && (
-              <p>
-                <Link to={snippet.linkUrl}>{snippet.linkText}</Link>
-              </p>
-            )}
-        </div>
-      ))}
+      {page.frontmatter.snippets.length && (
+        <ServicesGrid>
+          {page.frontmatter.snippets.map(snippet => (
+            <div key={snippet.title}>
+              <h2>{snippet.title}</h2>
+              {snippet.bullets.map(bullet => (
+                <p key={bullet.id}>{bullet.text}</p>
+              ))}
+              {snippet.linkText &&
+                snippet.linkUrl && (
+                  <p>
+                    <Link to={snippet.linkUrl}>{snippet.linkText}</Link>
+                  </p>
+                )}
+            </div>
+          ))}
+        </ServicesGrid>
+      )}
     </main>
   );
 };

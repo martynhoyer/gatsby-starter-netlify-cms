@@ -3,6 +3,13 @@ import graphql from "graphql";
 import Link from "gatsby-link";
 import Content, { HTMLContent } from "../components/Content";
 import SeoTitle from "../components/SeoTitle";
+import styled from "styled-components";
+
+const LogisticsGrid = styled.div`
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+`;
 
 export const LogisticsHomePageTemplate = ({
   title,
@@ -31,17 +38,23 @@ export default ({ data }) => {
         title={page.frontmatter.title}
         content={page.html}
       />
-      {page.frontmatter.snippets.map(snippet => (
-        <div key={snippet.title}>
-          <h2>{snippet.title}</h2>
-          {snippet.sections.map(section => (
-            <div key={section.id}>
-              <h3>{section.heading}</h3>
-              {section.paragraphs.map(para => <p key={para.id}>{para.text}</p>)}
+      {page.frontmatter.snippets.length && (
+        <LogisticsGrid>
+          {page.frontmatter.snippets.map(snippet => (
+            <div key={snippet.title}>
+              <h2>{snippet.title}</h2>
+              {snippet.sections.map(section => (
+                <div key={section.id}>
+                  <h3>{section.heading}</h3>
+                  {section.paragraphs.map(para => (
+                    <p key={para.id}>{para.text}</p>
+                  ))}
+                </div>
+              ))}
             </div>
           ))}
-        </div>
-      ))}
+        </LogisticsGrid>
+      )}
     </main>
   );
 };

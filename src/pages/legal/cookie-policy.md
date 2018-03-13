@@ -1,15 +1,15 @@
 ---
 templateKey: legal
-path: /cookie-policy
 title: Cookie policy
 date: '2018-03-13T21:45:18+00:00'
 ---
+
 **corseconcierge.com puts small files (known as ‘cookies’) onto your computer to collect information about how you browse the site.**
 
 Cookies are used to:
 
-*   measure how you use the website so it can be updated and improved based on your needs
-*   remember the notifications you’ve seen so that we don’t show them to you again
+* measure how you use the website so it can be updated and improved based on your needs
+* remember the notifications you’ve seen so that we don’t show them to you again
 
 corseconcierge.com cookies aren’t used to identify you personally.
 
@@ -23,10 +23,10 @@ We use Google Analytics software to collect information about how you use corsec
 
 Google Analytics stores information about:
 
-*   the pages you visit on corseconcierge.com
-*   how long you spend on each corseconcierge.com page
-*   how you got to the site
-*   what you click on while you’re visiting the site
+* the pages you visit on corseconcierge.com
+* how long you spend on each corseconcierge.com page
+* how you got to the site
+* what you click on while you’re visiting the site
 
 We don’t collect or store your personal information (eg your name or address) so this information can’t be used to identify who you are.
 

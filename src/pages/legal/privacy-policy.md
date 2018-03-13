@@ -1,9 +1,9 @@
 ---
 templateKey: legal
-path: /privacy-policy
 title: Privacy policy
 date: '2018-03-13T21:42:00+00:00'
 ---
+
 ## Key details
 
 This website privacy policy describes how Corse Concierge protects and makes use of the information you give the company when you use this website.
@@ -35,22 +35,22 @@ We also collect information to better understand how visitors use this website a
 
 We may collect the following information:
 
-*   Name and job title
-*   Contact information including email address
-*   Demographic information, such as postcode, preferences and interests
-*   Website usage data
-*   Other information relevant to client enquiries
+* Name and job title
+* Contact information including email address
+* Demographic information, such as postcode, preferences and interests
+* Website usage data
+* Other information relevant to client enquiries
 
 ## How we use this data
 
 Collecting this data helps us understand what you are looking for from the company, enabling us to deliver improved products and services. Specifically, we may use data:
 
-*   For our own internal records
-*   To improve the services we provide
-*   To contact you in response to a specific enquiry
-*   To customise the website for you
-*   To send you promotional emails about products, services, offers and other things we think might be relevant to you
-*   To send you promotional mailings or to call you about products, services, offers and other things we think might be relevant to you
+* For our own internal records
+* To improve the services we provide
+* To contact you in response to a specific enquiry
+* To customise the website for you
+* To send you promotional emails about products, services, offers and other things we think might be relevant to you
+* To send you promotional mailings or to call you about products, services, offers and other things we think might be relevant to you
 
 ## Cookies and how we use them
 
@@ -64,11 +64,11 @@ Cookies allow websites and applications to store your preferences in order to pr
 
 We may use cookies to:
 
-*   Analyse our web traffic using an analytics package Aggregated usage data helps us improve the website structure, design, content and functions
-*   Identify whether you are signed in to our website. A cookie allows us to check whether you are signed in to the site
-*   Test content on our website. For example, 50% of our users might see one piece of content, the other 50% a different piece of content
-*   Store information about your preferences. The website can then present you with information you will find more relevant and interesting
-*   To recognise when you return to our website. We may show your relevant content, or provide functionality you used previously
+* Analyse our web traffic using an analytics package Aggregated usage data helps us improve the website structure, design, content and functions
+* Identify whether you are signed in to our website. A cookie allows us to check whether you are signed in to the site
+* Test content on our website. For example, 50% of our users might see one piece of content, the other 50% a different piece of content
+* Store information about your preferences. The website can then present you with information you will find more relevant and interesting
+* To recognise when you return to our website. We may show your relevant content, or provide functionality you used previously
 
 Cookies do not provide us with access to your computer or any information about you, other than that which you choose to share with us.
 
@@ -90,16 +90,16 @@ When you fill in a form or provide your details on our website, you will see one
 
 If you have agreed that we can use your information for marketing purposes, you can change your mind easily, via one of these methods:
 
-*   Unsubscribe instantly via the link in the footer of one of our email communications
-*   Send an email to [hello@corseconcierge.com](hello@corseconcierge.com)
-*   Write to us at:  
-    Corse Concierge Ltd  
-    Kineton House  
-    31 Horse Fair  
-    Banbury  
-    Oxfordshire  
-    United Kingdom  
-    OX16 0AE
+* Unsubscribe instantly via the link in the footer of one of our email communications
+* Send an email to [hello@corseconcierge.com](hello@corseconcierge.com)
+* Write to us at:  
+  Corse Concierge Ltd  
+  Kineton House  
+  31 Horse Fair  
+  Banbury  
+  Oxfordshire  
+  United Kingdom  
+  OX16 0AE
 
 We will never lease, distribute or sell your personal information to third parties unless we have your permission or the law requires us to.
 

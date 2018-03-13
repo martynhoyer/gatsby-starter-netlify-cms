@@ -25,8 +25,20 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services-page"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services"}
       - {label: "Path", name: "path", widget: "string", default: "/services/{{slug}}"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "Legal"
+    label: "Legal"
+    folder: "src/pages/legal"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "legal"}
+      - {label: "Path", name: "path", widget: "string", default: {{slug}}}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}

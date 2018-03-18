@@ -12,8 +12,8 @@ const Footer = ({ legalLinks = [] }) => {
       {(legalLinks || legalLinks.length) && (
         <div>
           {legalLinks.map(({ node: link }) => (
-            <div key={link.frontmatter.slug}>
-              <Link to={link.frontmatter.slug}>{link.frontmatter.title}</Link>
+            <div key={link.fields.slug}>
+              <Link to={link.fields.slug}>{link.frontmatter.title}</Link>
             </div>
           ))}
         </div>

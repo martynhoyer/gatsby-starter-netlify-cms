@@ -1,13 +1,22 @@
 import React from "react";
 import Link from "gatsby-link";
 
-const Footer = ({ legalLinks = [] }) => {
+const Footer = ({
+  legalLinks = [],
+  fullCompanyName,
+  companyNumber,
+  vatNumber
+}) => {
   return (
     <footer>
       <div>
-        <p>&copy; {new Date().getFullYear()} Corse Concierge Ltd</p>
-        <p>Company number: 10447192</p>
-        <p>VAT number: GB259 2102 16</p>
+        {fullCompanyName && (
+          <p>
+            &copy; {new Date().getFullYear()} {fullCompanyName}
+          </p>
+        )}
+        {companyNumber && <p>Company number: {companyNumber}</p>}
+        {vatNumber && <p>VAT number: {vatNumber}</p>}
       </div>
       {(legalLinks || legalLinks.length) && (
         <div>

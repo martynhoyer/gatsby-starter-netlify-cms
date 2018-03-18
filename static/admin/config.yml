@@ -19,6 +19,7 @@ collections:
         description: "General Site Settings"
         fields:
           - {label: "Global title", name: "siteTitle", widget: "string"}
+          - {label: "Global description", name: "siteDescription", widget: "string"}
           - {label: "Full company name", name: "fullCompanyName", widget: "string"}
           - {label: "Company number", name: "companyNumber", widget: "string"}
           - {label: "VAT number", name: "vatNumber", widget: "string"}

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
+import settings from "../../_data/settings.json";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { injectGlobal } from "styled-components";
@@ -22,20 +23,19 @@ injectGlobal`
   }
 `;
 
+const { siteTitle, siteDescription } = settings;
+
 const TemplateWrapper = ({ children, data }) => {
   const { edges: legalLinks } = data.allMarkdownRemark;
   return (
     <div>
-      <Helmet title="Corse Concierge">
+      <Helmet title={siteTitle}>
         <html lang="en" />
-        <meta
-          name="description"
-          content="Commercial support for fast-moving motorsport and technology companies."
-        />
+        <meta name="description" content={siteDescription} />
       </Helmet>
       <Navbar />
       <div>{children()}</div>
-      <Footer legalLinks={legalLinks} />
+      <Footer legalLinks={legalLinks} {...settings} />
     </div>
   );
 };

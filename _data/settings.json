@@ -1,7 +1,6 @@
 {
-  "site_title": "Corse Concierge",
-  "posts": {
-    "front_limit": "9001",
-    "author": "Ella"
-  }
+  "siteTitle": "Corse Concierge",
+  "fullCompanyName": "Corse Concierge Ltd",
+  "companyNumber": "10447192",
+  "vatNumber": "GB259 2102 16"
 }

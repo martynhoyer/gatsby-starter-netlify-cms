@@ -18,15 +18,11 @@ collections:
         file: "_data/settings.json"
         description: "General Site Settings"
         fields:
-          - {label: "Global title", name: "site_title", widget: "string"}
-          - label: "Post Settings"
-            name: posts
-            widget: "object"
-            fields:
-              - {label: "Number of posts on frontpage", name: front_limit, widget: number}
-              - {label: "Default Author", name: author, widget: string}
-              - {label: "Default Thumbnail", name: thumb, widget: image, class: "thumb"}
-              
+          - {label: "Global title", name: "siteTitle", widget: "string"}
+          - {label: "Full company name", name: "fullCompanyName", widget: "string"}
+          - {label: "Company number", name: "companyNumber", widget: "string"}
+          - {label: "VAT number", name: "vatNumber", widget: "string"}
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"

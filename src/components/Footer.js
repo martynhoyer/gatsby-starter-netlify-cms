@@ -1,5 +1,12 @@
 import React from "react";
 import Link from "gatsby-link";
+import styled from "styled-components";
+
+const StyledFooter = styled.footer`
+  display: flex;
+  background-color: #424242;
+  color: #f1f1f1;
+`;
 
 const Footer = ({
   legalLinks = [],
@@ -8,7 +15,7 @@ const Footer = ({
   vatNumber
 }) => {
   return (
-    <footer>
+    <StyledFooter>
       <div>
         {fullCompanyName && (
           <p>
@@ -27,7 +34,7 @@ const Footer = ({
           ))}
         </div>
       )}
-    </footer>
+    </StyledFooter>
   );
 };
 

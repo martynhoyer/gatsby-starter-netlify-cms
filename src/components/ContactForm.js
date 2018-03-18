@@ -1,43 +1,42 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
 }
 
 export default class Contact extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       loading: false,
       submitted: false,
-      error: false,
-    }
+      error: false
+    };
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   handleSubmit = e => {
-    this.setState({ loading: true })
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
+    this.setState({ loading: true });
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => this.setState({ submitted: true, loading: false }))
-      .catch(error => this.setState({ error: true, loading: false }))
+      .catch(error => this.setState({ error: true, loading: false }));
 
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   render() {
     return (
       <div>
-        <h1>Contact</h1>
         {!this.state.submitted ? (
           <form
             name="contact"
@@ -68,6 +67,6 @@ export default class Contact extends React.Component {
           <div>Thanks!</div>
         )}
       </div>
-    )
+    );
   }
 }

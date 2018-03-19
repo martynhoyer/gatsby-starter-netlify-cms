@@ -18,12 +18,6 @@
     },
     "social": [
       {
-        "providerName": "instagram",
-        "providerDisplayName": "Instagram",
-        "url": "https://instagram.com/corseconcierge",
-        "profileDisplayName": "CorseConcierge"
-      },
-      {
         "providerName": "twitter",
         "providerDisplayName": "Twitter",
         "url": "https://twitter.com/corseconcierge",
@@ -33,6 +27,12 @@
         "providerName": "facebook",
         "providerDisplayName": "Facebook",
         "url": "https://facebook.com/corseconcierge",
+        "profileDisplayName": "CorseConcierge"
+      },
+      {
+        "providerName": "instagram",
+        "providerDisplayName": "Instagram",
+        "url": "https://instagram.com/corseconcierge",
         "profileDisplayName": "CorseConcierge"
       }
     ]

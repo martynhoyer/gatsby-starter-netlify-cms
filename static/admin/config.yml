@@ -19,10 +19,36 @@ collections:
         description: "General Site Settings"
         fields:
           - {label: "Global title", name: "siteTitle", widget: "string"}
-          - {label: "Global description", name: "siteDescription", widget: "string"}
-          - {label: "Full company name", name: "fullCompanyName", widget: "string"}
-          - {label: "Company number", name: "companyNumber", widget: "string"}
-          - {label: "VAT number", name: "vatNumber", widget: "string"}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - {label: "Global description", name: "siteDescription", widget: "string"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields: 
+              - {label: "Full company name", name: "fullCompanyName", widget: "string"}
+              - {label: "Company number", name: "companyNumber", widget: "string"}
+              - {label: "VAT number", name: "vatNumber", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - label: "address"
+                name: "address"
+                widget: "object"
+                fields:
+                  - {label: "Line 1", name: "line1", widget: "string"}
+                  - {label: "Line 2", name: "line2", widget: "string"}
+                  - {label: "Town/city", name: "town", widget: "string"}
+                  - {label: "County", name: "county", widget: "string"}
+                  - {label: "Country", name: "country", widget: "string"}
+                  - {label: "Postcode", name: "postcode", widget: "string"}
+              - label: "Social media profiles"
+                name: "social"
+                widget: "object"
+                fields:
+                  - {label: "Twitter", name: "twitter", widget: "string"}
+                  - {label: "Facebook", name: "facebook", widget: "string"}
+                  - {label: "Instagram", name: "instagram", widget: "string"}
 
   - name: "blog"
     label: "Blog"

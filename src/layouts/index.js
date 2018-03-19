@@ -24,7 +24,14 @@ injectGlobal`
   }
 `;
 
-const { siteTitle, siteDescription } = settings;
+const { siteTitle, seo, contact } = settings;
+const { siteDescription } = seo;
+const { fullCompanyName, companyNumber, vatNumber } = contact;
+const footerSettings = {
+  fullCompanyName,
+  companyNumber,
+  vatNumber
+};
 
 const TemplateWrapper = ({ children, data }) => {
   const { edges: legalLinks } = data.allMarkdownRemark;
@@ -36,7 +43,7 @@ const TemplateWrapper = ({ children, data }) => {
       </Helmet>
       <Navbar />
       <div>{children()}</div>
-      <Footer legalLinks={legalLinks} {...settings} />
+      <Footer legalLinks={legalLinks} {...footerSettings} />
     </div>
   );
 };

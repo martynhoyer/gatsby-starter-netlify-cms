@@ -6,6 +6,10 @@ const StyledFooter = styled.footer`
   display: flex;
   background-color: #424242;
   color: #f1f1f1;
+
+  & a {
+    color: #f1f1f1;
+  }
 `;
 
 const Footer = ({

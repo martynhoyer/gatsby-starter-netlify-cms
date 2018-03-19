@@ -17,10 +17,25 @@
       "postcode": "OX16 0AE"
     },
     "email": "hello@corseconcierge.com",
-    "social": {
-      "twitter": "corseconcierge",
-      "facebook": "corseconcierge",
-      "instagram": "corseconcierge"
-    }
+    "social": [
+      {
+        "providerName": "twitter",
+        "providerDisplayName": "Twitter",
+        "url": "https://twitter.com/corseconcierge",
+        "profileDisplayName": "@CorseConcierge"
+      },
+      {
+        "providerName": "facebook",
+        "providerDisplayName": "Facebook",
+        "url": "https://facebook.com/corseconcierge",
+        "profileDisplayName": "CorseConcierge"
+      },
+      {
+        "providerName": "instagram",
+        "providerDisplayName": "Instagram",
+        "url": "https://instagram.com/corseconcierge",
+        "profileDisplayName": "CorseConcierge"
+      }
+    ]
   }
 }

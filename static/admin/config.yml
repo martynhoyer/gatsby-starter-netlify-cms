@@ -44,11 +44,29 @@ collections:
                   - {label: "Postcode", name: "postcode", widget: "string"}
               - label: "Social media profiles"
                 name: "social"
-                widget: "object"
-                fields:
-                  - {label: "Twitter", name: "twitter", widget: "string"}
-                  - {label: "Facebook", name: "facebook", widget: "string"}
-                  - {label: "Instagram", name: "instagram", widget: "string"}
+                widget: "list"
+                fields: [
+                  {
+                    label: "Provider Name", 
+                    name: "providerName", 
+                    widget: "string"
+                  },
+                  {
+                    label: "Provider display name", 
+                    name: "providerDisplayName", 
+                    widget: "string"
+                  },
+                  {
+                    label: "URL", 
+                    name: "url", 
+                    widget: "string"
+                  },
+                  {
+                    label: "Profile display name", 
+                    name: "profileDisplayName", 
+                    widget: "string"
+                  }
+                ]
 
   - name: "blog"
     label: "Blog"

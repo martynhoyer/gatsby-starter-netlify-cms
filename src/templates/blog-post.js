@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
   );
 };
 
-export default ({ data }) => {
+const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
@@ -35,6 +35,8 @@ export default ({ data }) => {
     />
   );
 };
+
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostById($id: String!) {

@@ -19,7 +19,7 @@ const ServicesGrid = styled.div`
   }
 `;
 
-export default ({ data }) => {
+const ServicesHomePage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <main>
@@ -49,6 +49,8 @@ export default ({ data }) => {
     </main>
   );
 };
+
+export default ServicesHomePage;
 
 export const servicesHomePageQuery = graphql`
   query ServicesHomePage {

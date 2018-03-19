@@ -3,7 +3,7 @@ import graphql from "graphql";
 import Link from "gatsby-link";
 import PageHeader from "../components/PageHeader";
 
-export default ({ data }) => {
+const LegalHomePage = ({ data }) => {
   const { markdownRemark: page } = data;
   const { edges: childPages } = data.allMarkdownRemark;
 
@@ -13,7 +13,7 @@ export default ({ data }) => {
       {page.html && <div dangerouslySetInnerHTML={{ __html: page.html }} />}
       <ul>
         {childPages.map(({ node: page }) => (
-          <li>
+          <li key={page.fields.slug}>
             <Link to={page.fields.slug}>{page.frontmatter.title}</Link>
           </li>
         ))}
@@ -21,6 +21,8 @@ export default ({ data }) => {
     </main>
   );
 };
+
+export default LegalHomePage;
 
 export const legalHomePageQuery = graphql`
   query LegalHomePage($id: String!) {

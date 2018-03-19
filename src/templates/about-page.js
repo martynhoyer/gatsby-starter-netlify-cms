@@ -1,6 +1,5 @@
 import React from "react";
 import graphql from "graphql";
-import Content, { HTMLContent } from "../components/Content";
 import PageHeader from "../components/PageHeader";
 import Person from "../components/Person";
 import styled from "styled-components";
@@ -23,7 +22,7 @@ function findNode(images, key) {
   return l;
 }
 
-export default ({ data }) => {
+const AboutPage = ({ data }) => {
   const { markdownRemark: page } = data;
   const images = data.allImageSharp.edges;
   return (
@@ -52,6 +51,8 @@ export default ({ data }) => {
     </main>
   );
 };
+
+export default AboutPage;
 
 export const aboutPageQuery = graphql`
   query AboutPage {

@@ -1,10 +1,8 @@
 import React from "react";
 import graphql from "graphql";
-import Link from "gatsby-link";
-import SeoTitle from "../components/SeoTitle";
 import PageHeader from "../components/PageHeader";
 
-export default ({ data }) => {
+const LegalPage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <main>
@@ -13,6 +11,8 @@ export default ({ data }) => {
     </main>
   );
 };
+
+export default LegalPage;
 
 export const legalPageQuery = graphql`
   query LegalPage($id: String!) {

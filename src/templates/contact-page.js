@@ -2,11 +2,10 @@ import React from "react";
 import graphql from "graphql";
 import PageHeader from "../components/PageHeader";
 import ContactForm from "../components/ContactForm";
-import styled from "styled-components";
 
 import settings from "../../_data/settings.json";
 
-export default ({ data }) => {
+const ContactPage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <main>
@@ -24,6 +23,8 @@ export default ({ data }) => {
     </main>
   );
 };
+
+export default ContactPage;
 
 export const contactPageQuery = graphql`
   query ContactPage {

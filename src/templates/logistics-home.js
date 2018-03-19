@@ -17,7 +17,7 @@ const LogisticsGrid = styled.div`
   }
 `;
 
-export default ({ data }) => {
+const LogisticsHomePage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <main>
@@ -46,6 +46,8 @@ export default ({ data }) => {
     </main>
   );
 };
+
+export default LogisticsHomePage;
 
 export const logisticsHomePageQuery = graphql`
   query LogisticsHomePage {

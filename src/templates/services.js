@@ -4,7 +4,7 @@ import Link from "gatsby-link";
 import Content, { HTMLContent } from "../components/Content";
 import SeoTitle from "../components/SeoTitle";
 
-export const ServicesPageTemplate = ({ title, content, contentComponent }) => {
+export const ServicesPageTemplate = ({ content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -14,7 +14,7 @@ export const ServicesPageTemplate = ({ title, content, contentComponent }) => {
   );
 };
 
-export default ({ data }) => {
+const ServicesPage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <main>
@@ -28,6 +28,8 @@ export default ({ data }) => {
     </main>
   );
 };
+
+export default ServicesPage;
 
 export const servicesPageQuery = graphql`
   query ServicesPage($id: String!) {

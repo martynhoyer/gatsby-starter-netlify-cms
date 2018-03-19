@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import graphql from "graphql";
 
 import settings from "../../_data/settings.json";
 import Navbar from "../components/Navbar";

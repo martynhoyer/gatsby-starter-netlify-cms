@@ -16,6 +16,7 @@ injectGlobal`
 
   html {
     box-sizing: border-box;
+    font-size: 18px;
   }
 
   body {

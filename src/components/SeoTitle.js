@@ -21,11 +21,13 @@ const Title = styled.span`
   font-size: 2em;
 `;
 
-const SeoTitle = ({ title, subtitle }) => (
+const SeoTitle = ({ title, subtitle = null }) => (
   <Heading>
-    <Fragment>
-      <SubTitle>{subtitle}</SubTitle> <Concatenator>or</Concatenator>{" "}
-    </Fragment>
+    {subtitle && (
+      <Fragment>
+        <SubTitle>{subtitle}</SubTitle> <Concatenator>or</Concatenator>{" "}
+      </Fragment>
+    )}
     <Title>{title}</Title>
   </Heading>
 );

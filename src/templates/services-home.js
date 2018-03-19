@@ -1,42 +1,32 @@
 import React from "react";
 import graphql from "graphql";
 import Link from "gatsby-link";
-import Content, { HTMLContent } from "../components/Content";
-import SeoTitle from "../components/SeoTitle";
+import PageHeader from "../components/PageHeader";
 import styled from "styled-components";
 
 const ServicesGrid = styled.div`
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  margin-right: 1rem;
+  margin-left: 1rem;
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-right: 2em;
+    margin-left: 2rem;
+  }
 `;
-
-export const ServicesHomePageTemplate = ({
-  title,
-  content,
-  contentComponent
-}) => {
-  const PageContent = contentComponent || Content;
-
-  return (
-    <div>
-      <PageContent className="content" content={content} />
-    </div>
-  );
-};
 
 export default ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <main>
-      <SeoTitle
+      <PageHeader
+        title={page.frontmatter.title}
         subtitle={page.frontmatter.subtitle}
-        title={page.frontmatter.title}
-      />
-      <ServicesHomePageTemplate
-        contentComponent={HTMLContent}
-        title={page.frontmatter.title}
-        content={page.html}
+        text={page.html}
       />
       {page.frontmatter.snippets.length && (
         <ServicesGrid>

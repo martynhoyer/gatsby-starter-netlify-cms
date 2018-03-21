@@ -1,5 +1,6 @@
 ---
 templateKey: about-page
+mainNav: true
 path: /about-us
 title: Who we are
 subtitle: About us

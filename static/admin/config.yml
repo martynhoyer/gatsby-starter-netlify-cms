@@ -112,6 +112,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Appears on main navigation?", name: "mainNav", widget: "boolean"}
           - {
               label: "People", 
               name: "people", 
@@ -183,6 +184,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services-home"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Appears on main navigation?", name: "mainNav", widget: "boolean"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {
               label: "Snippets", 
@@ -230,6 +232,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "logistics-home"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Appears on main navigation?", name: "mainNav", widget: "boolean"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {
               label: "Snippets", 
@@ -284,4 +287,5 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Appears on main navigation?", name: "mainNav", widget: "boolean"}
           - {label: "Body", name: "body", widget: "markdown"}

@@ -5,7 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "eslint": "^4.19.0",
-    "gatsby": "^1.9.236",
+    "gatsby": "^1.9.238",
     "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-catch-links": "^1.0.19",

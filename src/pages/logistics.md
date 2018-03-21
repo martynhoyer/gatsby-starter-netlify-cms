@@ -1,6 +1,7 @@
 ---
 templateKey: logistics-home
 path: /logistics
+mainNav: true
 title: How we work
 subtitle: Logistics
 snippets: 

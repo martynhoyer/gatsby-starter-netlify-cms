@@ -31,7 +31,7 @@ const AboutPage = ({ data }) => {
         title={page.frontmatter.title}
         subtitle={page.frontmatter.subtitle}
       />
-      {page.frontmatter.people.length && (
+      {page.frontmatter.people.length > 0 && (
         <PeopleGrid>
           {page.frontmatter.people.map(person => {
             let img = findNode(images, person.image);

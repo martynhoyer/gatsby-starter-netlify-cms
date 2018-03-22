@@ -22,7 +22,7 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <section className="section">
+      <section>
         <Script
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
           onLoad={() => this.handleScriptLoad()}

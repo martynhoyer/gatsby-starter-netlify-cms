@@ -35,16 +35,22 @@ const footerSettings = {
 };
 
 const TemplateWrapper = ({ children, data }) => {
-  const { edges: legalLinks } = data.allMarkdownRemark;
+  const { edges: legalLinks } = data.legalLinks;
+  const { edges: navLinks } = data.navData;
+
   return (
     <div>
       <Helmet title={siteTitle}>
         <html lang="en" />
         <meta name="description" content={siteDescription} />
       </Helmet>
-      <Navbar />
+      <Navbar navLinks={navLinks} social={settings.contact.social} />
       <div>{children()}</div>
-      <Footer legalLinks={legalLinks} {...footerSettings} />
+      <Footer
+        legalLinks={legalLinks}
+        {...footerSettings}
+        social={settings.contact.social}
+      />
     </div>
   );
 };
@@ -56,14 +62,29 @@ TemplateWrapper.propTypes = {
 export default TemplateWrapper;
 
 export const templateDataQuery = graphql`
-  query TemplateData {
-    allMarkdownRemark(
+  query templateData {
+    legalLinks: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "legal" } } }
     ) {
       edges {
         node {
           frontmatter {
             title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+    navData: allMarkdownRemark(
+      filter: { frontmatter: { mainNav: { eq: true } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            subtitle
           }
           fields {
             slug

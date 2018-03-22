@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import styled from "styled-components";
+import ContactItem from "../components/ContactItem";
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -16,7 +17,8 @@ const Footer = ({
   legalLinks = [],
   fullCompanyName,
   companyNumber,
-  vatNumber
+  vatNumber,
+  social = []
 }) => {
   return (
     <StyledFooter>
@@ -29,7 +31,7 @@ const Footer = ({
         {companyNumber && <p>Company number: {companyNumber}</p>}
         {vatNumber && <p>VAT number: {vatNumber}</p>}
       </div>
-      {(legalLinks || legalLinks.length) && (
+      {legalLinks.length > 0 && (
         <div>
           {legalLinks.map(({ node: link }) => (
             <div key={link.fields.slug}>
@@ -37,6 +39,13 @@ const Footer = ({
             </div>
           ))}
         </div>
+      )}
+      {social.length > 0 && (
+        <dl>
+          {social.map(profile => (
+            <ContactItem key={profile.providerName} {...profile} iconOnly />
+          ))}
+        </dl>
       )}
     </StyledFooter>
   );

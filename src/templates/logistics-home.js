@@ -26,7 +26,7 @@ const LogisticsHomePage = ({ data }) => {
         subtitle={page.frontmatter.subtitle}
         text={page.html}
       />
-      {page.frontmatter.snippets.length && (
+      {page.frontmatter.snippets.length > 0 && (
         <LogisticsGrid>
           {page.frontmatter.snippets.map(snippet => (
             <div key={snippet.title}>

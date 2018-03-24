@@ -112,6 +112,16 @@ module.exports = {
         ]
       }
     },
-    "gatsby-plugin-offline"
+    "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-svgr",
+      options: {
+        dir: "/src/svg", // only process this directory
+        // svgr options
+        icon: true,
+        viewBox: false
+        // see https://github.com/smooth-code/svgr for a list of all options
+      }
+    }
   ]
 };

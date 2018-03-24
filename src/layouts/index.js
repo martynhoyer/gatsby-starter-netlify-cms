@@ -23,6 +23,10 @@ injectGlobal`
   body {
     margin: 0;
   }
+
+  svg {
+    fill: currentColor;
+  }
 `;
 
 const { siteTitle, seo, contact } = settings;

@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
 import { hideVisually } from "polished";
+import Facebook from "../svg/facebook.svg";
+import Twitter from "../svg/twitter.svg";
+import Instagram from "../svg/instagram.svg";
 
 const iconOnly = props =>
   props.iconOnly
@@ -35,16 +38,25 @@ const Content = ({
   profileDisplayName,
   providerName,
   iconOnly = false
-}) => (
-  <Fragment>
-    <DefinitionTitle iconOnly={iconOnly}>{providerDisplayName}</DefinitionTitle>
-    <DefinitionData>
-      <Link href={url}>
-        <Icon>{providerName}</Icon>
-        <DisplayName iconOnly={iconOnly}>{profileDisplayName}</DisplayName>
-      </Link>
-    </DefinitionData>
-  </Fragment>
-);
+}) => {
+  const icons = {
+    facebook: <Facebook />,
+    twitter: <Twitter />,
+    instagram: <Instagram />
+  };
+  return (
+    <Fragment>
+      <DefinitionTitle iconOnly={iconOnly}>
+        {providerDisplayName}
+      </DefinitionTitle>
+      <DefinitionData>
+        <Link href={url}>
+          {icons[providerName]}
+          <DisplayName iconOnly={iconOnly}>{profileDisplayName}</DisplayName>
+        </Link>
+      </DefinitionData>
+    </Fragment>
+  );
+};
 
 export default Content;

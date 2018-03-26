@@ -19,9 +19,7 @@ const Intro = styled.div`
   }
 `;
 
-const StyledImg = styled(Img)`
-  opacity: 0.15;
-`;
+const StyledImg = styled(Img)``;
 
 const NameAndJobTitle = styled.h2`
   margin: 0.5em 1rem 0;

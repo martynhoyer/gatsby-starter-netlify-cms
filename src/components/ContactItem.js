@@ -4,6 +4,8 @@ import { hideVisually } from "polished";
 import Facebook from "../svg/facebook.svg";
 import Twitter from "../svg/twitter.svg";
 import Instagram from "../svg/instagram.svg";
+import Envelope from "../svg/envelope.svg";
+import media from "../tokens/breakpoints";
 
 const iconOnly = props =>
   props.iconOnly
@@ -22,10 +24,46 @@ export const DefinitionData = styled.dd`
 
 export const Link = styled.a`
   display: block;
-`;
+  width: 32px;
+  height: 32px;
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+  border-bottom: none;
+  color: ${props => props.theme.palette.greyLightest};
 
-export const Icon = styled.span`
-  display: block;
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.palette.yellow};
+    outline-color: ${props => props.theme.palette.yellow};
+    color: ${props => props.theme.palette.white};
+  }
+
+  @media (${media.md}) {
+    width: 48px;
+    height: 48px;
+    margin: 1em auto 0;
+    padding: 5%;
+  }
+
+  @media (${media.lg}) {
+    width: 32px;
+    height: 32px;
+    padding: 10%;
+  }
+
+  @media (${media.xl}) {
+    width: 48px;
+    height: 48px;
+    padding: 15%;
+  }
+
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
 `;
 
 export const DisplayName = styled.span`
@@ -42,7 +80,8 @@ const Content = ({
   const icons = {
     facebook: <Facebook />,
     twitter: <Twitter />,
-    instagram: <Instagram />
+    instagram: <Instagram />,
+    email: <Envelope />
   };
   return (
     <Fragment>

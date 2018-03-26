@@ -1,21 +1,7 @@
 import React from "react";
 import graphql from "graphql";
 import PageHeader from "../components/PageHeader";
-import styled from "styled-components";
-
-const LogisticsGrid = styled.div`
-  display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-
-  margin-right: 1rem;
-  margin-left: 1rem;
-
-  @media (min-width: 720px) {
-    margin-right: 2em;
-    margin-left: 2rem;
-  }
-`;
+import { GridParent, GridItem } from "../components/Grid";
 
 const LogisticsHomePage = ({ data }) => {
   const { markdownRemark: page } = data;
@@ -27,9 +13,9 @@ const LogisticsHomePage = ({ data }) => {
         text={page.html}
       />
       {page.frontmatter.snippets.length > 0 && (
-        <LogisticsGrid>
+        <GridParent>
           {page.frontmatter.snippets.map(snippet => (
-            <div key={snippet.title}>
+            <GridItem key={snippet.title}>
               <h2>{snippet.title}</h2>
               {snippet.sections.map(section => (
                 <div key={section.id}>
@@ -39,9 +25,9 @@ const LogisticsHomePage = ({ data }) => {
                   ))}
                 </div>
               ))}
-            </div>
+            </GridItem>
           ))}
-        </LogisticsGrid>
+        </GridParent>
       )}
     </main>
   );

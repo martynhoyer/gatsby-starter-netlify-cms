@@ -2,13 +2,13 @@ import React from "react";
 import graphql from "graphql";
 import PageHeader from "../components/PageHeader";
 import Person from "../components/Person";
-import styled from "styled-components";
+import { GridParent, GridItem } from "../components/Grid";
 
-const PeopleGrid = styled.div`
-  display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-`;
+// const PeopleGrid = styled.div`
+//   display: grid;
+//   grid-gap: 16px;
+//   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+// `;
 
 function findNode(images, key) {
   let l = "";
@@ -32,12 +32,16 @@ const AboutPage = ({ data }) => {
         subtitle={page.frontmatter.subtitle}
       />
       {page.frontmatter.people.length > 0 && (
-        <PeopleGrid>
+        <GridParent>
           {page.frontmatter.people.map(person => {
             let img = findNode(images, person.image);
-            return <Person key={person.name} img={img} person={person} />;
+            return (
+              <GridItem key={person.name}>
+                <Person img={img} person={person} />
+              </GridItem>
+            );
           })}
-        </PeopleGrid>
+        </GridParent>
       )}
       <div>
         <h2>{page.frontmatter.whyus.title}</h2>

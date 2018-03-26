@@ -1,14 +1,28 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import { hideVisually } from "polished";
+import media from "../tokens/breakpoints";
 
 const Heading = styled.h1`
-  font-size: 1rem;
+  margin: 0;
+  font-size: 2.2em;
+  color: ${props => props.theme.palette.yellow};
+
+  @media (${media.lg}) {
+    /* display: flex; */
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const SubTitle = styled.small`
   display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.3em;
+  font-weight: normal;
   text-transform: uppercase;
+  opacity: 0.6;
 `;
 
 const Concatenator = styled.span`
@@ -18,7 +32,6 @@ const Concatenator = styled.span`
 const Title = styled.span`
   display: block;
   margin-top: 1em;
-  font-size: 2em;
 `;
 
 const SeoTitle = ({ title, subtitle = null }) => (

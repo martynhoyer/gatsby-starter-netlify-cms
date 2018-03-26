@@ -6,7 +6,9 @@ import graphql from "graphql";
 import settings from "../../_data/settings.json";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { injectGlobal } from "styled-components";
+import styled, { injectGlobal, ThemeProvider } from "styled-components";
+import media from "../tokens/breakpoints";
+import CC from "../tokens/colours";
 
 injectGlobal`
   *,
@@ -29,6 +31,48 @@ injectGlobal`
   }
 `;
 
+const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  min-height: 100vh;
+  font-family: "Philosopher", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.618;
+  background-color: var(--cc-white);
+  color: var(--cc-grey);
+
+  @media (${media.md}) {
+    flex-direction: row;
+    font-size: 18px;
+  }
+`;
+
+const StyledNavbar = styled(Navbar)`
+  background-color: var(--cc-white);
+
+  @media (${media.md}) {
+    flex-basis: 15%;
+
+    width: 15%;
+  }
+`;
+
+const MainWrapper = styled.div`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  @media (${media.md}) {
+    flex-basis: 85%;
+
+    width: 85%;
+  }
+`;
+
 const { siteTitle, seo, contact } = settings;
 const { siteDescription } = seo;
 const { fullCompanyName, companyNumber, vatNumber } = contact;
@@ -43,19 +87,23 @@ const TemplateWrapper = ({ children, data }) => {
   const { edges: navLinks } = data.navData;
 
   return (
-    <div>
-      <Helmet title={siteTitle}>
-        <html lang="en" />
-        <meta name="description" content={siteDescription} />
-      </Helmet>
-      <Navbar navLinks={navLinks} social={settings.contact.social} />
-      <div>{children()}</div>
-      <Footer
-        legalLinks={legalLinks}
-        {...footerSettings}
-        social={settings.contact.social}
-      />
-    </div>
+    <ThemeProvider theme={CC}>
+      <Layout>
+        <Helmet title={siteTitle}>
+          <html lang="en" />
+          <meta name="description" content={siteDescription} />
+        </Helmet>
+        <StyledNavbar navLinks={navLinks} social={settings.contact.social} />
+        <MainWrapper>
+          {children()}
+          <Footer
+            legalLinks={legalLinks}
+            {...footerSettings}
+            social={settings.contact.social}
+          />
+        </MainWrapper>
+      </Layout>
+    </ThemeProvider>
   );
 };
 

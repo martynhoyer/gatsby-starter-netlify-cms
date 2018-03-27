@@ -47,13 +47,18 @@ const Intro = styled.div`
   }
 `;
 
-const PageHeader = ({ title, subtitle, text = null }) => {
+const PageHeader = ({ title, subtitle, text = null, intro = null }) => {
   return (
     <StyledPageHeader>
       <SeoTitle title={title} subtitle={subtitle} />
       {text && (
         <Intro>
           <HTMLContent content={text} />
+        </Intro>
+      )}
+      {intro && (
+        <Intro>
+          <p>{intro}</p>
         </Intro>
       )}
     </StyledPageHeader>

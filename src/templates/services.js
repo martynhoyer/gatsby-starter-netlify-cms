@@ -1,30 +1,31 @@
 import React from "react";
 import graphql from "graphql";
 import Link from "gatsby-link";
-import Content, { HTMLContent } from "../components/Content";
-import SeoTitle from "../components/SeoTitle";
+import PageHeader from "../components/PageHeader";
+import styled from "styled-components";
+import { GridParent, GridItem } from "../components/Grid";
 
-export const ServicesPageTemplate = ({ content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+const StyledGridItem = styled(GridItem)`
+  flex-basis: 75%;
 
-  return (
-    <div>
-      <PageContent className="content" content={content} />
-    </div>
-  );
-};
+  padding-top: 1rem;
+`;
 
 const ServicesPage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <main>
-      <SeoTitle subtitle="services" title={page.frontmatter.title} />
-      <ServicesPageTemplate
-        contentComponent={HTMLContent}
+      <PageHeader
         title={page.frontmatter.title}
-        content={page.html}
+        subtitle={page.frontmatter.subtitle}
+        intro={page.frontmatter.intro}
       />
-      <Link to="/services">Back to our services</Link>
+      <GridParent>
+        <StyledGridItem>
+          <div dangerouslySetInnerHTML={{ __html: page.html }} />
+          <Link to="/services">Back to our services</Link>
+        </StyledGridItem>
+      </GridParent>
     </main>
   );
 };
@@ -36,6 +37,7 @@ export const servicesPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        intro
       }
       html
     }

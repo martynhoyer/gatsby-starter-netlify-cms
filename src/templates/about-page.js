@@ -3,12 +3,63 @@ import graphql from "graphql";
 import PageHeader from "../components/PageHeader";
 import Person from "../components/Person";
 import { GridParent, GridItem } from "../components/Grid";
+import styled from "styled-components";
+import media from "../tokens/breakpoints";
 
 // const PeopleGrid = styled.div`
 //   display: grid;
 //   grid-gap: 16px;
 //   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 // `;
+
+const WhyUs = styled.div`
+  padding-top: 4rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  background-color: ${props => props.theme.palette.greyLightest};
+
+  @media (${media.md}) {
+    padding-right: 12.5%;
+    padding-left: 4rem;
+  }
+
+  @media (${media.xl}) {
+    padding-right: 30%;
+  }
+
+  @media (${media.x2}) {
+    padding-right: 40%;
+  }
+`;
+
+const WhyUsTitle = styled.h2`
+  margin: 0;
+`;
+
+const Origin = styled.div`
+  padding-top: 4rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+
+  @media (${media.md}) {
+    padding-right: 12.5%;
+    padding-left: 4rem;
+  }
+
+  @media (${media.xl}) {
+    padding-right: 30%;
+  }
+
+  @media (${media.x2}) {
+    padding-right: 40%;
+  }
+
+  & > h2 {
+    margin: 0;
+  }
+`;
 
 function findNode(images, key) {
   let l = "";
@@ -43,15 +94,15 @@ const AboutPage = ({ data }) => {
           })}
         </GridParent>
       )}
-      <div>
-        <h2>{page.frontmatter.whyus.title}</h2>
+      <WhyUs>
+        <WhyUsTitle>{page.frontmatter.whyus.title}</WhyUsTitle>
         <ul>
           {page.frontmatter.whyus.reasons.map(reason => (
             <li key={reason.id}>{reason.text}</li>
           ))}
         </ul>
-      </div>
-      <div dangerouslySetInnerHTML={{ __html: page.html }} />
+      </WhyUs>
+      <Origin dangerouslySetInnerHTML={{ __html: page.html }} />
     </main>
   );
 };

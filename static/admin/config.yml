@@ -89,6 +89,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Intro paragraph", name: "intro", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "Legal"

@@ -117,20 +117,16 @@ const Title = styled.span`
 `;
 
 const ContactItemsList = styled.dl`
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-
-  position: absolute;
-  bottom: 1.5rem;
-  width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  display: none;
 
   @media (${media.md}) {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
     flex-direction: column;
 
     position: static;
+    margin: 0;
     padding-right: 0;
     padding-left: 0;
   }

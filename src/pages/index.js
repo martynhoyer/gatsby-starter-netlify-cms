@@ -31,10 +31,10 @@ export default class IndexPage extends React.Component {
           .filter(post => post.node.frontmatter.templateKey === "blog-post")
           .map(({ node: post }) => (
             <div key={post.id}>
-              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+              <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
               <small>{post.frontmatter.date}</small>
               {post.excerpt}
-              <Link to={post.frontmatter.path}>Keep Reading →</Link>
+              <Link to={post.fields.slug}>Keep Reading →</Link>
             </div>
           ))}
       </section>
@@ -52,6 +52,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+          }
+          fields {
+            slug
           }
         }
       }

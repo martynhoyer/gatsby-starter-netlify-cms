@@ -8,6 +8,7 @@ import { GridParent, GridItem } from "../components/Grid";
 const StyledGridItem = styled(GridItem)`
   flex-basis: 75%;
 
+  max-width: 60ch;
   padding-top: 1rem;
 `;
 

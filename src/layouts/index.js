@@ -3,33 +3,13 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import graphql from "graphql";
 
+import "./global.styles";
 import settings from "../../_data/settings.json";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import styled, { injectGlobal, ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import media from "../tokens/breakpoints";
 import CC from "../tokens/colours";
-
-injectGlobal`
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-
-  html {
-    box-sizing: border-box;
-    font-size: 18px;
-  }
-
-  body {
-    margin: 0;
-  }
-
-  svg {
-    fill: currentColor;
-  }
-`;
 
 const Layout = styled.div`
   display: flex;
@@ -42,8 +22,8 @@ const Layout = styled.div`
     "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.618;
-  background-color: var(--cc-white);
-  color: var(--cc-grey);
+  background-color: ${CC.palette.white};
+  color: ${CC.palette.grey};
 
   @media (${media.md}) {
     flex-direction: row;
@@ -52,7 +32,7 @@ const Layout = styled.div`
 `;
 
 const StyledNavbar = styled(Navbar)`
-  background-color: var(--cc-white);
+  background-color: ${CC.palette.white};
 
   @media (${media.md}) {
     flex-basis: 15%;

@@ -2,6 +2,23 @@ import React from "react";
 import graphql from "graphql";
 import PageHeader from "../components/PageHeader";
 import { GridParent, GridItem } from "../components/Grid";
+import styled from "styled-components";
+import { headingLevel3, headingLevel2 } from "../tokens/typography";
+import media from "../tokens/breakpoints";
+
+const Title = styled.h2`
+  ${headingLevel2};
+
+  @media (${media.xl}) {
+    margin: -2rem -2rem 0;
+    padding: 1rem 2rem;
+    background-color: ${props => props.theme.palette.yellow};
+  }
+`;
+
+const SubTitle = styled.h2`
+  ${headingLevel3};
+`;
 
 const LogisticsHomePage = ({ data }) => {
   const { markdownRemark: page } = data;
@@ -15,11 +32,11 @@ const LogisticsHomePage = ({ data }) => {
       {page.frontmatter.snippets.length > 0 && (
         <GridParent>
           {page.frontmatter.snippets.map(snippet => (
-            <GridItem key={snippet.title}>
-              <h2>{snippet.title}</h2>
+            <GridItem stripy key={snippet.title}>
+              <Title>{snippet.title}</Title>
               {snippet.sections.map(section => (
                 <div key={section.id}>
-                  <h3>{section.heading}</h3>
+                  <SubTitle>{section.heading}</SubTitle>
                   {section.paragraphs.map(para => (
                     <p key={para.id}>{para.text}</p>
                   ))}

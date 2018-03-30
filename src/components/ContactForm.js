@@ -25,34 +25,9 @@ const StyledContactForm = styled.form`
   max-width: 60ch;
 `;
 
-// .form-group {
-//   margin-top: 1rem;
-// }
-
-// .form-group__control {
-//   margin-top: 0.25rem;
-// }
-
-// .form-group__input--textarea,
-// .form-group__input {
-//   display: block;
-//   width: 100%;
-// padding: 0.5rem;
-// border: 1px solid var(--cc-grey-lighter);
-// background-color: var(--cc-white);
-
-// &:focus {
-//   border-color: var(--cc-purple);
-//   outline: none;
-// }
-
 //   @nest .has-error > & {
 //     border-color: color(red shade(10));
 //   }
-// }
-
-// .form-group__input--textarea {
-//   height: 6em;
 // }
 
 // .email-invalid {
@@ -93,7 +68,7 @@ const FormInput = styled.input`
 `;
 
 const FormTextarea = FormInput.withComponent("textarea").extend`
-  height: 7em;
+  height: 6em;
 `;
 
 const spin = keyframes`

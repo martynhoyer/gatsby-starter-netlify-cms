@@ -5,12 +5,13 @@ import Person from "../components/Person";
 import { GridParent, GridItem } from "../components/Grid";
 import styled from "styled-components";
 import media from "../tokens/breakpoints";
+import { headingLevel3 } from "../tokens/typography";
 
-// const PeopleGrid = styled.div`
-//   display: grid;
-//   grid-gap: 16px;
-//   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-// `;
+const PeopleGridParent = styled(GridParent)``;
+
+const PeopleGridItem = styled(GridItem)`
+  padding-top: 0;
+`;
 
 const WhyUs = styled.div`
   padding-top: 4rem;
@@ -34,7 +35,11 @@ const WhyUs = styled.div`
 `;
 
 const WhyUsTitle = styled.h2`
-  margin: 0;
+  ${headingLevel3};
+
+  &:first-child {
+    margin-top: 0;
+  }
 `;
 
 const Origin = styled.div`
@@ -57,7 +62,11 @@ const Origin = styled.div`
   }
 
   & > h2 {
-    margin: 0;
+    ${headingLevel3};
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 `;
 
@@ -83,16 +92,16 @@ const AboutPage = ({ data }) => {
         subtitle={page.frontmatter.subtitle}
       />
       {page.frontmatter.people.length > 0 && (
-        <GridParent>
+        <PeopleGridParent>
           {page.frontmatter.people.map(person => {
             let img = findNode(images, person.image);
             return (
-              <GridItem key={person.name}>
+              <PeopleGridItem key={person.name}>
                 <Person img={img} person={person} />
-              </GridItem>
+              </PeopleGridItem>
             );
           })}
-        </GridParent>
+        </PeopleGridParent>
       )}
       <WhyUs>
         <WhyUsTitle>{page.frontmatter.whyus.title}</WhyUsTitle>

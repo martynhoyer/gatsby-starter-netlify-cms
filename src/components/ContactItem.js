@@ -12,58 +12,77 @@ const iconOnly = props =>
     ? css`
         ${hideVisually};
       `
-    : null;
+    : css`
+        margin-top: 1.5em;
+      `;
 
 export const DefinitionTitle = styled.dt`
   ${iconOnly};
+
+  font-size: 0.65em;
+  text-transform: uppercase;
 `;
 
 export const DefinitionData = styled.dd`
   margin: 0;
 `;
 
+const iconOnlyLink = ({ iconOnly }) =>
+  iconOnly
+    ? css`
+        display: block;
+        width: 48px;
+        height: 48px;
+        margin-top: 1em;
+        margin-right: 1em;
+        margin-left: 1em;
+        padding: 5%;
+        border-bottom: none;
+        color: ${props => props.theme.palette.greyLightest};
+
+        &:hover,
+        &:focus {
+          background-color: ${props => props.theme.palette.yellow};
+          outline-color: ${props => props.theme.palette.yellow};
+          color: ${props => props.theme.palette.purple};
+        }
+
+        @media (${media.md}) {
+          width: 48px;
+          height: 48px;
+          margin: 1em auto 0;
+        }
+
+        @media (${media.lg}) {
+          width: 32px;
+          height: 32px;
+          padding: 10%;
+        }
+
+        @media (${media.xl}) {
+          width: 48px;
+          height: 48px;
+          padding: 15%;
+        }
+
+        & > svg {
+          display: block;
+          width: 100%;
+          height: 100%;
+          fill: currentColor;
+        }
+      `
+    : css`
+        & > svg {
+          position: absolute;
+          left: 0;
+          width: 1.6em;
+          height: 1.6em;
+        }
+      `;
+
 export const Link = styled.a`
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin-top: 1em;
-  margin-right: 1em;
-  margin-left: 1em;
-  border-bottom: none;
-  color: ${props => props.theme.palette.greyLightest};
-
-  &:hover,
-  &:focus {
-    background-color: ${props => props.theme.palette.yellow};
-    outline-color: ${props => props.theme.palette.yellow};
-    color: ${props => props.theme.palette.white};
-  }
-
-  @media (${media.md}) {
-    width: 48px;
-    height: 48px;
-    margin: 1em auto 0;
-    padding: 5%;
-  }
-
-  @media (${media.lg}) {
-    width: 32px;
-    height: 32px;
-    padding: 10%;
-  }
-
-  @media (${media.xl}) {
-    width: 48px;
-    height: 48px;
-    padding: 15%;
-  }
-
-  & > svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-    fill: currentColor;
-  }
+  ${iconOnlyLink};
 `;
 
 export const DisplayName = styled.span`
@@ -89,7 +108,7 @@ const Content = ({
         {providerDisplayName}
       </DefinitionTitle>
       <DefinitionData>
-        <Link href={url}>
+        <Link href={url} iconOnly={iconOnly}>
           {icons[providerName]}
           <DisplayName iconOnly={iconOnly}>{profileDisplayName}</DisplayName>
         </Link>

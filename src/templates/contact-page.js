@@ -7,8 +7,26 @@ import AddressBlock from "../components/AddressBlock";
 import settings from "../../_data/settings.json";
 import styled from "styled-components";
 import { GridParent, GridItem } from "../components/Grid";
+import { headingLevel3 } from "../tokens/typography";
 
-const ContactItemsList = styled.dl``;
+const ContactItemsList = styled.dl`
+  position: relative;
+  padding-left: 2em;
+  font-size: 1.35em;
+`;
+
+const Title = styled.h2`
+  ${headingLevel3};
+
+  &:first-child {
+    margin-top: 0;
+  }
+`;
+
+const StyledAddressBlock = styled(AddressBlock)`
+  margin-top: 1em;
+  font-style: normal;
+`;
 
 const ContactPage = ({ data }) => {
   const { markdownRemark: page } = data;
@@ -19,8 +37,8 @@ const ContactPage = ({ data }) => {
         title={page.frontmatter.title}
       />
       <GridParent>
-        <GridItem>
-          <h2>Talk to us</h2>
+        <GridItem stripy>
+          <Title>Talk to us</Title>
           <ContactItemsList>
             <ContactItem
               providerName={`email`}
@@ -33,13 +51,13 @@ const ContactPage = ({ data }) => {
             ))}
           </ContactItemsList>
         </GridItem>
-        <GridItem>
-          <h2>Leave a message</h2>
+        <GridItem stripy>
+          <Title>Leave a message</Title>
           <ContactForm />
         </GridItem>
-        <GridItem>
-          <h2>Registered office address</h2>
-          <AddressBlock {...settings.contact.address} />
+        <GridItem stripy>
+          <Title>Registered office address</Title>
+          <StyledAddressBlock {...settings.contact.address} />
           <p>Company number: {settings.contact.companyNumber}</p>
           <p>VAT number: {settings.contact.vatNumber}</p>
         </GridItem>

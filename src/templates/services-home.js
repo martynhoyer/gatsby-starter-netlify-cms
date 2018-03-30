@@ -3,6 +3,8 @@ import graphql from "graphql";
 import Link from "gatsby-link";
 import PageHeader from "../components/PageHeader";
 import { GridParent, GridItem } from "../components/Grid";
+import styled from "styled-components";
+import { headingLevel3 } from "../tokens/typography";
 
 // const ServicesGrid = styled.div`
 //   display: grid;
@@ -19,6 +21,14 @@ import { GridParent, GridItem } from "../components/Grid";
 //   }
 // `;
 
+const Title = styled.h2`
+  ${headingLevel3};
+
+  &:first-child {
+    margin-top: 0;
+  }
+`;
+
 const ServicesHomePage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
@@ -31,8 +41,8 @@ const ServicesHomePage = ({ data }) => {
       {page.frontmatter.snippets.length > 0 && (
         <GridParent>
           {page.frontmatter.snippets.map(snippet => (
-            <GridItem key={snippet.title}>
-              <h2>{snippet.title}</h2>
+            <GridItem stripy key={snippet.title}>
+              <Title>{snippet.title}</Title>
               {snippet.bullets.map(bullet => (
                 <p key={bullet.id}>{bullet.text}</p>
               ))}

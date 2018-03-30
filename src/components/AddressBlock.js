@@ -6,9 +6,10 @@ const AddressBlock = ({
   town = null,
   county = null,
   country = null,
-  postcode = null
+  postcode = null,
+  className
 }) => (
-  <address>
+  <address className={className}>
     {line1 && <Fragment>{line1}</Fragment>}
     {line2 && (
       <Fragment>

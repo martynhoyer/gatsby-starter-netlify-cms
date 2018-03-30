@@ -24,7 +24,7 @@ const ServicesPage = ({ data }) => {
       <GridParent>
         <StyledGridItem>
           <div dangerouslySetInnerHTML={{ __html: page.html }} />
-          <Link to="/services">Back to our services</Link>
+          <Link to="/services">&larr; Back to our services</Link>
         </StyledGridItem>
       </GridParent>
     </main>

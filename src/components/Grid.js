@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import media from "../tokens/breakpoints";
 
 export const GridParent = styled.div`
@@ -19,7 +19,17 @@ export const GridParent = styled.div`
   }
 `;
 
+const stripes = ({ stripy }) =>
+  stripy &&
+  css`
+    &:nth-child(2n) {
+      background-color: ${props => props.theme.palette.greyLightest};
+    }
+  `;
+
 export const GridItem = styled.div`
+  ${stripes};
+
   margin: 0 -1rem;
   padding: 1.5rem 1rem;
 
@@ -33,7 +43,7 @@ export const GridItem = styled.div`
   @media (${media.xl}) {
     flex-basis: calc(50% - 4rem);
     margin: 0 auto 4rem;
-    padding: 0 2rem 2rem;
+    padding: 2rem;
     box-shadow: 0 0 1.5em 0 ${props => props.theme.shadows.default};
     background-color: ${props => props.theme.palette.greyLightest};
     color: ${props => props.theme.palette.greDdark};

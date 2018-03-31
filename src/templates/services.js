@@ -12,6 +12,11 @@ const StyledGridItem = styled(GridItem)`
   padding-top: 1rem;
 `;
 
+const StyledLink = styled(Link)`
+  display: inline-block;
+  margin-top: 1em;
+`;
+
 const ServicesPage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
@@ -24,7 +29,7 @@ const ServicesPage = ({ data }) => {
       <GridParent>
         <StyledGridItem>
           <div dangerouslySetInnerHTML={{ __html: page.html }} />
-          <Link to="/services">&larr; Back to our services</Link>
+          <StyledLink to="/services">&larr; Back to our services</StyledLink>
         </StyledGridItem>
       </GridParent>
     </main>

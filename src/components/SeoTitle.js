@@ -23,7 +23,6 @@ const SubTitle = styled.small`
   font-size: 0.3em;
   font-weight: normal;
   text-transform: uppercase;
-  opacity: 0.6;
 `;
 
 const Concatenator = styled.span`

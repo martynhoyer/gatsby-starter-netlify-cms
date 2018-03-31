@@ -2,6 +2,7 @@
 templateKey: services-home
 path: /services
 mainNav: true
+order: 2
 title: What we can do for you
 subtitle: Services
 snippets: 

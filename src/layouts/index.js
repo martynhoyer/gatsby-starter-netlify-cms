@@ -119,6 +119,7 @@ export const templateDataQuery = graphql`
     }
     navData: allMarkdownRemark(
       filter: { frontmatter: { mainNav: { eq: true } } }
+      sort: { fields: [frontmatter___order], order: ASC }
     ) {
       edges {
         node {

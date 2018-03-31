@@ -53,6 +53,7 @@ const StyledLink = styled(Link)`
   }
 
   @media (${media.md}) {
+    border-top: 1px solid ${props => props.theme.palette.greyLight};
     color: ${props => props.theme.palette.white};
   }
 `;
@@ -94,7 +95,6 @@ const LinkWrapper = styled.span`
 
   @media (${media.md}) {
     padding: 1rem 0.5rem 1rem 0.25rem;
-    border-top: 1px solid ${props => props.theme.palette.greyLight};
     text-align: left;
     color: ${props => props.theme.palette.white};
   }

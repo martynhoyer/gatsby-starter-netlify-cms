@@ -114,6 +114,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Appears on main navigation?", name: "mainNav", widget: "boolean"}
+          - {label: "Order on main navigation", name: "order", widget: "number"}
           - {
               label: "People", 
               name: "people", 
@@ -186,6 +187,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Appears on main navigation?", name: "mainNav", widget: "boolean"}
+          - {label: "Order on main navigation", name: "order", widget: "number"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {
               label: "Snippets", 
@@ -234,6 +236,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Appears on main navigation?", name: "mainNav", widget: "boolean"}
+          - {label: "Order on main navigation", name: "order", widget: "number"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {
               label: "Snippets", 
@@ -289,4 +292,5 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Appears on main navigation?", name: "mainNav", widget: "boolean"}
+          - {label: "Order on main navigation", name: "order", widget: "number"}
           - {label: "Body", name: "body", widget: "markdown"}

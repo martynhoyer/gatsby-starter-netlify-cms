@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import { hideVisually } from "polished";
 import media from "../tokens/breakpoints";
+import { headingLevel1 } from "../tokens/typography";
 
 const Heading = styled.h1`
   margin: 0;
@@ -30,7 +31,7 @@ const Concatenator = styled.span`
 `;
 
 const Title = styled.span`
-  display: block;
+  ${headingLevel1} display: block;
   margin-top: 1em;
 `;
 

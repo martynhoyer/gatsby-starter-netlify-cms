@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import ContactItem from "../components/ContactItem";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import media from "../tokens/breakpoints";
 import { hideVisually } from "polished";
 import { ReactComponent as Logo } from "../svg/logo.svg";
@@ -42,10 +42,7 @@ const StyledLink = styled(Link)`
   flex-basis: 25%;
 
   display: block;
-  padding: 1em 0;
   border-bottom: none;
-  line-height: 1.2;
-  text-align: center;
   color: ${props => props.theme.palette.grey};
 
   &:hover,
@@ -56,37 +53,59 @@ const StyledLink = styled(Link)`
   }
 
   @media (${media.md}) {
-    padding: 1rem 0.5rem;
+    color: ${props => props.theme.palette.white};
+  }
+`;
+
+const isLinkActive = ({ isCurrentPage }) =>
+  isCurrentPage
+    ? css`
+        border-bottom: 0.25rem solid ${props => props.theme.palette.yellow};
+
+        @media (${media.md}) {
+          border-bottom: 0;
+          border-left: 0.25rem solid ${props => props.theme.palette.yellow};
+        }
+
+        @media (${media.lg}) {
+          border-left: 0.5rem solid ${props => props.theme.palette.yellow};
+        }
+      `
+    : css`
+        border-bottom: 0.25rem solid transparent;
+
+        @media (${media.md}) {
+          border-bottom: 0;
+          border-left: 0.25rem solid transparent;
+        }
+
+        @media (${media.lg}) {
+          border-left: 0.5rem solid transparent;
+        }
+      `;
+
+const LinkWrapper = styled.span`
+  ${isLinkActive};
+
+  display: block;
+  padding: 1em 0;
+  line-height: 1.2;
+  text-align: center;
+
+  @media (${media.md}) {
+    padding: 1rem 0.5rem 1rem 0.25rem;
     border-top: 1px solid ${props => props.theme.palette.greyLight};
     text-align: left;
     color: ${props => props.theme.palette.white};
   }
 
   @media (${media.lg}) {
-    padding: 1rem;
-  }
-
-  @media (${media.xl}) {
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 0.5rem;
   }
 `;
 
 const StyledLinkHome = StyledLink.extend`
   flex-basis: 100%;
-
-  padding: 0.5em 20%;
-
-  @media (${media.md}) {
-    padding: 1rem 0.5rem;
-  }
-
-  @media (${media.lg}) {
-    padding: 1rem;
-  }
-
-  @media (${media.xl}) {
-    padding: 1rem;
-  }
 `;
 
 const StyledLogo = styled(Logo)`
@@ -155,32 +174,49 @@ const ContactItemsList = styled.dl`
   }
 `;
 
-const Navbar = ({ navLinks = [], social = [], className }) => (
-  <nav className={className}>
-    <Container>
-      <SiteNav>
-        <StyledLinkHome to="/">
-          <StyledLogo />
-          <HomeText>Home</HomeText>
-        </StyledLinkHome>
-        {(navLinks || navLinks.length) &&
-          navLinks.map(({ node: link }) => (
-            <StyledLink key={link.fields.slug} to={link.fields.slug}>
-              <SubTitle>{link.frontmatter.subtitle}</SubTitle>{" "}
-              <Concatenator>or</Concatenator>{" "}
-              <Title>{link.frontmatter.title}</Title>
-            </StyledLink>
-          ))}
-      </SiteNav>
-      {social.length > 0 && (
-        <ContactItemsList>
-          {social.map(profile => (
-            <ContactItem key={profile.providerName} {...profile} iconOnly />
-          ))}
-        </ContactItemsList>
-      )}
-    </Container>
-  </nav>
-);
+const Navbar = ({ navLinks = [], social = [], topLevelPath, className }) => {
+  const formattedTopLevelPath = `/${topLevelPath}/`;
+
+  const isActive = (currentPage, menuItemSlug) =>
+    currentPage === menuItemSlug ? true : false;
+  return (
+    <nav className={className}>
+      <Container>
+        <SiteNav>
+          <StyledLinkHome to="/">
+            <LinkWrapper>
+              <StyledLogo />
+              <HomeText>Home</HomeText>
+            </LinkWrapper>
+          </StyledLinkHome>
+          {(navLinks || navLinks.length) &&
+            navLinks.map(({ node: link }) => {
+              return (
+                <StyledLink key={link.fields.slug} to={link.fields.slug}>
+                  <LinkWrapper
+                    isCurrentPage={isActive(
+                      formattedTopLevelPath,
+                      link.fields.slug
+                    )}
+                  >
+                    <SubTitle>{link.frontmatter.subtitle}</SubTitle>{" "}
+                    <Concatenator>or</Concatenator>{" "}
+                    <Title>{link.frontmatter.title}</Title>
+                  </LinkWrapper>
+                </StyledLink>
+              );
+            })}
+        </SiteNav>
+        {social.length > 0 && (
+          <ContactItemsList>
+            {social.map(profile => (
+              <ContactItem key={profile.providerName} {...profile} iconOnly />
+            ))}
+          </ContactItemsList>
+        )}
+      </Container>
+    </nav>
+  );
+};
 
 export default Navbar;

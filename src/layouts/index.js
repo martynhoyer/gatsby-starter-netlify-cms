@@ -62,9 +62,13 @@ const footerSettings = {
   vatNumber
 };
 
-const TemplateWrapper = ({ children, data }) => {
+const TemplateWrapper = ({ children, data, location }) => {
   const { edges: legalLinks } = data.legalLinks;
   const { edges: navLinks } = data.navData;
+
+  const { pathname } = location;
+
+  const topLevelPath = pathname.split("/")[1];
 
   return (
     <ThemeProvider theme={CC}>
@@ -73,7 +77,11 @@ const TemplateWrapper = ({ children, data }) => {
           <html lang="en" />
           <meta name="description" content={siteDescription} />
         </Helmet>
-        <StyledNavbar navLinks={navLinks} social={settings.contact.social} />
+        <StyledNavbar
+          navLinks={navLinks}
+          social={settings.contact.social}
+          topLevelPath={topLevelPath}
+        />
         <MainWrapper>
           {children()}
           <Footer

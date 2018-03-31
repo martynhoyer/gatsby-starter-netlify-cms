@@ -4,6 +4,7 @@ import ContactItem from "../components/ContactItem";
 import styled from "styled-components";
 import media from "../tokens/breakpoints";
 import { hideVisually } from "polished";
+import { ReactComponent as Logo } from "../svg/logo.svg";
 
 const Container = styled.div`
   @media (${media.md}) {
@@ -88,6 +89,23 @@ const StyledLinkHome = StyledLink.extend`
   }
 `;
 
+const StyledLogo = styled(Logo)`
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  max-height: 80px;
+  margin: 0 auto;
+
+  & .concierge__i__flame {
+    fill: ${props => props.theme.palette.yellow};
+  }
+`;
+
+const HomeText = styled.span`
+  ${hideVisually};
+`;
+
 const SubTitle = styled.span`
   @media (${media.xl}) {
     font-family: Arial, Helvetica, sans-serif;
@@ -141,7 +159,10 @@ const Navbar = ({ navLinks = [], social = [], className }) => (
   <nav className={className}>
     <Container>
       <SiteNav>
-        <StyledLinkHome to="/">Home</StyledLinkHome>
+        <StyledLinkHome to="/">
+          <StyledLogo />
+          <HomeText>Home</HomeText>
+        </StyledLinkHome>
         {(navLinks || navLinks.length) &&
           navLinks.map(({ node: link }) => (
             <StyledLink key={link.fields.slug} to={link.fields.slug}>

@@ -118,7 +118,7 @@ module.exports = {
       options: {
         dir: "/src/svg", // only process this directory
         // svgr options
-        icon: true,
+        icon: false,
         viewBox: true
         // see https://github.com/smooth-code/svgr for a list of all options
       }

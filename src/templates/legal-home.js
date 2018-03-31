@@ -2,6 +2,22 @@ import React from "react";
 import graphql from "graphql";
 import Link from "gatsby-link";
 import PageHeader from "../components/PageHeader";
+import styled from "styled-components";
+import { GridParent, GridItem } from "../components/Grid";
+import { headingLevel3 } from "../tokens/typography";
+
+const StyledGridItem = styled(GridItem)`
+  flex-basis: 75%;
+
+  max-width: 60ch;
+  padding-top: 1rem;
+`;
+
+const Content = styled.div`
+  & > h2 {
+    ${headingLevel3};
+  }
+`;
 
 const LegalHomePage = ({ data }) => {
   const { markdownRemark: page } = data;
@@ -10,14 +26,20 @@ const LegalHomePage = ({ data }) => {
   return (
     <main>
       <PageHeader title={page.frontmatter.title} />
-      {page.html && <div dangerouslySetInnerHTML={{ __html: page.html }} />}
-      <ul>
-        {childPages.map(({ node: page }) => (
-          <li key={page.fields.slug}>
-            <Link to={page.fields.slug}>{page.frontmatter.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <GridParent>
+        <StyledGridItem>
+          {page.html && (
+            <Content dangerouslySetInnerHTML={{ __html: page.html }} />
+          )}
+          <ul>
+            {childPages.map(({ node: page }) => (
+              <li key={page.fields.slug}>
+                <Link to={page.fields.slug}>{page.frontmatter.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </StyledGridItem>
+      </GridParent>
     </main>
   );
 };

@@ -1,13 +1,33 @@
 import React from "react";
 import graphql from "graphql";
 import PageHeader from "../components/PageHeader";
+import styled from "styled-components";
+import { GridParent, GridItem } from "../components/Grid";
+import { headingLevel3 } from "../tokens/typography";
+
+const StyledGridItem = styled(GridItem)`
+  flex-basis: 75%;
+
+  max-width: 60ch;
+  padding-top: 1rem;
+`;
+
+const Content = styled.div`
+  & > h2 {
+    ${headingLevel3};
+  }
+`;
 
 const LegalPage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
     <main>
       <PageHeader title={page.frontmatter.title} />
-      <div dangerouslySetInnerHTML={{ __html: page.html }} />
+      <GridParent>
+        <StyledGridItem>
+          <Content dangerouslySetInnerHTML={{ __html: page.html }} />
+        </StyledGridItem>
+      </GridParent>
     </main>
   );
 };

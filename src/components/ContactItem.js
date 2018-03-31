@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
 import { hideVisually } from "polished";
-import Facebook from "../svg/facebook.svg";
-import Twitter from "../svg/twitter.svg";
-import Instagram from "../svg/instagram.svg";
-import Envelope from "../svg/envelope.svg";
+import { ReactComponent as Facebook } from "../svg/facebook.svg";
+import { ReactComponent as Twitter } from "../svg/twitter.svg";
+import { ReactComponent as Instagram } from "../svg/instagram.svg";
+import { ReactComponent as Envelope } from "../svg/envelope.svg";
 import media from "../tokens/breakpoints";
 
 const iconOnly = props =>

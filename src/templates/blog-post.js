@@ -16,7 +16,6 @@ export const BlogPostTemplate = ({
     <section className="section">
       {helmet || ""}
       <h1>{title}</h1>
-      <p>{description}</p>
       <PostContent content={content} />
     </section>
   );
@@ -29,7 +28,6 @@ const BlogPost = ({ data }) => {
     <BlogPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      description={post.frontmatter.description}
       helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
       title={post.frontmatter.title}
     />
@@ -44,7 +42,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        description
       }
     }
   }

@@ -16,7 +16,7 @@ CC.palette.greyDarkest = shade(0.6, CC.palette.grey);
 
 CC.palette.greyLight = tint(0.7, CC.palette.grey);
 CC.palette.greyLighter = tint(0.4, CC.palette.grey);
-CC.palette.greyLightest = tint(0.1, CC.palette.grey);
+CC.palette.greyLightest = tint(0.09, CC.palette.grey);
 
 CC.shadows.default = transparentize(0.75, CC.palette.greyDarkest);
 

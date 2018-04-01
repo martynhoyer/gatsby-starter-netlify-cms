@@ -69,6 +69,7 @@ const Contact = ({
         handleBlur={handleBlur}
         handleChange={handleChange}
       />
+      <p>Hello</p>
       <Submit isValid={isValid} isSubmitting={isSubmitting} />
     </form>
   </div>

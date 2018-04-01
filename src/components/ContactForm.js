@@ -132,6 +132,7 @@ const Button = styled.button`
 `;
 
 const Success = styled.div`
+  margin-top: 1em;
   padding: 1em;
   border: 2px solid green;
   background-color: #fff;
@@ -171,7 +172,7 @@ export default class ContactForm extends React.Component {
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => this.setState({ submitted: true, loading: false }))
-      .catch(error => this.setState({ error: true, loading: false }));
+      .catch(() => this.setState({ error: true, loading: false }));
 
     e.preventDefault();
   };
@@ -198,6 +199,7 @@ export default class ContactForm extends React.Component {
               id="contactform-name"
               type="text"
               name="name"
+              required
               onChange={this.handleChange}
             />
           </FormControl>
@@ -208,6 +210,7 @@ export default class ContactForm extends React.Component {
             id="contactform-email"
             type="email"
             name="email"
+            required
             onChange={this.handleChange}
           />
         </FormGroup>
@@ -216,6 +219,7 @@ export default class ContactForm extends React.Component {
           <FormTextarea
             id="contactform-message"
             name="message"
+            required
             onChange={this.handleChange}
           />
         </FormGroup>
@@ -224,7 +228,7 @@ export default class ContactForm extends React.Component {
         </Button>
       </StyledContactForm>
     ) : (
-      <Success>Thanks!</Success>
+      <Success>Thanks for your enquiry, we&apos;ll be in touch!</Success>
     );
   }
 }

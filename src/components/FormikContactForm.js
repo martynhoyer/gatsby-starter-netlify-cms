@@ -5,6 +5,7 @@ import Yup from "yup";
 import FormInput from "./FormInput";
 import FormText from "./FormText";
 import Submit from "./Submit";
+import SuccessMessage from "./SuccessMessage";
 
 const encodePayloadToBody = data =>
   Object.keys(data)
@@ -28,47 +29,50 @@ const Contact = ({
   isSubmitting,
   handleChange,
   handleBlur,
-  handleSubmit
+  handleSubmit,
+  status
 }) => {
-  return (
-    <div>
-      <form
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        method="post"
-        name="contact"
-        onSubmit={handleSubmit}
-      >
-        <FormInput
-          label="Name"
-          name="name"
-          value={values.name}
-          error={errors.name}
-          touched={touched.name}
-          handleBlur={handleBlur}
-          handleChange={handleChange}
-        />
-        <FormInput
-          label="Email"
-          name="email"
-          value={values.email}
-          error={errors.email}
-          touched={touched.email}
-          handleBlur={handleBlur}
-          handleChange={handleChange}
-        />
-        <FormText
-          label="Message"
-          name="message"
-          value={values.message}
-          error={errors.message}
-          touched={touched.message}
-          handleBlur={handleBlur}
-          handleChange={handleChange}
-        />
-        <Submit isValid={isValid} isSubmitting={isSubmitting} />
-      </form>
-    </div>
+  return !status || !status.success ? (
+    <form
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      method="post"
+      name="contact"
+      onSubmit={handleSubmit}
+    >
+      <FormInput
+        label="Name"
+        name="name"
+        value={values.name}
+        error={errors.name}
+        touched={touched.name}
+        handleBlur={handleBlur}
+        handleChange={handleChange}
+      />
+      <FormInput
+        label="Email"
+        name="email"
+        value={values.email}
+        error={errors.email}
+        touched={touched.email}
+        handleBlur={handleBlur}
+        handleChange={handleChange}
+      />
+      <FormText
+        label="Message"
+        name="message"
+        value={values.message}
+        error={errors.message}
+        touched={touched.message}
+        handleBlur={handleBlur}
+        handleChange={handleChange}
+      />
+      <Submit isValid={isValid} isSubmitting={isSubmitting} />
+    </form>
+  ) : (
+    <SuccessMessage>
+      Thanks for your enquiry, we&apos;ll be in touch!
+    </SuccessMessage>
   );
 };
 
@@ -85,9 +89,9 @@ export default withFormik({
       .required("Email is required"),
     message: Yup.string().required("Message is required")
   }),
-  handleSubmit: async (values, { setSubmitting, resetForm }) => {
+  handleSubmit: async (values, { setSubmitting, setStatus }) => {
     await postContactMessage(values);
     setSubmitting(false);
-    resetForm();
+    setStatus({ success: true });
   }
 })(Contact);

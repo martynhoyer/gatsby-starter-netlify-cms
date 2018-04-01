@@ -1,22 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const Input = styled.input`
-  background-color: var(--nord1);
-  border-radius: 4px;
-  color: var(--nord6);
-  font-size: 1.1rem;
-  padding: 0.65rem;
+  display: block;
   width: 100%;
+  padding: 0.5rem;
+  border: 1px solid ${props => props.theme.palette.greyLighter};
+  font-size: inherit;
+  background-color: ${props => props.theme.palette.white};
+
   &:focus {
-    box-shadow: inset 0 1px 2px var(--nord1), 0 0 0 4px var(--nord2);
+    border-color: ${props => props.theme.palette.purple};
     outline: none;
   }
-  &::placeholder {
-    color: var(--nord3);
-    font-size: 1rem;
-  }
-`
+`;
 
 const TextInput = ({ name, placeholder, value, handleBlur, handleChange }) => (
   <Input
@@ -28,6 +25,6 @@ const TextInput = ({ name, placeholder, value, handleBlur, handleChange }) => (
     onBlur={handleBlur}
     onChange={handleChange}
   />
-)
+);
 
-export default TextInput
+export default TextInput;

@@ -1,9 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Error = styled.div`
-  position: absolute;
-  right: 0.65rem;
-  top: 42px;
-`
+  color: #cc0000;
+`;
 
-export default Error
+export default Error;

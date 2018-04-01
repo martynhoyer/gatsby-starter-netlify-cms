@@ -1,8 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-const Label = styled.p`
-  font-size: 1.1rem;
-  margin: 1.5rem 0 0.5rem;
-`
+const Label = styled.span`
+  display: block;
+`;
 
-export default Label
+export default Label;

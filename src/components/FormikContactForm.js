@@ -18,7 +18,6 @@ const postContactMessage = async payload => {
     body: encodePayloadToBody({ "form-name": "contact", ...payload })
   };
   await fetch("/", option).catch(() => alert("Unexpected error has occurred"));
-  alert("Thank you for your contact");
 };
 
 const Contact = ({
@@ -30,50 +29,48 @@ const Contact = ({
   handleChange,
   handleBlur,
   handleSubmit
-}) => (
-  <div>
-    <form
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      method="post"
-      name="contact"
-      onSubmit={handleSubmit}
-    >
-      <FormInput
-        label="Name"
-        name="name"
-        placeholder="John Doe"
-        value={values.name}
-        error={errors.name}
-        touched={touched.name}
-        handleBlur={handleBlur}
-        handleChange={handleChange}
-      />
-      <FormInput
-        label="Email"
-        name="email"
-        placeholder="john@example.com"
-        value={values.email}
-        error={errors.email}
-        touched={touched.email}
-        handleBlur={handleBlur}
-        handleChange={handleChange}
-      />
-      <FormText
-        label="Message"
-        name="message"
-        placeholder="What you want to message"
-        value={values.message}
-        error={errors.message}
-        touched={touched.message}
-        handleBlur={handleBlur}
-        handleChange={handleChange}
-      />
-      <p>Hello</p>
-      <Submit isValid={isValid} isSubmitting={isSubmitting} />
-    </form>
-  </div>
-);
+}) => {
+  return (
+    <div>
+      <form
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        method="post"
+        name="contact"
+        onSubmit={handleSubmit}
+      >
+        <FormInput
+          label="Name"
+          name="name"
+          value={values.name}
+          error={errors.name}
+          touched={touched.name}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
+        <FormInput
+          label="Email"
+          name="email"
+          value={values.email}
+          error={errors.email}
+          touched={touched.email}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
+        <FormText
+          label="Message"
+          name="message"
+          value={values.message}
+          error={errors.message}
+          touched={touched.message}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
+        <Submit isValid={isValid} isSubmitting={isSubmitting} />
+      </form>
+    </div>
+  );
+};
 
 export default withFormik({
   mapPropsToValues: () => ({

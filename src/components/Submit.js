@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css, keyframes } from "styled-components";
-import { transparentize } from "polished";
+import { transparentize, hideText } from "polished";
 
 const spin = keyframes`
   to {
@@ -11,18 +11,10 @@ const spin = keyframes`
 const buttonIsLoading = ({ isLoading }) =>
   isLoading &&
   css`
+    ${hideText};
     position: relative;
     background-color: ${props => props.theme.palette.purple};
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
+    overflow: hidden;
 
     &::after {
       content: "";
@@ -46,6 +38,7 @@ const buttonIsLoading = ({ isLoading }) =>
 
 const Button = styled.button`
   ${buttonIsLoading};
+
   display: block;
   width: 100%;
   margin-top: 1.5rem;
@@ -59,6 +52,10 @@ const Button = styled.button`
     box-shadow: 0 0 2em 0 ${props => props.theme.palette.purple};
     background-color: ${props => props.theme.palette.purple};
     outline: none;
+
+    &[disabled] {
+      box-shadow: none;
+    }
   }
 `;
 

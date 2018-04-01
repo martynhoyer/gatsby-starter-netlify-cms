@@ -70,7 +70,7 @@ const Contact = ({
       <Submit isValid={isValid} isSubmitting={isSubmitting} />
     </form>
   ) : (
-    <SuccessMessage>
+    <SuccessMessage id="contactFormSuccess" tabIndex={-1}>
       Thanks for your enquiry, we&apos;ll be in touch!
     </SuccessMessage>
   );
@@ -93,5 +93,6 @@ export default withFormik({
     await postContactMessage(values);
     setSubmitting(false);
     setStatus({ success: true });
+    document.getElementById("contactFormSuccess").focus();
   }
 })(Contact);

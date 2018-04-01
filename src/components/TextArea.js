@@ -1,12 +1,22 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const isErroring = ({ error }) =>
+  error
+    ? css`
+        border: 1px solid #cc0000;
+      `
+    : css`
+        border: 1px solid ${props => props.theme.palette.greyLighter};
+      `;
 
 const Input = styled.textarea`
+  ${isErroring};
+
   display: block;
   width: 100%;
   height: 6em;
   padding: 0.5rem;
-  border: 1px solid ${props => props.theme.palette.greyLighter};
   font-size: inherit;
   background-color: ${props => props.theme.palette.white};
 
@@ -16,7 +26,14 @@ const Input = styled.textarea`
   }
 `;
 
-const TextArea = ({ name, placeholder, value, handleBlur, handleChange }) => (
+const TextArea = ({
+  name,
+  placeholder,
+  value,
+  handleBlur,
+  handleChange,
+  error
+}) => (
   <Input
     id={name}
     name={name}
@@ -25,6 +42,7 @@ const TextArea = ({ name, placeholder, value, handleBlur, handleChange }) => (
     value={value}
     onBlur={handleBlur}
     onChange={handleChange}
+    error={error}
   />
 );
 

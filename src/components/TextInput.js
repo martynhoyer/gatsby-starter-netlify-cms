@@ -1,11 +1,21 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const isErroring = ({ error }) =>
+  error
+    ? css`
+        border: 1px solid #cc0000;
+      `
+    : css`
+        border: 1px solid ${props => props.theme.palette.greyLighter};
+      `;
 
 const Input = styled.input`
+  ${isErroring};
+
   display: block;
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid ${props => props.theme.palette.greyLighter};
   font-size: inherit;
   background-color: ${props => props.theme.palette.white};
 
@@ -15,7 +25,14 @@ const Input = styled.input`
   }
 `;
 
-const TextInput = ({ name, placeholder, value, handleBlur, handleChange }) => (
+const TextInput = ({
+  name,
+  placeholder,
+  value,
+  handleBlur,
+  handleChange,
+  error
+}) => (
   <Input
     id={name}
     name={name}
@@ -24,6 +41,7 @@ const TextInput = ({ name, placeholder, value, handleBlur, handleChange }) => (
     value={value}
     onBlur={handleBlur}
     onChange={handleChange}
+    error={error}
   />
 );
 

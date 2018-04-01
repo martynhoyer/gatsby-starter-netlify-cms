@@ -33,6 +33,7 @@ const FormInput = ({
         value={value}
         handleBlur={handleBlur}
         handleChange={handleChange}
+        error={error && touched}
       />
       {error && touched && <Error>{error}</Error>}
     </FormControl>

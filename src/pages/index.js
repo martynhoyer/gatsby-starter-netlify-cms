@@ -7,6 +7,12 @@ import styled from "styled-components";
 import { Main } from "../components/Main";
 import { transparentize } from "polished";
 
+const StyledImg = styled(Img)`
+  & > img {
+    object-position: 50% 100% !important;
+  }
+`;
+
 const Intro = styled.div`
   position: relative;
   max-width: 60ch;
@@ -75,12 +81,12 @@ export default class IndexPage extends React.Component {
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
           onLoad={() => this.handleScriptLoad()}
         />
-        <Img
+        <StyledImg
           sizes={data.file.childImageSharp.sizes}
           style={{
             position: "absolute",
             left: 0,
-            top: 0,
+            bottom: 0,
             width: "100%",
             height: "100%"
           }}

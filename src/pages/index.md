@@ -16,9 +16,6 @@ links:
   - id: 1
     linkText: Explore our services
     linkUrl: /services
-  - id: '2'
-    linkText: Read about  us
-    linkUrl: /about-us
 strapline: Keeping your business on track
 introPara: Commercial support for fast-moving motorsport and technology companies.
 ---

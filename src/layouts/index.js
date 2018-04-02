@@ -72,6 +72,8 @@ const TemplateWrapper = ({ children, data, location }) => {
 
   const topLevelPath = pathname.split("/")[1];
 
+  const isHome = pathname === "/";
+
   return (
     <ThemeProvider theme={CC}>
       <Layout>
@@ -90,6 +92,7 @@ const TemplateWrapper = ({ children, data, location }) => {
             legalLinks={legalLinks}
             {...footerSettings}
             social={settings.contact.social}
+            isHome={isHome}
           />
         </MainWrapper>
       </Layout>

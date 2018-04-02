@@ -1,13 +1,23 @@
 import React from "react";
 import Link from "gatsby-link";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import ContactItem from "../components/ContactItem";
 import media from "../tokens/breakpoints";
 
+const footerIsHome = ({ isHome }) =>
+  isHome
+    ? css`
+        background-color: ${props => props.theme.palette.black};
+      `
+    : css`
+        background-color: ${props => props.theme.palette.greyDarkest};
+      `;
+
 const StyledFooter = styled.footer`
+  ${footerIsHome};
+
   padding: 0 1rem 1rem;
   text-align: center;
-  background-color: ${props => props.theme.palette.greyDarkest};
   color: ${props => props.theme.palette.greyLightest};
 
   @media (${media.md}) {
@@ -20,10 +30,6 @@ const StyledFooter = styled.footer`
     display: flex;
 
     padding: 0 2rem;
-  }
-
-  .page-home & {
-    background-color: #000;
   }
 `;
 
@@ -76,10 +82,11 @@ const Footer = ({
   fullCompanyName,
   companyNumber,
   vatNumber,
-  social = []
+  social = [],
+  isHome
 }) => {
   return (
-    <StyledFooter>
+    <StyledFooter isHome={isHome}>
       <FooterItem>
         {fullCompanyName && (
           <p>

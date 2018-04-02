@@ -2,6 +2,7 @@ import { shade, tint, transparentize } from "polished";
 
 const CC = {
   palette: {
+    black: "#000",
     grey: "#6e6e6e",
     white: "#fff",
     yellow: "#ffcb08",

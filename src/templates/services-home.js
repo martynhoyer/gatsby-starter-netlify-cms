@@ -50,7 +50,9 @@ const ServicesHomePage = ({ data }) => {
               {snippet.linkText &&
                 snippet.linkUrl && (
                   <p>
-                    <Link to={snippet.linkUrl}>{snippet.linkText}</Link>
+                    <Link to={snippet.linkUrl}>
+                      {snippet.linkText}&nbsp;&rarr;
+                    </Link>
                   </p>
                 )}
             </GridItem>

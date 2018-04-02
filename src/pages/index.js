@@ -151,11 +151,8 @@ export const pageQuery = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        sizes(
-          maxWidth: 1200
-          traceSVG: { background: "#ffcb08", color: "#000" }
-        ) {
-          tracedSVG
+        sizes(maxWidth: 1200) {
+          base64
           aspectRatio
           src
           srcSet

@@ -2,7 +2,6 @@
 templateKey: about-page
 mainNav: true
 order: 1
-path: /about-us
 title: Who we are
 subtitle: About us
 people:

@@ -1,6 +1,5 @@
 ---
 templateKey: services
-path: /services/commercial-strategy
 title: Commerical strategy
 date: 2018-03-10T00:00:00+00:00
 intro: As a business evolves and markets change, taking time out to adjust your strategy is key to continuing your growth.

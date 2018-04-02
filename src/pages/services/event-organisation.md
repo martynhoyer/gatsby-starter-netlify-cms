@@ -1,6 +1,5 @@
 ---
 templateKey: services
-path: /services/event-organisation
 title: Event organisation
 date: 2018-03-10T00:00:00+00:00
 intro: Corse Concierge can organise anything from your exhibition presence to corporate events and networking functions.

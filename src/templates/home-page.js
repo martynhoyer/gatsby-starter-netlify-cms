@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Link from "gatsby-link";
 import Script from "react-load-script";
 import graphql from "graphql";
@@ -74,6 +74,11 @@ const PageTitle = styled.h1`
   color: ${props => props.theme.palette.yellow};
 `;
 
+const Links = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
 const StyledLink = styled(Link)`
   display: inline-block;
   margin-top: 1em;
@@ -96,7 +101,10 @@ export default class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    // const { edges: posts } = data.latestBlogs;
+    const posts = data.latestBlogs && data.latestBlogs.edges;
+
+    const { pageContent } = data;
 
     return (
       <Main isHome>
@@ -105,7 +113,7 @@ export default class IndexPage extends React.Component {
           onLoad={() => this.handleScriptLoad()}
         />
         <StyledImg
-          sizes={data.file.childImageSharp.sizes}
+          sizes={data.backgroundImage.childImageSharp.sizes}
           style={{
             position: "absolute",
             width: "100%",
@@ -114,31 +122,32 @@ export default class IndexPage extends React.Component {
         />
         <Intro>
           <Definitions>
-            <DefinitionTitle>
-              Corse <Pronunciation>/ˈkɔr.se/</Pronunciation>
-            </DefinitionTitle>
-            <DefinitionDescription>
-              Italian, plural feminine, race, short trip.
-            </DefinitionDescription>
-            <DefinitionTitle>
-              Concierge <Pronunciation>/kɔ̃.sjɛʁʒ/</Pronunciation>
-            </DefinitionTitle>
-            <DefinitionDescription>
-              French, a contraction of &ldquo;comte des cierges&rdquo; &ndash;
-              &ldquo;count of candles&rdquo;; a servant responsible for
-              maintaining the lighting and cleanliness of medieval palaces.
-            </DefinitionDescription>
+            {pageContent.frontmatter.definition &&
+              pageContent.frontmatter.definition.map(
+                ({ title, pronunciation, description }) => (
+                  <Fragment key={title}>
+                    <DefinitionTitle>
+                      {title} <Pronunciation>{pronunciation}</Pronunciation>
+                    </DefinitionTitle>
+                    <DefinitionDescription>{description}</DefinitionDescription>
+                  </Fragment>
+                )
+              )}
           </Definitions>
-          <PageTitle>Keeping your business on track</PageTitle>
-          <p>
-            Commercial support for fast-moving motorsport and technology
-            companies.
-          </p>
-          <StyledLink to="/services">Explore our services &rarr;</StyledLink>
+          <PageTitle>{pageContent.frontmatter.strapline}</PageTitle>
+          <p>{pageContent.frontmatter.introPara}</p>
+          {pageContent.frontmatter.links && (
+            <Links>
+              {pageContent.frontmatter.links.map(({ id, title, linkUrl }) => (
+                <StyledLink key={id} to={linkUrl}>
+                  {title} &rarr;
+                </StyledLink>
+              ))}
+            </Links>
+          )}
         </Intro>
-        {posts
-          .filter(post => post.node.frontmatter.templateKey === "blog-post")
-          .map(({ node: post }) => (
+        {posts &&
+          posts.map(({ node: post }) => (
             <div key={post.id}>
               <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
               <small>{post.frontmatter.date}</small>
@@ -152,8 +161,10 @@ export default class IndexPage extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark {
+  query IndexQuery($id: String!) {
+    latestBlogs: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 400)
@@ -168,7 +179,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: "spa.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "spa.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
@@ -181,6 +192,23 @@ export const pageQuery = graphql`
           srcSetWebp
           sizes
           originalName
+        }
+      }
+    }
+    pageContent: markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        title
+        definition {
+          title
+          pronunciation
+          description
+        }
+        strapline
+        introPara
+        links {
+          id
+          title
+          linkUrl
         }
       }
     }

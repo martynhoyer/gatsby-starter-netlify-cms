@@ -1,6 +1,5 @@
 ---
 templateKey: services
-path: /services/project-management
 title: Project management
 date: 2018-03-10T00:00:00+00:00
 intro: With our background in engineering and technology development, Corse Concierge are capable of overseeing both technical and commercial programmes.

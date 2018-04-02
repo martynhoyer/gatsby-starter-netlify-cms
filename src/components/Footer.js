@@ -61,7 +61,7 @@ const StyledLink = styled(Link)`
 `;
 
 const CompanyNumber = styled.p`
-  margin: 0;
+  margin: 0.5em 0 0;
 `;
 
 const VatNumber = styled.p`

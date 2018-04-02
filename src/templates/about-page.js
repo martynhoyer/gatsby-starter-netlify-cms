@@ -7,6 +7,8 @@ import styled from "styled-components";
 import media from "../tokens/breakpoints";
 import { Main } from "../components/Main";
 import { headingLevel3 } from "../tokens/typography";
+import { ReactComponent as Logo } from "../svg/logo.svg";
+import { transparentize } from "polished";
 
 const PeopleGridParent = styled(GridParent)``;
 
@@ -43,11 +45,13 @@ const WhyUsTitle = styled.h2`
   }
 `;
 
-const Origin = styled.div`
+const OriginContainer = styled.div`
+  position: relative;
   padding-top: 4rem;
   padding-right: 1rem;
   padding-bottom: 4rem;
   padding-left: 1rem;
+  overflow: hidden;
 
   @media (${media.md}) {
     padding-right: 12.5%;
@@ -61,6 +65,52 @@ const Origin = styled.div`
   @media (${media.x2}) {
     padding-right: 40%;
   }
+
+  & > h2 {
+    ${headingLevel3};
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+`;
+
+const StyledLogo = styled(Logo)`
+  display: none;
+
+  @media (${media.xl}) {
+    display: block;
+    position: absolute;
+    right: -75rem;
+    bottom: -25%;
+    width: 3000px;
+    height: auto;
+    padding-right: 12.5%;
+    fill: transparent;
+    stroke: ${props => transparentize(0.85, props.theme.palette.greyLighter)};
+    z-index: 0;
+
+    & .concierge__i {
+      stroke: transparent;
+    }
+
+    & .concierge__i {
+      fill: ${props => props.theme.palette.grey};
+    }
+
+    & .concierge__i__flame {
+      fill: ${props => props.theme.palette.yellow};
+    }
+  }
+
+  @media (${media.x2}) {
+    right: -68rem;
+  }
+`;
+
+const Origin = styled.div`
+  position: relative;
+  z-index: 1;
 
   & > h2 {
     ${headingLevel3};
@@ -112,7 +162,10 @@ const AboutPage = ({ data }) => {
           ))}
         </ul>
       </WhyUs>
-      <Origin dangerouslySetInnerHTML={{ __html: page.html }} />
+      <OriginContainer>
+        <StyledLogo />
+        <Origin dangerouslySetInnerHTML={{ __html: page.html }} />
+      </OriginContainer>
     </Main>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import graphql from "graphql";
 import Link from "gatsby-link";
+import { Main } from "../components/Main";
 import PageHeader from "../components/PageHeader";
 import { GridParent, GridItem } from "../components/Grid";
 import styled from "styled-components";
@@ -32,7 +33,7 @@ const Title = styled.h2`
 const ServicesHomePage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
-    <main>
+    <Main>
       <PageHeader
         title={page.frontmatter.title}
         subtitle={page.frontmatter.subtitle}
@@ -56,7 +57,7 @@ const ServicesHomePage = ({ data }) => {
           ))}
         </GridParent>
       )}
-    </main>
+    </Main>
   );
 };
 

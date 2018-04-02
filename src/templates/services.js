@@ -1,6 +1,7 @@
 import React from "react";
 import graphql from "graphql";
 import Link from "gatsby-link";
+import { Main } from "../components/Main";
 import PageHeader from "../components/PageHeader";
 import styled from "styled-components";
 import { GridParent, GridItem } from "../components/Grid";
@@ -20,7 +21,7 @@ const StyledLink = styled(Link)`
 const ServicesPage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
-    <main>
+    <Main>
       <PageHeader
         title={page.frontmatter.title}
         subtitle={page.frontmatter.subtitle}
@@ -32,7 +33,7 @@ const ServicesPage = ({ data }) => {
           <StyledLink to="/services">&larr; Back to our services</StyledLink>
         </StyledGridItem>
       </GridParent>
-    </main>
+    </Main>
   );
 };
 

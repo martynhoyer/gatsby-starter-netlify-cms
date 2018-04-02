@@ -2,6 +2,7 @@ import React from "react";
 import graphql from "graphql";
 import PageHeader from "../components/PageHeader";
 import styled from "styled-components";
+import { Main } from "../components/Main";
 import { GridParent, GridItem } from "../components/Grid";
 import { headingLevel3 } from "../tokens/typography";
 
@@ -21,14 +22,14 @@ const Content = styled.div`
 const LegalPage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
-    <main>
+    <Main>
       <PageHeader title={page.frontmatter.title} />
       <GridParent>
         <StyledGridItem>
           <Content dangerouslySetInnerHTML={{ __html: page.html }} />
         </StyledGridItem>
       </GridParent>
-    </main>
+    </Main>
   );
 };
 

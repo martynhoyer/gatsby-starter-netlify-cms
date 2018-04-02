@@ -5,6 +5,7 @@ import Person from "../components/Person";
 import { GridParent, GridItem } from "../components/Grid";
 import styled from "styled-components";
 import media from "../tokens/breakpoints";
+import { Main } from "../components/Main";
 import { headingLevel3 } from "../tokens/typography";
 
 const PeopleGridParent = styled(GridParent)``;
@@ -86,7 +87,7 @@ const AboutPage = ({ data }) => {
   const { markdownRemark: page } = data;
   const images = data.allImageSharp.edges;
   return (
-    <main>
+    <Main>
       <PageHeader
         title={page.frontmatter.title}
         subtitle={page.frontmatter.subtitle}
@@ -112,7 +113,7 @@ const AboutPage = ({ data }) => {
         </ul>
       </WhyUs>
       <Origin dangerouslySetInnerHTML={{ __html: page.html }} />
-    </main>
+    </Main>
   );
 };
 

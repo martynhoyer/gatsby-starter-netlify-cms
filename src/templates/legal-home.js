@@ -3,6 +3,7 @@ import graphql from "graphql";
 import Link from "gatsby-link";
 import PageHeader from "../components/PageHeader";
 import styled from "styled-components";
+import { Main } from "../components/Main";
 import { GridParent, GridItem } from "../components/Grid";
 import { headingLevel3 } from "../tokens/typography";
 
@@ -24,7 +25,7 @@ const LegalHomePage = ({ data }) => {
   const { edges: childPages } = data.allMarkdownRemark;
 
   return (
-    <main>
+    <Main>
       <PageHeader title={page.frontmatter.title} />
       <GridParent>
         <StyledGridItem>
@@ -40,7 +41,7 @@ const LegalHomePage = ({ data }) => {
           </ul>
         </StyledGridItem>
       </GridParent>
-    </main>
+    </Main>
   );
 };
 

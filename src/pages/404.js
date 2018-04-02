@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
+import { Main } from "../components/Main";
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
-)
+  <Main>
+    <h1>Page not found</h1>
+    <p>You just hit a route that doesn&#39;t exist.</p>
+  </Main>
+);
 
-export default NotFoundPage
+export default NotFoundPage;

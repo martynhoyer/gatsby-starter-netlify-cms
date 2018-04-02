@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import Script from "react-load-script";
 import graphql from "graphql";
+import { Main } from "../components/Main";
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
@@ -22,7 +23,7 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <section>
+      <Main>
         <Script
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
           onLoad={() => this.handleScriptLoad()}
@@ -37,7 +38,7 @@ export default class IndexPage extends React.Component {
               <Link to={post.fields.slug}>Keep Reading →</Link>
             </div>
           ))}
-      </section>
+      </Main>
     );
   }
 }

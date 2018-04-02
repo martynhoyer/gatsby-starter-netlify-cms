@@ -6,6 +6,7 @@ import ContactItem from "../components/ContactItem";
 import AddressBlock from "../components/AddressBlock";
 import settings from "../../_data/settings.json";
 import styled from "styled-components";
+import { Main } from "../components/Main";
 import { GridParent, GridItem } from "../components/Grid";
 import { headingLevel3 } from "../tokens/typography";
 
@@ -31,7 +32,7 @@ const StyledAddressBlock = styled(AddressBlock)`
 const ContactPage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
-    <main>
+    <Main>
       <PageHeader
         subtitle={page.frontmatter.subtitle}
         title={page.frontmatter.title}
@@ -62,7 +63,7 @@ const ContactPage = ({ data }) => {
           <p>VAT number: {settings.contact.vatNumber}</p>
         </GridItem>
       </GridParent>
-    </main>
+    </Main>
   );
 };
 

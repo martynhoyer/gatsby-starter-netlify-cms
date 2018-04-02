@@ -3,6 +3,7 @@ import graphql from "graphql";
 import PageHeader from "../components/PageHeader";
 import { GridParent, GridItem } from "../components/Grid";
 import styled from "styled-components";
+import { Main } from "../components/Main";
 import { headingLevel3, headingLevel2 } from "../tokens/typography";
 import media from "../tokens/breakpoints";
 
@@ -23,7 +24,7 @@ const SubTitle = styled.h2`
 const LogisticsHomePage = ({ data }) => {
   const { markdownRemark: page } = data;
   return (
-    <main>
+    <Main>
       <PageHeader
         title={page.frontmatter.title}
         subtitle={page.frontmatter.subtitle}
@@ -46,7 +47,7 @@ const LogisticsHomePage = ({ data }) => {
           ))}
         </GridParent>
       )}
-    </main>
+    </Main>
   );
 };
 

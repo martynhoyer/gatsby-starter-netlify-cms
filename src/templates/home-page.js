@@ -127,7 +127,10 @@ export default class IndexPage extends React.Component {
                 ({ title, pronunciation, description }) => (
                   <Fragment key={title}>
                     <DefinitionTitle>
-                      {title} <Pronunciation>{pronunciation}</Pronunciation>
+                      {title}{" "}
+                      <Pronunciation aria-hidden="true">
+                        {pronunciation}
+                      </Pronunciation>
                     </DefinitionTitle>
                     <DefinitionDescription>{description}</DefinitionDescription>
                   </Fragment>

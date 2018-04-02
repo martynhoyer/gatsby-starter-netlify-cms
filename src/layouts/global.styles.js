@@ -29,10 +29,9 @@ injectGlobal`
 
     &:hover,
     &:focus {
-      border-bottom: none;
       background-color: ${CC.palette.yellow};
       color: ${CC.palette.greyDarkest};
-      outline-width: 0.2em;
+      outline-width: 0.2em 0.2em 0 0.2em;
       outline-style: solid;
       outline-color: ${CC.palette.yellow};
     }

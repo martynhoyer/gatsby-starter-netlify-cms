@@ -138,11 +138,13 @@ export default class IndexPage extends React.Component {
           <p>{pageContent.frontmatter.introPara}</p>
           {pageContent.frontmatter.links && (
             <Links>
-              {pageContent.frontmatter.links.map(({ id, title, linkUrl }) => (
-                <StyledLink key={id} to={linkUrl}>
-                  {title} &rarr;
-                </StyledLink>
-              ))}
+              {pageContent.frontmatter.links.map(
+                ({ id, linkText, linkUrl }) => (
+                  <StyledLink key={id} to={linkUrl}>
+                    {linkText} &rarr;
+                  </StyledLink>
+                )
+              )}
             </Links>
           )}
         </Intro>
@@ -207,7 +209,7 @@ export const pageQuery = graphql`
         introPara
         links {
           id
-          title
+          linkText
           linkUrl
         }
       }

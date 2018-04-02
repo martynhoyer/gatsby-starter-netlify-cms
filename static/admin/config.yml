@@ -106,6 +106,60 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/index.md"
+        label: "Home page"
+        name: "home"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Definition", 
+              name: "definition", 
+              widget: "list", 
+              fields: [
+                {
+                  label: "Title", 
+                  name: "title", 
+                  widget: "string"
+                }, 
+                {
+                  label: "Pronunciation", 
+                  name: "pronunciation", 
+                  widget: "string"
+                }, 
+                {
+                  label: "Description", 
+                  name: "description", 
+                  widget: "string"
+                }
+              ]
+            }
+          - {
+              label: "Links", 
+              name: "links", 
+              widget: "list", 
+              fields: [
+                {
+                  label: "ID", 
+                  name: "id", 
+                  widget: "string"
+                }, 
+                {
+                  label: "Link URL", 
+                  name: "linkUrl", 
+                  widget: "string"
+                }, 
+                {
+                  label: "Link text", 
+                  name: "linkText", 
+                  widget: "string"
+                }
+              ]
+            }
+          - {label: "Strapline", name: "strapline", widget: "string"} 
+          - {label: "Intro paragraph", name: "introPara", widget: "string"}
       - file: "src/pages/about-us.md"
         label: "About us"
         name: "about-us"

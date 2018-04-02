@@ -1,12 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter"
+    title: "Corse Concierge",
+    siteUrl: `https://www.corseconcierge.com`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-netlify-cms",
+    {
+      resolve: `gatsby-plugin-sitemap`
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

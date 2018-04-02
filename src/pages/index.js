@@ -11,6 +11,28 @@ const StyledImg = styled(Img)`
   & > img {
     object-position: 50% 100% !important;
   }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 2px solid red;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        ${props => transparentize(0.9, props.theme.palette.black)} 90%,
+        ${props => props.theme.palette.black} 100%
+      ),
+      url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgICA8ZyBmaWxsPSJyZ2JhKDExMCw2NCwxNDEsLjI1KSI+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1IiAvPgogICAgICAgIDxyZWN0IHg9IjI1IiB5PSIyNSIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1IiAvPgogICAgPC9nPgo8L3N2Zz4=");
+    background-size: cover, 4px;
+    background-repeat: no-repeat, repeat;
+    background-position: 0 0, 0 0;
+    z-index: 1;
+  }
 `;
 
 const Intro = styled.div`
@@ -21,6 +43,7 @@ const Intro = styled.div`
   text-shadow: 0 0 1em ${props => props.theme.palette.purple};
   background-color: ${props => transparentize(0.5, props.theme.palette.purple)};
   color: ${props => props.theme.palette.white};
+  z-index: 1;
 `;
 
 const Definitions = styled.dl`
@@ -85,8 +108,6 @@ export default class IndexPage extends React.Component {
           sizes={data.file.childImageSharp.sizes}
           style={{
             position: "absolute",
-            left: 0,
-            bottom: 0,
             width: "100%",
             height: "100%"
           }}

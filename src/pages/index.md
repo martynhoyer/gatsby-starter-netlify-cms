@@ -1,21 +1,26 @@
 ---
 templateKey: home-page
-mainNav: false
 title: Corse Concierge
 subtitle: Home
-definition: 
-  - title: Corse
+definition:
+  - description: 'Italian, plural feminine, race, short trip.'
     pronunciation: /ˈkɔr.se/
-    description: Italian, plural feminine, race, short trip.
-  - title: Concierge
+    title: Corse
+  - description: >-
+      French, a contraction of “comte des cierges” – “count of candles”; a
+      servant responsible for maintaining the lighting and cleanliness of
+      medieval palaces.
     pronunciation: /kɔ̃.sjɛʁʒ/
-    description: French, a contraction of “comte des cierges” – “count of candles”; a servant responsible for maintaining the lighting and cleanliness of medieval palaces.
-strapline: Keeping your business on track
-introPara: Commercial support for fast-moving motorsport and technology companies.
-links: 
+    title: Concierge
+links:
   - id: 1
     linkText: Explore our services
     linkUrl: /services
+  - id: '2'
+    linkText: Read about  us
+    linkUrl: /about-us
+strapline: Keeping your business on track
+introPara: Commercial support for fast-moving motorsport and technology companies.
 ---
 
 Left intentionally blank - all page content is dynamic.

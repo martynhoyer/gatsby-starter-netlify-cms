@@ -17,6 +17,23 @@ const Content = styled.div`
   & > h2 {
     ${headingLevel3};
   }
+
+  & table {
+    width: 100%;
+    margin-top: 1em;
+    border: 1px solid ${props => props.theme.palette.greyLighter};
+    border-collapse: collapse;
+
+    & th,
+    & td {
+      padding: 0.25em;
+      border: 1px solid ${props => props.theme.palette.greyLighter};
+    }
+
+    & th {
+      text-align: left;
+    }
+  }
 `;
 
 const LegalPage = ({ data }) => {

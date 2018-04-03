@@ -33,3 +33,9 @@ We don’t collect or store your personal information (eg your name or address) 
 We don’t allow Google to use or share our analytics data.
 
 Google Analytics sets the following cookies:
+
+| Cookie Name | Expiration Time | Description                    |
+| ----------- | --------------- | ------------------------------ |
+| `_ga`       | 2 years         | Used to distinguish users.     |
+| `_gid`      | 24 hours        | Used to distinguish users.     |
+| `_gat`      | 1 minute        | Used to throttle request rate. |

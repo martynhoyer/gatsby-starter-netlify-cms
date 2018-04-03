@@ -26,6 +26,7 @@ collections:
           - {label: "Item 2", name: "item2", widget: "string"}
           - {label: "Item 3", name: "item3", widget: "string"}
           - {label: "Item 4", name: "item4", widget: "string"}
+          - {label: "Item 5", name: "item5", widget: "string"}
 
   - name: "settings"
     label: "Settings"

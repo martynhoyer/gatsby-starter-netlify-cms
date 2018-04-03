@@ -1,0 +1,8 @@
+{
+  "title": "English",
+  "langCode": "en",
+  "translations": {
+    "item1": "Hello",
+    "item2": "Home"
+  }
+}

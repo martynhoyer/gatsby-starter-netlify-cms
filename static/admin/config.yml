@@ -7,6 +7,26 @@ public_folder: /img
 
 collections:
 
+  - name: "languages"
+    label: "Languages"
+    folder: "_data/languages"
+    create: true
+    extension: json
+    format: json
+    editor:
+      preview: false
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Language code", name: "langCode", widget: "text"}
+      - label: "Translations"
+        name: "translations"
+        widget: "object"
+        fields: 
+          - {label: "Item 1", name: "item1", widget: "string"}
+          - {label: "Item 2", name: "item2", widget: "string"}
+          - {label: "Item 3", name: "item3", widget: "string"}
+          - {label: "Item 4", name: "item4", widget: "string"}
+
   - name: "settings"
     label: "Settings"
     delete: false # Prevent users from deleting documents in this collection

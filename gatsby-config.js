@@ -7,7 +7,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-netlify",
     "gatsby-plugin-netlify-cms",
     {
       resolve: `gatsby-plugin-sitemap`
@@ -138,6 +137,14 @@ module.exports = {
         anonymize: true,
         // Setting this parameter is also optional
         respectDNT: true
+      }
+    },
+    {
+      resolve: "gatsby-plugin-netlify",
+      options: {
+        headers: {
+          "/favicons/*": ["Cache-Control: max-age=31536000"]
+        }
       }
     }
   ]

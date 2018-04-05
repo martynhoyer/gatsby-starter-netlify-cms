@@ -7,6 +7,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-netlify",
     "gatsby-plugin-netlify-cms",
     {
       resolve: `gatsby-plugin-sitemap`

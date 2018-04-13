@@ -30,7 +30,7 @@ collections:
 
   - name: "authors"
     label: "Authors"
-    folder: "_data/languages"
+    folder: "_data/authors"
     create: true
     extension: json
     format: json

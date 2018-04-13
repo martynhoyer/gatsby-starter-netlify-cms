@@ -37,7 +37,7 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Twitter", name: "twitter", widget: "string"}
 
   - name: "settings"

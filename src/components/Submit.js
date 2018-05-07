@@ -1,12 +1,12 @@
-import React from "react";
-import styled, { css, keyframes } from "styled-components";
-import { transparentize } from "polished";
+import React from 'react'
+import styled, { css, keyframes } from 'styled-components'
+import { transparentize } from 'polished'
 
 const spin = keyframes`
   to {
     transform: rotate(360deg);
   }
-`;
+`
 
 const buttonIsLoading = ({ isLoading }) =>
   isLoading
@@ -14,7 +14,7 @@ const buttonIsLoading = ({ isLoading }) =>
         color: ${props => props.theme.palette.purple};
 
         &::after {
-          content: "";
+          content: '';
           display: block;
           position: absolute;
           top: 50%;
@@ -35,7 +35,7 @@ const buttonIsLoading = ({ isLoading }) =>
       `
     : css`
         color: ${props => props.theme.palette.white};
-      `;
+      `
 
 const Button = styled.button`
   ${buttonIsLoading};
@@ -58,12 +58,12 @@ const Button = styled.button`
       box-shadow: none;
     }
   }
-`;
+`
 
 const Submit = ({ isSubmitting }) => (
   <Button type="submit" disabled={isSubmitting} isLoading={isSubmitting}>
     Send
   </Button>
-);
+)
 
-export default Submit;
+export default Submit

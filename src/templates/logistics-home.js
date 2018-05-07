@@ -1,11 +1,11 @@
-import React from "react";
-import graphql from "graphql";
-import PageHeader from "../components/PageHeader";
-import { GridParent, GridItem } from "../components/Grid";
-import styled from "styled-components";
-import { Main } from "../components/Main";
-import { headingLevel3, headingLevel2 } from "../tokens/typography";
-import media from "../tokens/breakpoints";
+import React from 'react'
+import graphql from 'graphql'
+import PageHeader from '../components/PageHeader'
+import { GridParent, GridItem } from '../components/Grid'
+import styled from 'styled-components'
+import { Main } from '../components/Main'
+import { headingLevel3, headingLevel2 } from '../tokens/typography'
+import media from '../tokens/breakpoints'
 
 const Title = styled.h2`
   ${headingLevel2};
@@ -15,14 +15,14 @@ const Title = styled.h2`
     padding: 1rem 2rem;
     background-color: ${props => props.theme.palette.yellow};
   }
-`;
+`
 
 const SubTitle = styled.h2`
   ${headingLevel3};
-`;
+`
 
 const LogisticsHomePage = ({ data }) => {
-  const { markdownRemark: page } = data;
+  const { markdownRemark: page } = data
   return (
     <Main>
       <PageHeader
@@ -48,10 +48,10 @@ const LogisticsHomePage = ({ data }) => {
         </GridParent>
       )}
     </Main>
-  );
-};
+  )
+}
 
-export default LogisticsHomePage;
+export default LogisticsHomePage
 
 export const logisticsHomePageQuery = graphql`
   query LogisticsHomePage {
@@ -74,4 +74,4 @@ export const logisticsHomePageQuery = graphql`
       html
     }
   }
-`;
+`

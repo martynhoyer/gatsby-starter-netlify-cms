@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components";
-import Error from "./Error";
-import Label from "./Label";
-import TextInput from "./TextInput";
+import React from 'react'
+import styled from 'styled-components'
+import Error from './Error'
+import Label from './Label'
+import TextInput from './TextInput'
 
 const FormGroup = styled.label`
   display: block;
   position: relative;
   margin-top: 1rem;
-`;
+`
 
 const FormControl = styled.div`
   margin-top: 0.25rem;
-`;
+`
 
 const FormInput = ({
   label,
@@ -22,7 +22,7 @@ const FormInput = ({
   error,
   touched,
   handleBlur,
-  handleChange
+  handleChange,
 }) => (
   <FormGroup htmlFor={name}>
     <Label>{label}</Label>
@@ -38,6 +38,6 @@ const FormInput = ({
       {error && touched && <Error>{error}</Error>}
     </FormControl>
   </FormGroup>
-);
+)
 
-export default FormInput;
+export default FormInput

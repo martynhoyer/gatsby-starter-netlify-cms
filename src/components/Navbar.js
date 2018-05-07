@@ -1,10 +1,10 @@
-import React from "react";
-import Link from "gatsby-link";
-import ContactItem from "../components/ContactItem";
-import styled, { css } from "styled-components";
-import media from "../tokens/breakpoints";
-import { hideVisually } from "polished";
-import { ReactComponent as Logo } from "../svg/logo.svg";
+import React from 'react'
+import Link from 'gatsby-link'
+import ContactItem from '../components/ContactItem'
+import styled, { css } from 'styled-components'
+import media from '../tokens/breakpoints'
+import { hideVisually } from 'polished'
+import { ReactComponent as Logo } from '../svg/logo.svg'
 
 const Container = styled.div`
   @media (${media.md}) {
@@ -25,7 +25,7 @@ const Container = styled.div`
   @media (${media.xl}) {
     padding-bottom: 1.4rem;
   }
-`;
+`
 
 const SiteNav = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ const SiteNav = styled.div`
     display: block;
     border-bottom: 1px solid ${props => props.theme.palette.greyLight};
   }
-`;
+`
 
 const StyledLink = styled(Link)`
   flex-basis: 25%;
@@ -56,7 +56,7 @@ const StyledLink = styled(Link)`
     border-top: 1px solid ${props => props.theme.palette.greyLight};
     color: ${props => props.theme.palette.white};
   }
-`;
+`
 
 const isLinkActive = ({ isCurrentPage }) =>
   isCurrentPage
@@ -83,7 +83,7 @@ const isLinkActive = ({ isCurrentPage }) =>
         @media (${media.lg}) {
           border-left: 0.5rem solid transparent;
         }
-      `;
+      `
 
 const LinkWrapper = styled.span`
   ${isLinkActive};
@@ -102,11 +102,11 @@ const LinkWrapper = styled.span`
   @media (${media.lg}) {
     padding: 1rem 1rem 1rem 0.5rem;
   }
-`;
+`
 
 const StyledLinkHome = StyledLink.extend`
   flex-basis: 100%;
-`;
+`
 
 const StyledLogo = styled(Logo)`
   display: block;
@@ -119,11 +119,11 @@ const StyledLogo = styled(Logo)`
   & .concierge__i__flame {
     fill: ${props => props.theme.palette.yellow};
   }
-`;
+`
 
 const HomeText = styled.span`
   ${hideVisually};
-`;
+`
 
 const SubTitle = styled.span`
   @media (${media.xl}) {
@@ -131,11 +131,11 @@ const SubTitle = styled.span`
     font-size: 0.65em;
     text-transform: uppercase;
   }
-`;
+`
 
 const Concatenator = styled.span`
   ${hideVisually};
-`;
+`
 
 const Title = styled.span`
   ${hideVisually};
@@ -151,7 +151,7 @@ const Title = styled.span`
     clip-path: inherit;
     white-space: inherit;
   }
-`;
+`
 
 const ContactItemsList = styled.dl`
   display: none;
@@ -172,13 +172,13 @@ const ContactItemsList = styled.dl`
     flex-direction: row;
     justify-content: space-around;
   }
-`;
+`
 
 const Navbar = ({ navLinks = [], social = [], topLevelPath, className }) => {
-  const formattedTopLevelPath = `/${topLevelPath}/`;
+  const formattedTopLevelPath = `/${topLevelPath}/`
 
   const isActive = (currentPage, menuItemSlug) =>
-    currentPage === menuItemSlug ? true : false;
+    currentPage === menuItemSlug ? true : false
   return (
     <nav className={className}>
       <Container>
@@ -199,12 +199,12 @@ const Navbar = ({ navLinks = [], social = [], topLevelPath, className }) => {
                       link.fields.slug
                     )}
                   >
-                    <SubTitle>{link.frontmatter.subtitle}</SubTitle>{" "}
-                    <Concatenator>or</Concatenator>{" "}
+                    <SubTitle>{link.frontmatter.subtitle}</SubTitle>{' '}
+                    <Concatenator>or</Concatenator>{' '}
                     <Title>{link.frontmatter.title}</Title>
                   </LinkWrapper>
                 </StyledLink>
-              );
+              )
             })}
         </SiteNav>
         {social.length > 0 && (
@@ -216,7 +216,7 @@ const Navbar = ({ navLinks = [], social = [], topLevelPath, className }) => {
         )}
       </Container>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

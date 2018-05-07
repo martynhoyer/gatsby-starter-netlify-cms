@@ -1,11 +1,11 @@
-import React from "react";
-import graphql from "graphql";
-import Link from "gatsby-link";
-import { Main } from "../components/Main";
-import PageHeader from "../components/PageHeader";
-import { GridParent, GridItem } from "../components/Grid";
-import styled from "styled-components";
-import { headingLevel3 } from "../tokens/typography";
+import React from 'react'
+import graphql from 'graphql'
+import Link from 'gatsby-link'
+import { Main } from '../components/Main'
+import PageHeader from '../components/PageHeader'
+import { GridParent, GridItem } from '../components/Grid'
+import styled from 'styled-components'
+import { headingLevel3 } from '../tokens/typography'
 
 // const ServicesGrid = styled.div`
 //   display: grid;
@@ -28,10 +28,10 @@ const Title = styled.h2`
   &:first-child {
     margin-top: 0;
   }
-`;
+`
 
 const ServicesHomePage = ({ data }) => {
-  const { markdownRemark: page } = data;
+  const { markdownRemark: page } = data
   return (
     <Main>
       <PageHeader
@@ -60,10 +60,10 @@ const ServicesHomePage = ({ data }) => {
         </GridParent>
       )}
     </Main>
-  );
-};
+  )
+}
 
-export default ServicesHomePage;
+export default ServicesHomePage
 
 export const servicesHomePageQuery = graphql`
   query ServicesHomePage {
@@ -84,4 +84,4 @@ export const servicesHomePageQuery = graphql`
       html
     }
   }
-`;
+`

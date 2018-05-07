@@ -1,17 +1,17 @@
-require("babel-polyfill");
+require('babel-polyfill')
 
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import graphql from "graphql";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import graphql from 'graphql'
 
-import "./global.styles";
-import settings from "../../_data/settings.json";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import styled, { ThemeProvider } from "styled-components";
-import media from "../tokens/breakpoints";
-import CC from "../tokens/colours";
+import './global.styles'
+import settings from '../../_data/settings.json'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import styled, { ThemeProvider } from 'styled-components'
+import media from '../tokens/breakpoints'
+import CC from '../tokens/colours'
 
 const Layout = styled.div`
   display: flex;
@@ -19,8 +19,8 @@ const Layout = styled.div`
 
   position: relative;
   min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   font-size: 16px;
   line-height: 1.618;
@@ -31,7 +31,7 @@ const Layout = styled.div`
     flex-direction: row;
     font-size: 18px;
   }
-`;
+`
 
 const StyledNavbar = styled(Navbar)`
   background-color: ${CC.palette.white};
@@ -41,7 +41,7 @@ const StyledNavbar = styled(Navbar)`
 
     width: 15%;
   }
-`;
+`
 
 const MainWrapper = styled.div`
   flex-grow: 1;
@@ -53,26 +53,26 @@ const MainWrapper = styled.div`
 
     width: 85%;
   }
-`;
+`
 
-const { siteTitle, seo, contact } = settings;
-const { siteDescription } = seo;
-const { fullCompanyName, companyNumber, vatNumber } = contact;
+const { siteTitle, seo, contact } = settings
+const { siteDescription } = seo
+const { fullCompanyName, companyNumber, vatNumber } = contact
 const footerSettings = {
   fullCompanyName,
   companyNumber,
-  vatNumber
-};
+  vatNumber,
+}
 
 const TemplateWrapper = ({ children, data, location }) => {
-  const { edges: legalLinks } = data.legalLinks;
-  const { edges: navLinks } = data.navData;
+  const { edges: legalLinks } = data.legalLinks
+  const { edges: navLinks } = data.navData
 
-  const { pathname } = location;
+  const { pathname } = location
 
-  const topLevelPath = pathname.split("/")[1];
+  const topLevelPath = pathname.split('/')[1]
 
-  const isHome = pathname === "/";
+  const isHome = pathname === '/'
 
   return (
     <ThemeProvider theme={CC}>
@@ -97,14 +97,14 @@ const TemplateWrapper = ({ children, data, location }) => {
         </MainWrapper>
       </Layout>
     </ThemeProvider>
-  );
-};
+  )
+}
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
-};
+  children: PropTypes.func,
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper
 
 export const templateDataQuery = graphql`
   query templateData {
@@ -139,4 +139,4 @@ export const templateDataQuery = graphql`
       }
     }
   }
-`;
+`

@@ -1,25 +1,25 @@
-import React from "react";
-import { withFormik } from "formik";
-import Yup from "yup";
+import React from 'react'
+import { withFormik } from 'formik'
+import Yup from 'yup'
 
-import FormInput from "./FormInput";
-import FormText from "./FormText";
-import Submit from "./Submit";
-import SuccessMessage from "./SuccessMessage";
+import FormInput from './FormInput'
+import FormText from './FormText'
+import Submit from './Submit'
+import SuccessMessage from './SuccessMessage'
 
 const encodePayloadToBody = data =>
   Object.keys(data)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join("&");
+    .join('&')
 
 const postContactMessage = async payload => {
   const option = {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encodePayloadToBody({ "form-name": "contact", ...payload })
-  };
-  await fetch("/", option).catch(() => alert("Unexpected error has occurred"));
-};
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encodePayloadToBody({ 'form-name': 'contact', ...payload }),
+  }
+  await fetch('/', option).catch(() => alert('Unexpected error has occurred'))
+}
 
 const Contact = ({
   values,
@@ -30,7 +30,7 @@ const Contact = ({
   handleChange,
   handleBlur,
   handleSubmit,
-  status
+  status,
 }) => {
   return !status || !status.success ? (
     <form
@@ -73,26 +73,26 @@ const Contact = ({
     <SuccessMessage id="contactFormSuccess" tabIndex={-1}>
       Thanks for your enquiry, we&apos;ll be in touch!
     </SuccessMessage>
-  );
-};
+  )
+}
 
 export default withFormik({
   mapPropsToValues: () => ({
-    name: "",
-    email: "",
-    message: ""
+    name: '',
+    email: '',
+    message: '',
   }),
   validationSchema: Yup.object().shape({
-    name: Yup.string().required("Name is required"),
+    name: Yup.string().required('Name is required'),
     email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    message: Yup.string().required("Message is required")
+      .email('Invalid email address')
+      .required('Email is required'),
+    message: Yup.string().required('Message is required'),
   }),
   handleSubmit: async (values, { setSubmitting, setStatus }) => {
-    await postContactMessage(values);
-    setSubmitting(false);
-    setStatus({ success: true });
-    document.getElementById("contactFormSuccess").focus();
-  }
-})(Contact);
+    await postContactMessage(values)
+    setSubmitting(false)
+    setStatus({ success: true })
+    document.getElementById('contactFormSuccess').focus()
+  },
+})(Contact)

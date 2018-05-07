@@ -1,5 +1,5 @@
-import { injectGlobal } from "styled-components";
-import CC from "../tokens/colours";
+import { injectGlobal } from 'styled-components'
+import CC from '../tokens/colours'
 
 injectGlobal`
   *,
@@ -50,4 +50,4 @@ injectGlobal`
     margin-bottom: 0;
     font-size: 1em;
   }
-`;
+`

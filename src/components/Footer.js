@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled, { css } from "styled-components";
-import ContactItem from "../components/ContactItem";
-import media from "../tokens/breakpoints";
+import React from 'react'
+import Link from 'gatsby-link'
+import styled, { css } from 'styled-components'
+import ContactItem from '../components/ContactItem'
+import media from '../tokens/breakpoints'
 
 const footerIsHome = ({ isHome }) =>
   isHome
@@ -11,7 +11,7 @@ const footerIsHome = ({ isHome }) =>
       `
     : css`
         background-color: ${props => props.theme.palette.greyDarkest};
-      `;
+      `
 
 const StyledFooter = styled.footer`
   ${footerIsHome};
@@ -31,7 +31,7 @@ const StyledFooter = styled.footer`
 
     padding: 0 2rem;
   }
-`;
+`
 
 const FooterItem = styled.div`
   padding: 1rem 0;
@@ -46,27 +46,27 @@ const FooterItem = styled.div`
 
     padding: 1.6rem 2rem;
   }
-`;
+`
 
 const FooterList = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-`;
+`
 
-const FooterListItem = styled.li``;
+const FooterListItem = styled.li``
 
 const StyledLink = styled(Link)`
   color: ${props => props.theme.palette.white};
-`;
+`
 
 const CompanyNumber = styled.p`
   margin: 0.5em 0 0;
-`;
+`
 
 const VatNumber = styled.p`
   margin: 0;
-`;
+`
 
 const FooterSocial = styled.dl`
   display: flex;
@@ -75,7 +75,7 @@ const FooterSocial = styled.dl`
   @media (${media.md}) {
     display: none;
   }
-`;
+`
 
 const Footer = ({
   legalLinks = [],
@@ -83,7 +83,7 @@ const Footer = ({
   companyNumber,
   vatNumber,
   social = [],
-  isHome
+  isHome,
 }) => {
   return (
     <StyledFooter isHome={isHome}>
@@ -119,7 +119,7 @@ const Footer = ({
         </FooterSocial>
       )}
     </StyledFooter>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

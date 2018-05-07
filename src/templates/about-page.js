@@ -1,20 +1,20 @@
-import React from "react";
-import graphql from "graphql";
-import PageHeader from "../components/PageHeader";
-import Person from "../components/Person";
-import { GridParent, GridItem } from "../components/Grid";
-import styled from "styled-components";
-import media from "../tokens/breakpoints";
-import { Main } from "../components/Main";
-import { headingLevel3 } from "../tokens/typography";
-import { ReactComponent as Logo } from "../svg/logo.svg";
-import { transparentize } from "polished";
+import React from 'react'
+import graphql from 'graphql'
+import PageHeader from '../components/PageHeader'
+import Person from '../components/Person'
+import { GridParent, GridItem } from '../components/Grid'
+import styled from 'styled-components'
+import media from '../tokens/breakpoints'
+import { Main } from '../components/Main'
+import { headingLevel3 } from '../tokens/typography'
+import { ReactComponent as Logo } from '../svg/logo.svg'
+import { transparentize } from 'polished'
 
-const PeopleGridParent = styled(GridParent)``;
+const PeopleGridParent = styled(GridParent)``
 
 const PeopleGridItem = styled(GridItem)`
   padding-top: 0;
-`;
+`
 
 const WhyUs = styled.div`
   padding-top: 4rem;
@@ -35,7 +35,7 @@ const WhyUs = styled.div`
   @media (${media.x2}) {
     padding-right: 40%;
   }
-`;
+`
 
 const WhyUsTitle = styled.h2`
   ${headingLevel3};
@@ -43,7 +43,7 @@ const WhyUsTitle = styled.h2`
   &:first-child {
     margin-top: 0;
   }
-`;
+`
 
 const OriginContainer = styled.div`
   position: relative;
@@ -73,7 +73,7 @@ const OriginContainer = styled.div`
       margin-top: 0;
     }
   }
-`;
+`
 
 const StyledLogo = styled(Logo)`
   display: none;
@@ -106,7 +106,7 @@ const StyledLogo = styled(Logo)`
   @media (${media.x2}) {
     right: -68rem;
   }
-`;
+`
 
 const Origin = styled.div`
   position: relative;
@@ -119,23 +119,23 @@ const Origin = styled.div`
       margin-top: 0;
     }
   }
-`;
+`
 
 function findNode(images, key) {
-  let l = "";
+  let l = ''
   images.forEach((el, index) => {
-    let originalName = `/img/${images[index].node.sizes.originalName}`;
+    let originalName = `/img/${images[index].node.sizes.originalName}`
     if (originalName === `${key}`) {
-      l = images[index].node;
+      l = images[index].node
     }
-  });
+  })
 
-  return l;
+  return l
 }
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: page } = data;
-  const images = data.allImageSharp.edges;
+  const { markdownRemark: page } = data
+  const images = data.allImageSharp.edges
   return (
     <Main>
       <PageHeader
@@ -145,12 +145,12 @@ const AboutPage = ({ data }) => {
       {page.frontmatter.people.length > 0 && (
         <PeopleGridParent>
           {page.frontmatter.people.map(person => {
-            let img = findNode(images, person.image);
+            let img = findNode(images, person.image)
             return (
               <PeopleGridItem key={person.name}>
                 <Person img={img} person={person} />
               </PeopleGridItem>
-            );
+            )
           })}
         </PeopleGridParent>
       )}
@@ -167,10 +167,10 @@ const AboutPage = ({ data }) => {
         <Origin dangerouslySetInnerHTML={{ __html: page.html }} />
       </OriginContainer>
     </Main>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage
 
 export const aboutPageQuery = graphql`
   query AboutPage {
@@ -217,4 +217,4 @@ export const aboutPageQuery = graphql`
       }
     }
   }
-`;
+`

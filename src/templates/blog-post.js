@@ -1,29 +1,29 @@
-import React from "react";
-import graphql from "graphql";
-import Helmet from "react-helmet";
-import Content, { HTMLContent } from "../components/Content";
-import { Main } from "../components/Main";
+import React from 'react'
+import graphql from 'graphql'
+import Helmet from 'react-helmet'
+import Content, { HTMLContent } from '../components/Content'
+import { Main } from '../components/Main'
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
   title,
-  helmet
+  helmet,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
     <section className="section">
-      {helmet || ""}
+      {helmet || ''}
       <h1>{title}</h1>
       <PostContent content={content} />
     </section>
-  );
-};
+  )
+}
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <BlogPostTemplate
@@ -32,10 +32,10 @@ const BlogPost = ({ data }) => {
       helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
       title={post.frontmatter.title}
     />
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostById($id: String!) {
@@ -46,4 +46,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

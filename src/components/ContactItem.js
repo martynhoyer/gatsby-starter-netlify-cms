@@ -1,11 +1,11 @@
-import React, { Fragment } from "react";
-import styled, { css } from "styled-components";
-import { hideVisually } from "polished";
-import { ReactComponent as Facebook } from "../svg/facebook.svg";
-import { ReactComponent as Twitter } from "../svg/twitter.svg";
-import { ReactComponent as Instagram } from "../svg/instagram.svg";
-import { ReactComponent as Envelope } from "../svg/envelope.svg";
-import media from "../tokens/breakpoints";
+import React, { Fragment } from 'react'
+import styled, { css } from 'styled-components'
+import { hideVisually } from 'polished'
+import { ReactComponent as Facebook } from '../svg/facebook.svg'
+import { ReactComponent as Twitter } from '../svg/twitter.svg'
+import { ReactComponent as Instagram } from '../svg/instagram.svg'
+import { ReactComponent as Envelope } from '../svg/envelope.svg'
+import media from '../tokens/breakpoints'
 
 const iconOnly = props =>
   props.iconOnly
@@ -14,18 +14,18 @@ const iconOnly = props =>
       `
     : css`
         margin-top: 1.5em;
-      `;
+      `
 
 export const DefinitionTitle = styled.dt`
   ${iconOnly};
 
   font-size: 0.65em;
   text-transform: uppercase;
-`;
+`
 
 export const DefinitionData = styled.dd`
   margin: 0;
-`;
+`
 
 const iconOnlyLink = ({ iconOnly }) =>
   iconOnly
@@ -79,29 +79,29 @@ const iconOnlyLink = ({ iconOnly }) =>
           width: 1.6em;
           height: 1.6em;
         }
-      `;
+      `
 
 export const Link = styled.a`
   ${iconOnlyLink};
-`;
+`
 
 export const DisplayName = styled.span`
   ${iconOnly};
-`;
+`
 
 const Content = ({
   url,
   providerDisplayName,
   profileDisplayName,
   providerName,
-  iconOnly = false
+  iconOnly = false,
 }) => {
   const icons = {
     facebook: <Facebook />,
     twitter: <Twitter />,
     instagram: <Instagram />,
-    email: <Envelope />
-  };
+    email: <Envelope />,
+  }
   return (
     <Fragment>
       <DefinitionTitle iconOnly={iconOnly}>
@@ -114,7 +114,7 @@ const Content = ({
         </Link>
       </DefinitionData>
     </Fragment>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content

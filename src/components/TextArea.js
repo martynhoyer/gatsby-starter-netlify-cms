@@ -1,5 +1,5 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import React from 'react'
+import styled, { css } from 'styled-components'
 
 const isErroring = ({ error }) =>
   error
@@ -8,7 +8,7 @@ const isErroring = ({ error }) =>
       `
     : css`
         border: 1px solid ${props => props.theme.palette.greyLighter};
-      `;
+      `
 
 const Input = styled.textarea`
   ${isErroring};
@@ -24,7 +24,7 @@ const Input = styled.textarea`
     border-color: ${props => props.theme.palette.purple};
     outline: none;
   }
-`;
+`
 
 const TextArea = ({
   name,
@@ -32,7 +32,7 @@ const TextArea = ({
   value,
   handleBlur,
   handleChange,
-  error
+  error,
 }) => (
   <Input
     id={name}
@@ -44,6 +44,6 @@ const TextArea = ({
     onChange={handleChange}
     error={error}
   />
-);
+)
 
-export default TextArea;
+export default TextArea

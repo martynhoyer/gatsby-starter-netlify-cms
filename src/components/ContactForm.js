@@ -1,12 +1,12 @@
-import React from "react";
-import styled, { css, keyframes } from "styled-components";
-import { transparentize } from "polished";
+import React from 'react'
+import styled, { css, keyframes } from 'styled-components'
+import { transparentize } from 'polished'
 
 const isLoading = ({ isLoading }) =>
   isLoading &&
   css`
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0;
@@ -16,14 +16,14 @@ const isLoading = ({ isLoading }) =>
       background-color: ${props => props.theme.palette.greyLightest};
       z-index: 1;
     }
-  `;
+  `
 
 const StyledContactForm = styled.form`
   ${isLoading};
 
   position: relative;
   max-width: 60ch;
-`;
+`
 
 //   @nest .has-error > & {
 //     border-color: color(red shade(10));
@@ -42,16 +42,16 @@ const StyledContactForm = styled.form`
 const FormGroup = styled.label`
   display: block;
   margin-top: 1rem;
-`;
+`
 
 const FormLabelText = styled.span`
   display: block;
-`;
+`
 
 const FormControl = styled.div`
   display: block;
   margin-top: 0.25rem;
-`;
+`
 
 const FormInput = styled.input`
   display: block;
@@ -65,26 +65,26 @@ const FormInput = styled.input`
     border-color: ${props => props.theme.palette.purple};
     outline: none;
   }
-`;
+`
 
-const FormTextarea = FormInput.withComponent("textarea").extend`
+const FormTextarea = FormInput.withComponent('textarea').extend`
   height: 6em;
-`;
+`
 
 const spin = keyframes`
   to {
     transform: rotate(360deg);
   }
-`;
+`
 
 const buttonIsLoading = ({ isLoading }) =>
   isLoading &&
   css`
-    ${"" /* @apply --text-hide; */} position: relative;
+    ${'' /* @apply --text-hide; */} position: relative;
     background-color: var(--cc-purple);
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0;
@@ -94,7 +94,7 @@ const buttonIsLoading = ({ isLoading }) =>
     }
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 50%;
@@ -111,7 +111,7 @@ const buttonIsLoading = ({ isLoading }) =>
       animation: ${spin} 0.35s linear infinite;
       z-index: 2;
     }
-  `;
+  `
 
 const Button = styled.button`
   ${buttonIsLoading};
@@ -129,7 +129,7 @@ const Button = styled.button`
     background-color: ${props => props.theme.palette.purple};
     outline: none;
   }
-`;
+`
 
 const Success = styled.div`
   margin-top: 1em;
@@ -142,40 +142,40 @@ const Success = styled.div`
     outline: none;
     box-shadow: 0 0 2em 0 green;
   }
-`;
+`
 
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
 }
 
 export default class ContactForm extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       loading: false,
       submitted: false,
-      error: false
-    };
+      error: false,
+    }
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+    this.setState({ [e.target.name]: e.target.value })
+  }
 
   handleSubmit = e => {
-    this.setState({ loading: true });
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+    this.setState({ loading: true })
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.state }),
     })
       .then(() => this.setState({ submitted: true, loading: false }))
-      .catch(() => this.setState({ error: true, loading: false }));
+      .catch(() => this.setState({ error: true, loading: false }))
 
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   render() {
     return !this.state.submitted ? (
@@ -189,7 +189,7 @@ export default class ContactForm extends React.Component {
         isLoading={this.state.loading}
       >
         <label htmlFor="contactform-bot-field" hidden>
-          Don’t fill this out:{" "}
+          Don’t fill this out:{' '}
           <input id="contactform-bot-field" name="bot-field" />
         </label>
         <FormGroup htmlFor="contactform-name">
@@ -229,6 +229,6 @@ export default class ContactForm extends React.Component {
       </StyledContactForm>
     ) : (
       <Success>Thanks for your enquiry, we&apos;ll be in touch!</Success>
-    );
+    )
   }
 }

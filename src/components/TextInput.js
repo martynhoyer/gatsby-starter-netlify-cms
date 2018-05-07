@@ -1,5 +1,5 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import React from 'react'
+import styled, { css } from 'styled-components'
 
 const isErroring = ({ error }) =>
   error
@@ -8,7 +8,7 @@ const isErroring = ({ error }) =>
       `
     : css`
         border: 1px solid ${props => props.theme.palette.greyLighter};
-      `;
+      `
 
 const Input = styled.input`
   ${isErroring};
@@ -23,7 +23,7 @@ const Input = styled.input`
     border-color: ${props => props.theme.palette.purple};
     outline: none;
   }
-`;
+`
 
 const TextInput = ({
   name,
@@ -31,7 +31,7 @@ const TextInput = ({
   value,
   handleBlur,
   handleChange,
-  error
+  error,
 }) => (
   <Input
     id={name}
@@ -43,6 +43,6 @@ const TextInput = ({
     onChange={handleChange}
     error={error}
   />
-);
+)
 
-export default TextInput;
+export default TextInput

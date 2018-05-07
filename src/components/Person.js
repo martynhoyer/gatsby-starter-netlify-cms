@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import Img from "gatsby-image";
-import media from "../tokens/breakpoints";
-import { transparentize } from "polished";
+import React from 'react'
+import styled from 'styled-components'
+import Img from 'gatsby-image'
+import media from '../tokens/breakpoints'
+import { transparentize } from 'polished'
 
-const Container = styled.div``;
+const Container = styled.div``
 
 const Intro = styled.div`
   position: relative;
@@ -17,9 +17,9 @@ const Intro = styled.div`
   @media (${media.xl}) {
     margin: 0 -2rem;
   }
-`;
+`
 
-const StyledImg = styled(Img)``;
+const StyledImg = styled(Img)``
 
 const NameAndJobTitle = styled.h2`
   margin: 0.5em 1rem 0;
@@ -46,7 +46,7 @@ const NameAndJobTitle = styled.h2`
     position: absolute;
     margin: 0 2rem;
   }
-`;
+`
 
 const Name = styled.span`
   position: relative;
@@ -58,7 +58,7 @@ const Name = styled.span`
     background-color: ${props =>
       transparentize(0.2, props.theme.palette.white)};
   }
-`;
+`
 
 const JobTitle = styled.small`
   font-family: Arial, Helvetica, sans-serif;
@@ -73,25 +73,26 @@ const JobTitle = styled.small`
     background-color: ${props =>
       transparentize(0.2, props.theme.palette.white)};
   }
-`;
+`
 
 const Para = styled.p`
   margin: 1em 0 0;
-`;
+`
 
 const Person = ({ person, img }) => {
-  return(
-  <Container>
-    <Intro>
-      <StyledImg sizes={{...img.sizes, base64: img.sqip.dataURI}} />
-      <img src={img.sqip.dataURI} alt="" />
-      <NameAndJobTitle>
-        <Name>{person.name}</Name> <br />
-        <JobTitle>{person.jobtitle}</JobTitle>
-      </NameAndJobTitle>
-    </Intro>
-    {person.paragraphs.map(para => <Para key={para.id}>{para.text}</Para>)}
-  </Container>
-)};
+  return (
+    <Container>
+      <Intro>
+        <StyledImg sizes={{ ...img.sizes, base64: img.sqip.dataURI }} />
+        <img src={img.sqip.dataURI} alt="" />
+        <NameAndJobTitle>
+          <Name>{person.name}</Name> <br />
+          <JobTitle>{person.jobtitle}</JobTitle>
+        </NameAndJobTitle>
+      </Intro>
+      {person.paragraphs.map(para => <Para key={para.id}>{para.text}</Para>)}
+    </Container>
+  )
+}
 
-export default Person;
+export default Person

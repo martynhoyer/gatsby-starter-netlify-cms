@@ -1,17 +1,17 @@
-import React from "react";
-import graphql from "graphql";
-import PageHeader from "../components/PageHeader";
-import styled from "styled-components";
-import { Main } from "../components/Main";
-import { GridParent, GridItem } from "../components/Grid";
-import { headingLevel3 } from "../tokens/typography";
+import React from 'react'
+import graphql from 'graphql'
+import PageHeader from '../components/PageHeader'
+import styled from 'styled-components'
+import { Main } from '../components/Main'
+import { GridParent, GridItem } from '../components/Grid'
+import { headingLevel3 } from '../tokens/typography'
 
 const StyledGridItem = styled(GridItem)`
   flex-basis: 75%;
 
   max-width: 60ch;
   padding-top: 1rem;
-`;
+`
 
 const Content = styled.div`
   & > h2 {
@@ -34,10 +34,10 @@ const Content = styled.div`
       text-align: left;
     }
   }
-`;
+`
 
 const LegalPage = ({ data }) => {
-  const { markdownRemark: page } = data;
+  const { markdownRemark: page } = data
   return (
     <Main>
       <PageHeader title={page.frontmatter.title} />
@@ -47,10 +47,10 @@ const LegalPage = ({ data }) => {
         </StyledGridItem>
       </GridParent>
     </Main>
-  );
-};
+  )
+}
 
-export default LegalPage;
+export default LegalPage
 
 export const legalPageQuery = graphql`
   query LegalPage($id: String!) {
@@ -61,4 +61,4 @@ export const legalPageQuery = graphql`
       html
     }
   }
-`;
+`

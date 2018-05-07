@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import media from "../tokens/breakpoints";
+import styled, { css } from 'styled-components'
+import media from '../tokens/breakpoints'
 
 export const GridParent = styled.div`
   padding-right: 1rem;
@@ -17,7 +17,7 @@ export const GridParent = styled.div`
     padding-right: 2rem;
     padding-left: 2rem;
   }
-`;
+`
 
 const stripes = ({ stripy }) =>
   stripy &&
@@ -25,7 +25,7 @@ const stripes = ({ stripy }) =>
     &:nth-child(2n) {
       background-color: ${props => props.theme.palette.greyLightest};
     }
-  `;
+  `
 
 export const GridItem = styled.div`
   ${stripes};
@@ -53,4 +53,4 @@ export const GridItem = styled.div`
       margin-top: -10rem;
     }
   }
-`;
+`

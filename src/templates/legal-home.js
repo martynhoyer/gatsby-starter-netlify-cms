@@ -1,28 +1,28 @@
-import React from "react";
-import graphql from "graphql";
-import Link from "gatsby-link";
-import PageHeader from "../components/PageHeader";
-import styled from "styled-components";
-import { Main } from "../components/Main";
-import { GridParent, GridItem } from "../components/Grid";
-import { headingLevel3 } from "../tokens/typography";
+import React from 'react'
+import graphql from 'graphql'
+import Link from 'gatsby-link'
+import PageHeader from '../components/PageHeader'
+import styled from 'styled-components'
+import { Main } from '../components/Main'
+import { GridParent, GridItem } from '../components/Grid'
+import { headingLevel3 } from '../tokens/typography'
 
 const StyledGridItem = styled(GridItem)`
   flex-basis: 75%;
 
   max-width: 60ch;
   padding-top: 1rem;
-`;
+`
 
 const Content = styled.div`
   & > h2 {
     ${headingLevel3};
   }
-`;
+`
 
 const LegalHomePage = ({ data }) => {
-  const { markdownRemark: page } = data;
-  const { edges: childPages } = data.allMarkdownRemark;
+  const { markdownRemark: page } = data
+  const { edges: childPages } = data.allMarkdownRemark
 
   return (
     <Main>
@@ -42,10 +42,10 @@ const LegalHomePage = ({ data }) => {
         </StyledGridItem>
       </GridParent>
     </Main>
-  );
-};
+  )
+}
 
-export default LegalHomePage;
+export default LegalHomePage
 
 export const legalHomePageQuery = graphql`
   query LegalHomePage($id: String!) {
@@ -70,4 +70,4 @@ export const legalHomePageQuery = graphql`
       }
     }
   }
-`;
+`

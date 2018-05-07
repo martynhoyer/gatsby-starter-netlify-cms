@@ -1,25 +1,25 @@
-import React from "react";
-import graphql from "graphql";
-import Link from "gatsby-link";
-import { Main } from "../components/Main";
-import PageHeader from "../components/PageHeader";
-import styled from "styled-components";
-import { GridParent, GridItem } from "../components/Grid";
+import React from 'react'
+import graphql from 'graphql'
+import Link from 'gatsby-link'
+import { Main } from '../components/Main'
+import PageHeader from '../components/PageHeader'
+import styled from 'styled-components'
+import { GridParent, GridItem } from '../components/Grid'
 
 const StyledGridItem = styled(GridItem)`
   flex-basis: 75%;
 
   max-width: 60ch;
   padding-top: 1rem;
-`;
+`
 
 const StyledLink = styled(Link)`
   display: inline-block;
   margin-top: 1em;
-`;
+`
 
 const ServicesPage = ({ data }) => {
-  const { markdownRemark: page } = data;
+  const { markdownRemark: page } = data
   return (
     <Main>
       <PageHeader
@@ -34,10 +34,10 @@ const ServicesPage = ({ data }) => {
         </StyledGridItem>
       </GridParent>
     </Main>
-  );
-};
+  )
+}
 
-export default ServicesPage;
+export default ServicesPage
 
 export const servicesPageQuery = graphql`
   query ServicesPage($id: String!) {
@@ -49,4 +49,4 @@ export const servicesPageQuery = graphql`
       html
     }
   }
-`;
+`

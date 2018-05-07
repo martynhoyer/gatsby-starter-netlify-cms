@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react'
 
 const AddressBlock = ({
   line1 = null,
@@ -7,7 +7,7 @@ const AddressBlock = ({
   county = null,
   country = null,
   postcode = null,
-  className
+  className,
 }) => (
   <address className={className}>
     {line1 && <Fragment>{line1}</Fragment>}
@@ -42,6 +42,6 @@ const AddressBlock = ({
       </Fragment>
     )}
   </address>
-);
+)
 
-export default AddressBlock;
+export default AddressBlock

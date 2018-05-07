@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import SeoTitle from "./SeoTitle";
-import { HTMLContent } from "../components/Content";
-import media from "../tokens/breakpoints";
+import React from 'react'
+import styled from 'styled-components'
+import SeoTitle from './SeoTitle'
+import { HTMLContent } from '../components/Content'
+import media from '../tokens/breakpoints'
 
 const StyledPageHeader = styled.header`
   padding: 2rem 1rem 3rem;
@@ -35,7 +35,7 @@ const StyledPageHeader = styled.header`
       color: ${props => props.theme.palette.purple};
     }
   }
-`;
+`
 
 const Intro = styled.div`
   @media (${media.xl}) {
@@ -45,7 +45,7 @@ const Intro = styled.div`
   @media (${media.x2}) {
     padding: 0 20%;
   }
-`;
+`
 
 const PageHeader = ({ title, subtitle, text = null, intro = null }) => {
   return (
@@ -62,7 +62,7 @@ const PageHeader = ({ title, subtitle, text = null, intro = null }) => {
         </Intro>
       )}
     </StyledPageHeader>
-  );
-};
+  )
+}
 
-export default PageHeader;
+export default PageHeader

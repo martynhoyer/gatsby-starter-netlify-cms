@@ -1,20 +1,20 @@
-import React from "react";
-import graphql from "graphql";
-import PageHeader from "../components/PageHeader";
-import ContactForm from "../components/FormikContactForm";
-import ContactItem from "../components/ContactItem";
-import AddressBlock from "../components/AddressBlock";
-import settings from "../../_data/settings.json";
-import styled from "styled-components";
-import { Main } from "../components/Main";
-import { GridParent, GridItem } from "../components/Grid";
-import { headingLevel3 } from "../tokens/typography";
+import React from 'react'
+import graphql from 'graphql'
+import PageHeader from '../components/PageHeader'
+import ContactForm from '../components/FormikContactForm'
+import ContactItem from '../components/ContactItem'
+import AddressBlock from '../components/AddressBlock'
+import settings from '../../_data/settings.json'
+import styled from 'styled-components'
+import { Main } from '../components/Main'
+import { GridParent, GridItem } from '../components/Grid'
+import { headingLevel3 } from '../tokens/typography'
 
 const ContactItemsList = styled.dl`
   position: relative;
   padding-left: 2em;
   font-size: 1.35em;
-`;
+`
 
 const Title = styled.h2`
   ${headingLevel3};
@@ -22,15 +22,15 @@ const Title = styled.h2`
   &:first-child {
     margin-top: 0;
   }
-`;
+`
 
 const StyledAddressBlock = styled(AddressBlock)`
   margin-top: 1em;
   font-style: normal;
-`;
+`
 
 const ContactPage = ({ data }) => {
-  const { markdownRemark: page } = data;
+  const { markdownRemark: page } = data
   return (
     <Main>
       <PageHeader
@@ -64,10 +64,10 @@ const ContactPage = ({ data }) => {
         </GridItem>
       </GridParent>
     </Main>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage
 
 export const contactPageQuery = graphql`
   query ContactPage {
@@ -79,4 +79,4 @@ export const contactPageQuery = graphql`
       html
     }
   }
-`;
+`

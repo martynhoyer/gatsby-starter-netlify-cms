@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const SuccessMessage = styled.div`
   margin-top: 1em;
@@ -11,6 +11,6 @@ const SuccessMessage = styled.div`
     outline: none;
     box-shadow: 0 0 2em 0 green;
   }
-`;
+`
 
-export default SuccessMessage;
+export default SuccessMessage

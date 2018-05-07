@@ -1,11 +1,11 @@
-import React, { Fragment } from "react";
-import Link from "gatsby-link";
-import Script from "react-load-script";
-import graphql from "graphql";
-import Img from "gatsby-image";
-import styled from "styled-components";
-import { Main } from "../components/Main";
-import { transparentize } from "polished";
+import React, { Fragment } from 'react'
+import Link from 'gatsby-link'
+import Script from 'react-load-script'
+import graphql from 'graphql'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import { Main } from '../components/Main'
+import { transparentize } from 'polished'
 
 const StyledImg = styled(Img)`
   & > img {
@@ -13,7 +13,7 @@ const StyledImg = styled(Img)`
   }
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -27,13 +27,13 @@ const StyledImg = styled(Img)`
         ${props => transparentize(0.9, props.theme.palette.black)} 90%,
         ${props => props.theme.palette.black} 100%
       ),
-      url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgICA8ZyBmaWxsPSJyZ2JhKDExMCw2NCwxNDEsLjI1KSI+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1IiAvPgogICAgICAgIDxyZWN0IHg9IjI1IiB5PSIyNSIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1IiAvPgogICAgPC9nPgo8L3N2Zz4=");
+      url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgICA8ZyBmaWxsPSJyZ2JhKDExMCw2NCwxNDEsLjI1KSI+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1IiAvPgogICAgICAgIDxyZWN0IHg9IjI1IiB5PSIyNSIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1IiAvPgogICAgPC9nPgo8L3N2Zz4=');
     background-size: cover, 4px;
     background-repeat: no-repeat, repeat;
     background-position: 0 0, 0 0;
     z-index: 1;
   }
-`;
+`
 
 const Intro = styled.div`
   position: relative;
@@ -44,11 +44,11 @@ const Intro = styled.div`
   background-color: ${props => transparentize(0.5, props.theme.palette.purple)};
   color: ${props => props.theme.palette.white};
   z-index: 1;
-`;
+`
 
 const Definitions = styled.dl`
   margin: 0;
-`;
+`
 
 const DefinitionTitle = styled.dt`
   margin-top: 0.5em;
@@ -57,54 +57,54 @@ const DefinitionTitle = styled.dt`
   &:first-child {
     margin-top: 0;
   }
-`;
+`
 
 const Pronunciation = styled.small`
   display: inline-block;
   font-size: 0.6em;
-`;
+`
 
 const DefinitionDescription = styled.dd`
   margin: 0;
   padding: 0;
-`;
+`
 
 const PageTitle = styled.h1`
   font-size: 2em;
   color: ${props => props.theme.palette.yellow};
-`;
+`
 
 const Links = styled.div`
   display: flex;
   justify-content: space-between;
-`;
+`
 
 const StyledLink = styled(Link)`
   display: inline-block;
   margin-top: 1em;
   color: ${props => props.theme.palette.white};
-`;
+`
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
     if (typeof window !== `undefined` && window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
+      window.netlifyIdentity.on('init', user => {
         if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/'
+          })
         }
-      });
+      })
     }
-    window.netlifyIdentity.init();
+    window.netlifyIdentity.init()
   }
 
   render() {
-    const { data } = this.props;
+    const { data } = this.props
     // const { edges: posts } = data.latestBlogs;
-    const posts = data.latestBlogs && data.latestBlogs.edges;
+    const posts = data.latestBlogs && data.latestBlogs.edges
 
-    const { pageContent } = data;
+    const { pageContent } = data
 
     return (
       <Main isHome>
@@ -118,20 +118,23 @@ export default class IndexPage extends React.Component {
             base64: data.backgroundImage.childImageSharp.sqip.dataURI,
           }}
           style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%"
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
           }}
         />
         <Intro>
           <Definitions>
-          <img src={data.backgroundImage.childImageSharp.sqip.dataURI} alt="" />
+            <img
+              src={data.backgroundImage.childImageSharp.sqip.dataURI}
+              alt=""
+            />
             {pageContent.frontmatter.definition &&
               pageContent.frontmatter.definition.map(
                 ({ title, pronunciation, description }) => (
                   <Fragment key={title}>
                     <DefinitionTitle>
-                      {title}{" "}
+                      {title}{' '}
                       <Pronunciation aria-hidden="true">
                         {pronunciation}
                       </Pronunciation>
@@ -165,7 +168,7 @@ export default class IndexPage extends React.Component {
             </div>
           ))}
       </Main>
-    );
+    )
   }
 }
 
@@ -216,4 +219,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

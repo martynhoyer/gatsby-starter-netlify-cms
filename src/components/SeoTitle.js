@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
-import { hideVisually } from "polished";
-import media from "../tokens/breakpoints";
-import { headingLevel1 } from "../tokens/typography";
+import React, { Fragment } from 'react'
+import styled from 'styled-components'
+import { hideVisually } from 'polished'
+import media from '../tokens/breakpoints'
+import { headingLevel1 } from '../tokens/typography'
 
 const Heading = styled.h1`
   margin: 0;
@@ -15,7 +15,7 @@ const Heading = styled.h1`
     justify-content: space-between;
     align-items: center;
   }
-`;
+`
 
 const SubTitle = styled.small`
   display: block;
@@ -23,26 +23,26 @@ const SubTitle = styled.small`
   font-size: 0.3em;
   font-weight: normal;
   text-transform: uppercase;
-`;
+`
 
 const Concatenator = styled.span`
   ${hideVisually};
-`;
+`
 
 const Title = styled.span`
   ${headingLevel1} display: block;
   margin-top: 1em;
-`;
+`
 
 const SeoTitle = ({ title, subtitle = null }) => (
   <Heading>
     {subtitle && (
       <Fragment>
-        <SubTitle>{subtitle}</SubTitle> <Concatenator>or</Concatenator>{" "}
+        <SubTitle>{subtitle}</SubTitle> <Concatenator>or</Concatenator>{' '}
       </Fragment>
     )}
     <Title>{title}</Title>
   </Heading>
-);
+)
 
-export default SeoTitle;
+export default SeoTitle

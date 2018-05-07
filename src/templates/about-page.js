@@ -202,7 +202,6 @@ export const aboutPageQuery = graphql`
         node {
           id
           sizes(maxWidth: 560) {
-            base64
             aspectRatio
             src
             srcSet
@@ -210,6 +209,9 @@ export const aboutPageQuery = graphql`
             srcSetWebp
             sizes
             originalName
+          }
+          sqip(numberOfPrimitives: 32, blur: 0, mode: 1) {
+            dataURI
           }
         }
       }

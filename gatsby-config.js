@@ -32,8 +32,10 @@ module.exports = {
         name: "cmsImages"
       }
     },
+    "gatsby-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-sqip",
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -67,8 +69,7 @@ module.exports = {
         background_color: "#6e408d",
         theme_color: "#6e408d",
         display: "minimal-ui",
-        icons: [
-          {
+        icons: [{
             src: "/favicons/android-chrome-36x36.png",
             sizes: "36x36",
             type: "image/png"

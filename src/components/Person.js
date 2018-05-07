@@ -79,10 +79,12 @@ const Para = styled.p`
   margin: 1em 0 0;
 `;
 
-const Person = ({ person, img }) => (
+const Person = ({ person, img }) => {
+  return(
   <Container>
     <Intro>
-      <StyledImg sizes={img.sizes} />
+      <StyledImg sizes={{...img.sizes, base64: img.sqip.dataURI}} />
+      <img src={img.sqip.dataURI} alt="" />
       <NameAndJobTitle>
         <Name>{person.name}</Name> <br />
         <JobTitle>{person.jobtitle}</JobTitle>
@@ -90,6 +92,6 @@ const Person = ({ person, img }) => (
     </Intro>
     {person.paragraphs.map(para => <Para key={para.id}>{para.text}</Para>)}
   </Container>
-);
+)};
 
 export default Person;

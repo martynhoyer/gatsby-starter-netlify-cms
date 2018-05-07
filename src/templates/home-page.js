@@ -113,7 +113,10 @@ export default class IndexPage extends React.Component {
           onLoad={() => this.handleScriptLoad()}
         />
         <StyledImg
-          sizes={data.backgroundImage.childImageSharp.sizes}
+          sizes={{
+            ...data.backgroundImage.childImageSharp.sizes,
+            base64: data.backgroundImage.childImageSharp.sqip.dataURI,
+          }}
           style={{
             position: "absolute",
             width: "100%",
@@ -122,6 +125,7 @@ export default class IndexPage extends React.Component {
         />
         <Intro>
           <Definitions>
+          <img src={data.backgroundImage.childImageSharp.sqip.dataURI} alt="" />
             {pageContent.frontmatter.definition &&
               pageContent.frontmatter.definition.map(
                 ({ title, pronunciation, description }) => (
@@ -186,17 +190,11 @@ export const pageQuery = graphql`
     }
     backgroundImage: file(relativePath: { eq: "spa.jpg" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        sizes(maxWidth: 1200) {
-          base64
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          sizes
-          originalName
+        sizes(maxWidth: 4000) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+        sqip(numberOfPrimitives: 100, blur: 0, mode: 1) {
+          dataURI
         }
       }
     }

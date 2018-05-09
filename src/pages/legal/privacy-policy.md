@@ -3,9 +3,7 @@ templateKey: legal
 title: Privacy and Cookies notice
 date: '2018-05-09T15:45:00+01:00'
 ---
-# Privacy and Cookies Notice
-
-Corse Concierge Ltd is a registered data controller with the UK Information Commissioner's Office under number** ZA226132.**
+Corse Concierge Ltd is a registered data controller with the UK Information Commissioner's Office under number **ZA226132**.
 
 We hold personal data about:
 
@@ -29,7 +27,7 @@ You also have the right to lodge a complaint about our processing with the UK’
 
 _This policy will be reviewed annually. Date of last review: 9th May 2018._
 
-## Your Rights
+# Your Rights
 
 As an individual whose personal data is processed by Corse Concierge you have these rights:
 
@@ -42,7 +40,7 @@ As an individual whose personal data is processed by Corse Concierge you have th
 * The right to have your data rectified if it is inaccurate.
 * The right to have your data restricted or blocked from processing
 
-## Our Website
+# Our Website
 
 Corse Concierge uses a third-party service, Google Analytics, to understand how users interact with our website in order to understand better who is visiting, why they are visiting, and how we can better help them by improving our website. 
 
@@ -55,7 +53,7 @@ Google Analytics stores information about:
 
 Individuals cannot be identified from the information we gain from Google Analytics. You can [opt out ](http://tools.google.com/dlpage/gaoptout)of all Google Analytics tracking if you would prefer. 
 
-## Cookies
+# Cookies
 
 corseconcierge.com puts small files (known as ‘cookies’) onto your computer to collect information about how you browse the site.
 
@@ -65,11 +63,11 @@ _ga      Google Analytics
 
 You can control cookies via your web browser settings. 
 
-## Emailing us
+# Emailing us
 
 We use Transport Layer Security (TLS) to encrypt and protect email traffic, alongside monitoring for viruses or malicious software.
 
-## Data we may hold
+# Data we may hold
 
 ## Prospective Clients
 
@@ -118,6 +116,6 @@ As a newsletter subscriber, we may hold the following information about you:
 
 We will use this information to send you news about Corse Concierge and its services. We will ask you annually to check and update this information. If we do not hear from you then, your details will be removed. You can unsubscribe using the link including in all email newsletters or on the contact details above.
 
-## Data we may transfer
+# Data we may transfer
 
 We use third party tools in our business -  [Slack](https://slack.com/privacy-policy), [Google GSuite](https://gsuite.google.co.uk/intl/en_uk/security/) and [MailChimp](https://mailchimp.com/legal/privacy/). These tools may transfer your information out of the European Economic Area.

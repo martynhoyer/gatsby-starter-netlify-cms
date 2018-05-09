@@ -27,7 +27,7 @@ You also have the right to lodge a complaint about our processing with the UK’
 
 _This policy will be reviewed annually. Date of last review: 9th May 2018._
 
-# Your Rights
+## Your Rights
 
 As an individual whose personal data is processed by Corse Concierge you have these rights:
 
@@ -40,7 +40,7 @@ As an individual whose personal data is processed by Corse Concierge you have th
 * The right to have your data rectified if it is inaccurate.
 * The right to have your data restricted or blocked from processing
 
-# Our Website
+## Our Website
 
 Corse Concierge uses a third-party service, Google Analytics, to understand how users interact with our website in order to understand better who is visiting, why they are visiting, and how we can better help them by improving our website. 
 
@@ -53,7 +53,7 @@ Google Analytics stores information about:
 
 Individuals cannot be identified from the information we gain from Google Analytics. You can [opt out ](http://tools.google.com/dlpage/gaoptout)of all Google Analytics tracking if you would prefer. 
 
-# Cookies
+## Cookies
 
 corseconcierge.com puts small files (known as ‘cookies’) onto your computer to collect information about how you browse the site.
 
@@ -63,13 +63,13 @@ _ga      Google Analytics
 
 You can control cookies via your web browser settings. 
 
-# Emailing us
+## Emailing us
 
 We use Transport Layer Security (TLS) to encrypt and protect email traffic, alongside monitoring for viruses or malicious software.
 
-# Data we may hold
+## Data we may hold
 
-## Prospective Clients
+### Prospective Clients
 
 As a prospective client, we may hold the following information about you:
 
@@ -82,7 +82,7 @@ If you contact us via email, phone or the contact us page on our website, this d
 
 If 12 months after the duration of the enquiry, you can not an active client we will remove this data from our systems.
 
-## Clients
+### Clients
 
 As a client, we may hold the following information about you:
 
@@ -94,7 +94,7 @@ As a client, we may hold the following information about you:
 
 We use this data to meet our contractual requirements to you in providing an agreed service and to seek payment from you via invoice. We also use this for lawful purposes, such as taxation.  We will retain all financial records for 6 years, following the end of the current financial year. This may include your data. We will retain other information about you for the duration of our relationship with you, plus 12 months. 
 
-## Suppliers
+### Suppliers
 
 As a supplier, we may hold the following information about you:
 
@@ -106,7 +106,7 @@ As a supplier, we may hold the following information about you:
 
 We use this data to as part of our contractual agreement to help you provide an agreed service and make payments to you via invoice. We also use this for lawful purposes, such as taxation.  We will retain all financial records for 6 years, following the end of the current financial year. This may include your data. We will retain other information about you for the duration of our relationship with you, plus 12 months. 
 
-## Newsletter subscribers
+### Newsletter subscribers
 
 As a newsletter subscriber, we may hold the following information about you:
 
@@ -116,6 +116,6 @@ As a newsletter subscriber, we may hold the following information about you:
 
 We will use this information to send you news about Corse Concierge and its services. We will ask you annually to check and update this information. If we do not hear from you then, your details will be removed. You can unsubscribe using the link including in all email newsletters or on the contact details above.
 
-# Data we may transfer
+## Data we may transfer
 
 We use third party tools in our business -  [Slack](https://slack.com/privacy-policy), [Google GSuite](https://gsuite.google.co.uk/intl/en_uk/security/) and [MailChimp](https://mailchimp.com/legal/privacy/). These tools may transfer your information out of the European Economic Area.

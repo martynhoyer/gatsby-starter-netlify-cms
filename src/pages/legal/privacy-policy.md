@@ -1,122 +1,123 @@
 ---
 templateKey: legal
-title: Privacy policy
-date: '2018-03-13T21:42:00+00:00'
+title: Privacy and Cookies notice
+date: '2018-05-09T15:45:00+01:00'
 ---
+# Privacy and Cookies Notice
 
-## Key details
+Corse Concierge Ltd is a registered data controller with the UK Information Commissioner's Office under number** ZA226132.**
 
-This website privacy policy describes how Corse Concierge protects and makes use of the information you give the company when you use this website.
+We hold personal data about:
 
-If you are asked to provide information when using this website, it will only be used in the ways described in this privacy policy.
+* Clients
+* Prospective clients
+* Suppliers
+* Employees
+* Newsletter subscribers
 
-This policy is updated from time to time. The latest version is published on this page.
+We will only disclose this data if:
 
-This website privacy policy was updated on: 2017-04-16
+* It is required by law
+* It is required to provide you with services and goods
+* You have given us prior consent
 
-If you have any questions about this policy, please email [hello@corseconcierge.com](hello@corseconcierge.com)
+We do not buy or sell personal data for any purpose.
 
-Write to us at:  
-Corse Concierge Ltd  
-Kineton House  
-31 Horse Fair  
-Banbury  
-Oxfordshire  
-United Kingdom  
-OX16 0AE
+To verify, update or amend your personal data, or contact us with a data protection query, please email <mailto:dataprotection@corseconcierge.com>
 
-## Introduction
+You also have the right to lodge a complaint about our processing with the UK’s [Information Commissioner’s Office](https://ico.org.uk/).
 
-We gather and use certain information about individuals in order to provide products and services and to enable certain functions on this website.
+_This policy will be reviewed annually. Date of last review: 9th May 2018._
 
-We also collect information to better understand how visitors use this website and to present timely, relevant information to them.
+## Your Rights
 
-## What data we gather
+As an individual whose personal data is processed by Corse Concierge you have these rights:
 
-We may collect the following information:
+* The right to be informed, which is what this privacy policy is for.
+* The right to access what data we hold about you.
+* The right to object to direct marketing – either use the unsubscribe option or contact us directly.
+* The right to object to processing carried out on the basis of legitimate interests.
+* The right to erasure (in some circumstances).
+* The right to data portability.
+* The right to have your data rectified if it is inaccurate.
+* The right to have your data restricted or blocked from processing
 
-* Name and job title
-* Contact information including email address
-* Demographic information, such as postcode, preferences and interests
-* Website usage data
-* Other information relevant to client enquiries
+## Our Website
 
-## How we use this data
+Corse Concierge uses a third-party service, Google Analytics, to understand how users interact with our website in order to understand better who is visiting, why they are visiting, and how we can better help them by improving our website. 
 
-Collecting this data helps us understand what you are looking for from the company, enabling us to deliver improved products and services. Specifically, we may use data:
+Google Analytics stores information about:
 
-* For our own internal records
-* To improve the services we provide
-* To contact you in response to a specific enquiry
-* To customise the website for you
-* To send you promotional emails about products, services, offers and other things we think might be relevant to you
-* To send you promotional mailings or to call you about products, services, offers and other things we think might be relevant to you
+* the pages you visit on corseconcierge.com
+* how long you spend on each corseconcierge.com page
+* how you got to the site
+* what you click on while you’re visiting the site
 
-## Cookies and how we use them
+Individuals cannot be identified from the information we gain from Google Analytics. You can [opt out ](http://tools.google.com/dlpage/gaoptout)of all Google Analytics tracking if you would prefer. 
 
-### What is a cookie?
+## Cookies
 
-A cookie is a small file placed on your computer’s hard drive. It enables our website to identify your computer as you view different pages on our website.
+corseconcierge.com puts small files (known as ‘cookies’) onto your computer to collect information about how you browse the site.
 
-Cookies allow websites and applications to store your preferences in order to present content, options or functions that are specific to you. They also enable us to see information like how many people use the website and what pages they tend to visit.
+This site will place the following cookies on your computer.
 
-### How we use cookies
+_ga      Google Analytics
 
-We may use cookies to:
+You can control cookies via your web browser settings. 
 
-* Analyse our web traffic using an analytics package Aggregated usage data helps us improve the website structure, design, content and functions
-* Identify whether you are signed in to our website. A cookie allows us to check whether you are signed in to the site
-* Test content on our website. For example, 50% of our users might see one piece of content, the other 50% a different piece of content
-* Store information about your preferences. The website can then present you with information you will find more relevant and interesting
-* To recognise when you return to our website. We may show your relevant content, or provide functionality you used previously
+## Emailing us
 
-Cookies do not provide us with access to your computer or any information about you, other than that which you choose to share with us.
+We use Transport Layer Security (TLS) to encrypt and protect email traffic, alongside monitoring for viruses or malicious software.
 
-View our cookies policy page to find out more about the cookies used on this website.
+## Data we may hold
 
-### Controlling cookies
+## Prospective Clients
 
-You can use your web browser’s cookie settings to determine how our website uses cookies. If you do not want our website to store cookies on your computer or device, you should set your web browser to refuse cookies.
+As a prospective client, we may hold the following information about you:
 
-However, please note that doing this may affect how our website functions. Some pages and services may become unavailable to you.
+* Your name and basic contact information such as phone number and email address
+* What you do
+* What we may be able to do for you
+* Communications with you
 
-Unless you have changed your browser to refuse cookies, our website will issue cookies when you visit it.
+If you contact us via email, phone or the contact us page on our website, this data allow us to follow-up with you.
 
-To learn more about cookies and how they are used, visit [All About Cookies.](http://www.allaboutcookies.org/)
+If 12 months after the duration of the enquiry, you can not an active client we will remove this data from our systems.
 
-## Controlling information about you
+## Clients
 
-When you fill in a form or provide your details on our website, you will see one or more tick boxes allowing you to opt-in to receive marketing communications from us by email, telephone, text message or post.
+As a client, we may hold the following information about you:
 
-If you have agreed that we can use your information for marketing purposes, you can change your mind easily, via one of these methods:
+* Your name and contact information such as phone number and email address
+* Your billing and payment information including your address and postcode
+* What you do
+* What we are working on for you
+* Communications with you
 
-* Unsubscribe instantly via the link in the footer of one of our email communications
-* Send an email to [hello@corseconcierge.com](hello@corseconcierge.com)
-* Write to us at:  
-  Corse Concierge Ltd  
-  Kineton House  
-  31 Horse Fair  
-  Banbury  
-  Oxfordshire  
-  United Kingdom  
-  OX16 0AE
+We use this data to meet our contractual requirements to you in providing an agreed service and to seek payment from you via invoice. We also use this for lawful purposes, such as taxation.  We will retain all financial records for 6 years, following the end of the current financial year. This may include your data. We will retain other information about you for the duration of our relationship with you, plus 12 months. 
 
-We will never lease, distribute or sell your personal information to third parties unless we have your permission or the law requires us to.
+## Suppliers
 
-Any personal information we hold about you is stored and processed under our data protection policy, in line with the Data Protection Act 1998. We are registered with the Information Commissioner’s Office under registration number: ZA226132
+As a supplier, we may hold the following information about you:
 
-## Security
+* Your name and contact information such as phone number and email address
+* Your billing and payment information including your address and postcode
+* What you do
+* What you are providing for us
+* Communications with you
 
-We will always hold your information securely.
+We use this data to as part of our contractual agreement to help you provide an agreed service and make payments to you via invoice. We also use this for lawful purposes, such as taxation.  We will retain all financial records for 6 years, following the end of the current financial year. This may include your data. We will retain other information about you for the duration of our relationship with you, plus 12 months. 
 
-To prevent unauthorised disclosure or access to your information, we have implemented strong physical and electronic security safeguards.
+## Newsletter subscribers
 
-We also follow stringent procedures to ensure we work with all personal data in line with the Data Protection Act 1998 and the Information Commisioner’s office guides to best practice.
+As a newsletter subscriber, we may hold the following information about you:
 
-## Links from our site
+* Your name and email address
+* What you would like to hear from us about
+* A record of your consent to receive our newsletter
 
-Our website may contain links to other websites.
+We will use this information to send you news about Corse Concierge and its services. We will ask you annually to check and update this information. If we do not hear from you then, your details will be removed. You can unsubscribe using the link including in all email newsletters or on the contact details above.
 
-Please note that we have no control of websites outside the corseconcierge.com domain. If you provide information to a website to which we link, we are not responsible for its protection and privacy.
+## Data we may transfer
 
-Always be wary when submitting data to websites. Read the site’s data protection and privacy policies fully.
+We use third party tools in our business -  [Slack](https://slack.com/privacy-policy), [Google GSuite](https://gsuite.google.co.uk/intl/en_uk/security/) and [MailChimp](https://mailchimp.com/legal/privacy/). These tools may transfer your information out of the European Economic Area.

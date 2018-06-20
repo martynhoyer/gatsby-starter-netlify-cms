@@ -13,18 +13,18 @@ snippets:
             text: >-
               Corse Concierge is based in the heart of the UK's "Motorsport
               Valley". From this central location we can function from your
-              offices and workshops as an extension of your team.
+              offices as an extension of your team.
       - heading: On event
         id: 2
         paragraphs:
           - id: 1
             text: >-
-              We aren't afraid to get stuck in at a race track or rally stage.
+              We aren't afraid to get stuck in at a race track or evening event.
               9-5, Monday to Friday isn't how we operate.
           - id: 2
             text: >-
-              During the racing season we are able to provide reliable race team
-              support.
+              During the motorsport season we are able to provide reliable race
+              team support.
       - heading: Online
         id: 3
         paragraphs:

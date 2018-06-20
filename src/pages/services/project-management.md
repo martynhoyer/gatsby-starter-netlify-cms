@@ -1,13 +1,15 @@
 ---
 templateKey: services
 title: Project management
-date: 2018-03-10T00:00:00+00:00
-intro: With our background in engineering and technology development, Corse Concierge are capable of overseeing both technical and commercial programmes.
+date: 2018-03-10T00:00:00.000Z
+intro: >-
+  With our background in engineering and technology development, Corse Concierge
+  are capable of overseeing both technical and commercial programmes.
 ---
 
-We hold qualifications in project management and understand the unique environment in which motorsport projects take place.
+We hold qualifications in project management and have extensive experience running challenging projects.
 
-Corse Concierge can also apply the philosophy of racing to project delivery in other industries. Our team are used to working to tight deadlines and budgets. We understand that sometimes things might not go to plan, but know the most important thing is how you react. Corse Concierge will always get you to your finish line.
+Corse Concierge applies the philosophy of motorsport to project delivery in other industries. Our team are used to working to tight deadlines and even tighter budgets. We understand that sometimes things might not go to plan, but know the most important thing is how you react. Corse Concierge will always get you to your finish line.
 
 Clear communication is important to us, and nowhere is that more critical than whilst managing client projects.
 

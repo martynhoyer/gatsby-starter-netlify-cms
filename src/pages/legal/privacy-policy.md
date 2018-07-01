@@ -32,13 +32,15 @@ _This policy will be reviewed annually. Date of last review: 9th May 2018._
 As an individual whose personal data is processed by Corse Concierge you have these rights:
 
 * The right to be informed, which is what this privacy policy is for.
-* The right to access what data we hold about you.
+* The right to access what data we hold about you. To make a subject access request please make a written request using the email address above.
 * The right to object to direct marketing – either use the unsubscribe option or contact us directly.
-* The right to object to processing carried out on the basis of legitimate interests.
+* The right to object to processing carried out on the basis of legitimate interests. Where Corse Concierge rely on legitimate interests to process, store or use your data, we only do so after carrying our a full Legitimate Interest Assessment.
 * The right to erasure (in some circumstances).
 * The right to data portability.
 * The right to have your data rectified if it is inaccurate.
-* The right to have your data restricted or blocked from processing
+* The right to have your data restricted or blocked from processing.
+
+Please note we do not use automated decision-making or profiling.
 
 ## Our Website
 
@@ -61,7 +63,7 @@ This site will place the following cookies on your computer.
 
 _ga      Google Analytics
 
-You can control cookies via your web browser settings. 
+You can control cookies via your web browser settings.
 
 ## Emailing us
 
@@ -78,9 +80,9 @@ As a prospective client, we may hold the following information about you:
 * What we may be able to do for you
 * Communications with you
 
-If you contact us via email, phone or the contact us page on our website, this data allow us to follow-up with you.
+If you contact us via email, phone or the contact us page on our website, this data allow us to follow-up with you. We believe this to be a legitimate interest. A copy of our Legitimate Interest Assessment is available on request.
 
-If 12 months after the duration of the enquiry, you can not an active client we will remove this data from our systems.
+If 12 months after the duration of the enquiry, you are not an active client we will remove this data from our systems.
 
 ### Clients
 
@@ -114,8 +116,8 @@ As a newsletter subscriber, we may hold the following information about you:
 * What you would like to hear from us about
 * A record of your consent to receive our newsletter
 
-We will use this information to send you news about Corse Concierge and its services. We will ask you annually to check and update this information. If we do not hear from you then, your details will be removed. You can unsubscribe using the link including in all email newsletters or on the contact details above.
+We will use this information to send you news about Corse Concierge and its services. We will ask you annually to check and update this information. If we do not hear from you then, your details will be removed. You can unsubscribe using the link including in all email newsletters or on the contact details above. Our lawful basis for processing is your consent; We will not add you to our mailing list without your consent.
 
 ## Data we may transfer
 
-We use third party tools in our business -  [Slack](https://slack.com/privacy-policy), [Google GSuite](https://gsuite.google.co.uk/intl/en_uk/security/) and [MailChimp](https://mailchimp.com/legal/privacy/). These tools may transfer your information out of the European Economic Area.
+We use third party tools in our business -  [Slack](https://slack.com/privacy-policy), [Google GSuite](https://gsuite.google.co.uk/intl/en_uk/security/) and [MailChimp](https://mailchimp.com/legal/privacy/). These tools may transfer your information out of the European Economic Area. If you have any concerns around your data being transferred international after reading the linked privacy statements from these third parties, please contact us. We'll be happy to discuss.

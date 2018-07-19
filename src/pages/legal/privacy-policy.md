@@ -120,4 +120,4 @@ We will use this information to send you news about Corse Concierge and its serv
 
 ## Data we may transfer
 
-We use third party tools in our business -  [Slack](https://slack.com/privacy-policy), [Google GSuite](https://gsuite.google.co.uk/intl/en_uk/security/) and [MailChimp](https://mailchimp.com/legal/privacy/). These tools may transfer your information out of the European Economic Area. If you have any concerns around your data being transferred international after reading the linked privacy statements from these third parties, please contact us. We'll be happy to discuss.
+We use third party tools in our business -  [Slack](https://slack.com/privacy-policy), [Google GSuite](https://gsuite.google.co.uk/intl/en_uk/security/), [Typeform](http://www.typeform.com/privacy-policy/) and [MailChimp](https://mailchimp.com/legal/privacy/). These tools may transfer your information out of the European Economic Area. If you have any concerns around your data being transferred international after reading the linked privacy statements from these third parties, please contact us. We'll be happy to discuss.

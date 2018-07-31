@@ -57,7 +57,7 @@ const ContactPage = ({ data }) => {
           <ContactForm />
         </GridItem>
         <GridItem stripy>
-          <Title>Registered office address</Title>
+          <Title>Find us</Title>
           <StyledAddressBlock {...settings.contact.address} />
           <p>Company number: {settings.contact.companyNumber}</p>
           <p>VAT number: {settings.contact.vatNumber}</p>

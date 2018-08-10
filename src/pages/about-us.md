@@ -1,9 +1,9 @@
 ---
 templateKey: about-page
-mainNav: true
-order: 1
 title: Who we are
 subtitle: About us
+mainNav: true
+order: 1
 people:
   - image: /img/ella.jpg
     jobtitle: Managing director
@@ -11,13 +11,14 @@ people:
     paragraphs:
       - id: 1
         text: >-
-          A reformed engineer, Ella is an award-winning business and operations
-          director for motorsport.
+          If your business needs someone with a strategic mind, an eye for
+          process and an unwavering determination to do things better, Ella’s
+          the person to call.
       - id: 2
         text: >-
-          She has worked with and for teams and tier one suppliers in everything
-          from karting to international sportscars, junior formula to historic
-          racing.
+          An award-winning business and operations director, Ella carved her
+          career in the ambitious world of motorsport. She knows how to deliver
+          the performance edge you need to overtake your biggest competition. 
   - image: /img/martyn.jpg
     jobtitle: Digital director
     name: Martyn Hoyer

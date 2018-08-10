@@ -25,13 +25,14 @@ people:
     paragraphs:
       - id: 1
         text: >-
-          Martyn is in charge of all things online. Through working for small
-          agencies to multinational technology companies, Martyn has a passion
-          for the web.
+          Martyn is in charge of all things online. He is passionate about
+          utilising technology to make life more efficient.
       - id: 2
         text: >-
-          Combined with his knowledge of professional motorsport, he understands
-          what works and what doesn’t across multiple platforms.
+          With experience in small agencies and multinational technology
+          companies, Martyn can make the web work for you, whatever your
+          industry.  Whether you want to make your website accessible to all, or
+          just take your first steps into the digital world, he can help.
 whyus:
   reasons:
     - id: 1

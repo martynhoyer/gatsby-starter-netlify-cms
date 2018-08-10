@@ -4,15 +4,14 @@ title: Project management
 date: 2018-03-10T00:00:00.000Z
 intro: >-
   With our background in engineering and technology development, Corse Concierge
-  are capable of overseeing both technical and commercial programmes.
+  can oversee both technical and commercial programmes.
 ---
+Stop worrying about complicated communications and distracting deadlines – pass the pain of project management over to Corse Concierge. 
 
-We hold qualifications in project management and have extensive experience running challenging projects.
+Not only are we qualified experts, we’ve co-ordinated complex projects in challenging, high-performance industries. 
 
-Corse Concierge applies the philosophy of motorsport to project delivery in other industries. Our team are used to working to tight deadlines and even tighter budgets. We understand that sometimes things might not go to plan, but know the most important thing is how you react. Corse Concierge will always get you to your finish line.
+We’re used to working to tight deadlines and strict budgets. And even if things aren’t quite going to plan, we can rally your team together to get everything back on-track. 
 
 Clear communication is important to us, and nowhere is that more critical than whilst managing client projects.
 
-From co-ordinating company relocations and new product launches, we can take on individual assignments you can continue to focus on your day to day business.
-
-Our experienced staff can also work in-house to provide project management support as and when you need it.
+From co-ordinating company relocations and new product launches, we can get your project sorted.

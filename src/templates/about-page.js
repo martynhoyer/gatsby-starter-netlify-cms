@@ -6,7 +6,7 @@ import { GridParent, GridItem } from "../components/Grid";
 import styled from "styled-components";
 import media from "../tokens/breakpoints";
 import { Main } from "../components/Main";
-import { headingLevel3 } from "../tokens/typography";
+import { headingLevel3, headingLevel4 } from "../tokens/typography";
 import { ReactComponent as Logo } from "../svg/logo.svg";
 import { transparentize } from "polished";
 
@@ -44,6 +44,14 @@ const WhyUsTitle = styled.h2`
     margin-top: 0;
   }
 `;
+
+const WhyUsItemTitle = styled.h3`
+  ${headingLevel4};
+`
+
+const WhyUsItemBody = styled.p`
+  margin-top: 0.2em;
+`
 
 const OriginContainer = styled.div`
   position: relative;
@@ -156,11 +164,16 @@ const AboutPage = ({ data }) => {
       )}
       <WhyUs>
         <WhyUsTitle>{page.frontmatter.whyus.title}</WhyUsTitle>
+        <p>{page.frontmatter.whyus.preamble}</p>
         <ul>
           {page.frontmatter.whyus.reasons.map(reason => (
-            <li key={reason.id}>{reason.text}</li>
+            <li key={reason.id}>
+              <WhyUsItemTitle>{reason.title}</WhyUsItemTitle>
+              <WhyUsItemBody>{reason.text}</WhyUsItemBody>
+            </li>
           ))}
         </ul>
+        <p>{page.frontmatter.whyus.postamble}</p>
       </WhyUs>
       <OriginContainer>
         <StyledLogo />
@@ -189,10 +202,13 @@ export const aboutPageQuery = graphql`
         }
         whyus {
           title
+          preamble
           reasons {
             id
+            title
             text
           }
+          postamble
         }
       }
       html

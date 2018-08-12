@@ -34,23 +34,21 @@ people:
           industry.  Whether you want to make your website accessible to all, or
           just take your first steps into the digital world, he can help.
 whyus:
+  preamble: "There are three fundamental things we learned in motorsport that help us to add value to businesses in every sector:"
   reasons:
     - id: 1
+      title: Innate curiosity
       text: >-
-        We have comprehensive industry experience. We know motorsport in and
-        out.
+        We’re continuously looking for ways to improve your business operations; what is the next thing we can do better?
     - id: 2
+      title: Intelligent strategy
       text: >-
-        We build networks of experts and specialists that you can rely on. Our
-        contacts are yours.
+        Everything we put in place is mapped to your end goals; how can we deliver quicker, better, bigger growth?
     - id: 3
+      title: Intensive approach
       text: >-
-        We understand the continuous progress required to keep ahead of the
-        competition. We don't stop.
-    - id: 4
-      text: >-
-        We constantly evolve, adapt and incorporate new technology and tactics.
-        For clients and for ourselves.
+        Our experience working to tight deadlines and strict budgets makes us experts in getting stuff done; what results can we deliver today?
+  postamble: Importantly, we give you the choice about how we work together. Either we give you the knowledge and tools to take back to your business, or we can become a part of your team and add value day-in, day-out.
   title: Why us?
 ---
 ## Our name explained

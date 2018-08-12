@@ -215,6 +215,11 @@ collections:
               widget: "string"
             },
             {
+              label: "Preamble",
+              name: "preamble",
+              widget: "string"
+            },
+            {
               label: "Reasons",
               name: "reasons",
               widget: "list",
@@ -225,11 +230,21 @@ collections:
                   widget: "number"
                 }, 
                 {
+                  label: "title", 
+                  name: "title", 
+                  widget: "string"
+                },
+                {
                   label: "text", 
                   name: "text", 
                   widget: "string"
                 }
               ]
+            },
+            {
+              label: "Postamble",
+              name: "postamble",
+              widget: "string"
             }
           ]}
           - {label: "Body", name: "body", widget: "markdown"}

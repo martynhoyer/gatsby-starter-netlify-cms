@@ -14,3 +14,9 @@ export const headingLevel3 = css`
   line-height: 1.3;
   color: ${props => props.theme.palette.purple};
 `;
+
+export const headingLevel4 = css`
+  font-size: 1.1em;
+  line-height: 1.3;
+  color: ${props => props.theme.palette.purple};
+`;

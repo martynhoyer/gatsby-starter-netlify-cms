@@ -10,33 +10,29 @@ snippets:
         id: 1
         paragraphs:
           - id: 1
-            text: >-
-              Corse Concierge is based in the heart of the UK's "Motorsport
-              Valley". From this central location we can function from your
-              offices as an extension of your team.
+            text: We can function from your offices as an extension of your team.
+          - id: '2'
+            text: 'You can blend us into your activities, under your brand.'
       - heading: On event
         id: 2
         paragraphs:
           - id: 1
             text: >-
-              We aren't afraid to get stuck in at a race track or evening event.
-              9-5, Monday to Friday isn't how we operate.
+              If you need support at a race track or an evening event, count us
+              in.
           - id: 2
-            text: >-
-              During the motorsport season we are able to provide reliable race
-              team support.
+            text: '9-5, Monday to Friday isn''t how we operate.'
       - heading: Online
         id: 3
         paragraphs:
           - id: 1
             text: >-
-              Using the wonders of modern technology we can work anywhere in the
-              world.
+              Using the wonders of modern technology we can work for you
+              wherever you are in the world.
           - id: 2
             text: >-
-              Corse Concierge can provide remote assistance to businesses
-              without the need to be in the same place, but with the same level
-              of service as face to face clients.
+              You can get the same level of service, without needing to pay for
+              a desk.
     title: The physical
   - sections:
       - heading: Project based
@@ -45,33 +41,37 @@ snippets:
           - id: 1
             text: >-
               You can commission Corse Concierge to work on a project basis.
-              We'll discuss with you the scope of work, and then provide a quote
-              to cover this before work commences.
+              We'll work together to scope the work, and then provide you with a
+              quote.
+          - id: '2'
+            text: >-
+              You’ll know exactly how much you are spending from start to
+              finish.
       - heading: Hourly rate or daily rate
         id: 2
         paragraphs:
           - id: 1
             text: >-
-              When working on less defined tasks we offer hourly and daily
-              rates. This flexible solution is perfect for regular clients.
+              When you give us less defined tasks we can offer you hourly and
+              daily rates. This flexible solution is perfect for you if you need
+              medium term support.
           - id: 2
             text: >-
-              We always provide time breakdowns to show where your money is
+              We provide you with time breakdowns to show where your money is
               going.
       - heading: Fixed duration contract or ad-hoc
         id: 3
         paragraphs:
           - id: 1
             text: >-
-              With longer term customers we can work on a fixed contract with
-              regular time and tasks for better budgeting.
+              If you don’t know what the future holds, but you need support now,
+              you need a fixed term contract. We can do that.
           - id: 2
             text: >-
               Just need us occasionally? We don't have any minimum charges, so
-              can help out ad-hoc.
+              can help you out ad-hoc.
     title: The financial
 ---
-
-Corse Concierge work with our clients in whatever way suits them best.
+Corse Concierge can work with you in whatever way suits you best.
 
 Need support but not sure where to start? [Get in touch →](/contact).

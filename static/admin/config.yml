@@ -144,7 +144,7 @@ collections:
                 {
                   label: "ID", 
                   name: "id", 
-                  widget: "string"
+                  widget: "number"
                 }, 
                 {
                   label: "Link URL", 
@@ -197,7 +197,7 @@ collections:
                     {
                       label: "id", 
                       name: "id", 
-                      widget: "string"
+                      widget: "number"
                     }, 
                     {
                       label: "text", 
@@ -222,7 +222,7 @@ collections:
                 {
                   label: "id", 
                   name: "id", 
-                  widget: "string"
+                  widget: "number"
                 }, 
                 {
                   label: "text", 
@@ -271,7 +271,7 @@ collections:
                     {
                       label: "id", 
                       name: "id", 
-                      widget: "string"
+                      widget: "number"
                     }, 
                     {
                       label: "text", 
@@ -310,7 +310,7 @@ collections:
                     {
                       label: "id", 
                       name: "id", 
-                      widget: "string"
+                      widget: "number"
                     }, 
                     {
                       label: "Heading", 
@@ -325,7 +325,7 @@ collections:
                         {
                           label: "id", 
                           name: "id", 
-                          widget: "string"
+                          widget: "number"
                         }, 
                         {
                           label: "text", 

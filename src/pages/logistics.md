@@ -11,7 +11,7 @@ snippets:
         paragraphs:
           - id: 1
             text: We can function from your offices as an extension of your team.
-          - id: '2'
+          - id: 2
             text: 'You can blend us into your activities, under your brand.'
       - heading: On event
         id: 2
@@ -43,7 +43,7 @@ snippets:
               You can commission Corse Concierge to work on a project basis.
               We'll work together to scope the work, and then provide you with a
               quote.
-          - id: '2'
+          - id: 2
             text: >-
               You’ll know exactly how much you are spending from start to
               finish.

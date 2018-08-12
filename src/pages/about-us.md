@@ -53,16 +53,15 @@ whyus:
         For clients and for ourselves.
   title: Why us?
 ---
-
 ## Our name explained
 
-When we were thinking about starting this company we came across the original definition of a concierge. Far from just a person in a hotel lobby making arrangements for VIP guests, the concierge was an important part of running of medieval palaces.
+When we were thinking about starting this company we came across the original definition of a concierge. Not just a person in a hotel lobby making arrangements for guests, the concierge was an important part of running of medieval palaces.
 
-They were in charge of lighting all the candles at dusk. The concierge continued to walk the corridors during the dark hours to ensure that the residents and guests were able to move around safely. In the morning they extinguished the candles to avoid wasting expensive wax.
+They were in charge of lighting all the candles at dusk. The concierge walked the corridors during the dark hours to so residents and guests were able to move around safely. In the morning they extinguished the candles to avoid wasting expensive wax.
 
-Although making arrangements for VIPs is part of what we do, we thought that the older definition better described what we do. We provide "light" through our knowledge and know-how to allow companies to go about their business.
+Although making arrangements for guests is part of what we do, we thought that the older definition better described what we do. We provide "light" to allow companies to go about their business.
 
-We work diligently behind closed doors to maintain that enlightenment so our clients do not have to. Our services are commissioned only when required, avoiding wasting expensive permanent employment costs, just like the candle wax.
+Behind closed doors we maintain our enlightenment so you don't have to. Our services are commissioned only when required, just like the candle wax.
 
 Corse is a word synonymous with motorsport meaning race or short trip. What we work on is often inherently short in duration.
 
